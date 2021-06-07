@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
@@ -14,28 +15,17 @@ use Laravel\Socialite\Facades\Socialite;
 
 
 /////////AUTENTIKASI///////////
-
-// Route::get('/auth/redirect', function () {
-//     return Socialite::driver('google')->redirect();
-// });
-
-// Route::get('/auth/google/callback', function () {
-//     $user = Socialite::driver('google')->user();
-//     dd($user);
-//     // $user->token
-// });
-
-Route::get('login', [UserAuthController::class, 'login']);
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
-// Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
 
-// Route::get('auth/google/callback', 'GoogleController@redirectToGoogle');
-// Route::get('check', [UserAuthController::class, 'check'])->name('auth.check');
-// Route::get('register', [UserAuthController::class, 'register']);
+Route::get('/', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'login']);
+
+
 
 
 /////////HOME///////////
-Route::get('/', 'App\Http\Controllers\PagesController@home');
+
 Route::get('/home', 'App\Http\Controllers\PagesController@home');
 
 /////////DATA WARGA KK///////////
@@ -44,8 +34,6 @@ Route::get('data_kk', 'App\Http\Controllers\JamaahController@datakk');
 Route::get('formkk', 'App\Http\Controllers\PagesController@formdatakk');
 
 
-// Route::post('transaksi', 'App\Http\Controllers\JamaahController@cariTransaksi')->name('cari.transaksi');
-// Route::get('transaksi_datainduk', 'App\Http\Controllers\JamaahController@transaksi_datakk');
 
 
 
@@ -117,11 +105,10 @@ Route::get('/rw/detail2', 'App\Http\Controllers\RwController@detail2');
 Route::get('/rw/detail13', 'App\Http\Controllers\RwController@detail13');
 
 
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
+// Route::get('/auth/redirect', function () {
+//     return Socialite::driver('google')->redirect();
+// });
 
-Route::get('/auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
-    dd($user);
-});
+// Route::get('/auth/google/callback', function () {
+//     $user = Socialite::driver('google')->user();
+// });

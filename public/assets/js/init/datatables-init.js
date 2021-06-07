@@ -23,11 +23,12 @@
 	// $('#bootstrap-data-table2').DataTable({
 	// 	lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
 	// });
-	for (let x of Array(5).keys()) {
+	var max_tab_table = 10
+	for (let x of Array(max_tab_table).keys()) {
 		slc = '#bootstrap-data-table' + (x + 2)
 
 		try {
-			$(scl).DataTable({
+			$(slc).DataTable({
 				lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
 			});
 		} catch (err) {

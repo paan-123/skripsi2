@@ -50,7 +50,7 @@
 					
 					<div class="container-login100-form-btn">
                         {{-- <a href="{{route('google.login')}}" class="btn btn-block btn-danger">Login</a> --}}
-                        <a href="/auth/redirect" class="btn btn-block btn-danger">Login</a>
+                        <a href="{{route ('google.login')}}" class="btn btn-block btn-danger">Login</a>
 						{{-- <button class="login100-form-btn">
 							Sign in
 						</button> --}}

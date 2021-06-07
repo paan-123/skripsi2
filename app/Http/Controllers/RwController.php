@@ -2,15 +2,72 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\Cast\Array_;
 
 class RwController extends Controller
 {
     public function home()
     {
-        return view('/rw/home');
+        $counter = [];
+        $counter['age'] = [];
+        $counter['age']['Anak-anak'] = 0;
+        $counter['age']['Remaja'] = 0;
+        $counter['age']['Dewasa'] = 0;
+        $counter['age']['Manula'] = 0;
+        $counter['total'] = 0;
+
+
+        $data_kk = DB::table('data_kk')
+            ->count();
+
+
+        $laki = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Laki-laki')
+            ->count();
+
+        $perempuan = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Perempuan')
+            ->count();
+
+        $rumah = DB::table('md_rumah')
+            ->count();
+
+        $data = DB::table('datainduk')
+            ->select('tgl_lahir')
+            ->get();
+
+
+        foreach ($data as $row) {
+            $ageCategory = $this->ageCategory($this->birthCounter($row->tgl_lahir));
+            if ($ageCategory == 'Anak-anak') {
+                // array_push($counter['age']['Anak-anak'], $row->tgl_lahir);
+                $counter['age']['Anak-anak']++;
+            } elseif ($ageCategory == 'Remaja') {
+                $counter['age']['Remaja']++;
+            } elseif ($ageCategory == 'Dewasa') {
+                $counter['age']['Dewasa']++;
+            } elseif ($ageCategory == 'Manula') {
+                $counter['age']['Manula']++;
+            }
+
+            $counter['total']++;
+        }
+
+
+
+        return view('/rw/home', [
+            "counter" => $counter,
+            "data_kk" => $data_kk,
+            "laki" => $laki,
+            "perempuan" => $perempuan,
+            "rumah" => $rumah,
+
+        ]);
     }
+
 
 
     public function warga()
@@ -152,5 +209,28 @@ class RwController extends Controller
             'gd' => $gd,
             'sh' => $sh,
         ]);
+    }
+
+
+    #Method helper
+    public function birthCounter($dt)
+    {
+        $dt_born = Carbon::parse($dt);
+        $dt_now = Carbon::now();
+        $dt_age = $dt_born->diffInYears($dt_now);
+        return $dt_age;
+    }
+
+    public function ageCategory($age)
+    {
+        if ($age <= 12) :
+            return 'Anak-anak';
+        elseif ($age <= 25) :
+            return 'Remaja';
+        elseif ($age <= 55) :
+            return 'Dewasa';
+        else :
+            return 'Manula';
+        endif;
     }
 }

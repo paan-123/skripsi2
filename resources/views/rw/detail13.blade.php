@@ -92,7 +92,7 @@
 
 
                                         <div class="tab-pane fade" id="data-keahlian" role="tabpanel" aria-labelledby="data-keahlian-tab">
-                                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                            <table id="bootstrap-data-table2" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>NIK</th>
@@ -118,7 +118,7 @@
                                             
                                         </div>
                                         <div class="tab-pane fade" id="data-ekonomi" role="tabpanel" aria-labelledby="data-ekonomi-tab">
-                                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                            <table id="bootstrap-data-table3" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Nomor Kartu Keluarga</th>
@@ -145,7 +145,7 @@
 
                                         <div class="tab-pane fade" id="data-darah" role="tabpanel" aria-labelledby="data-darah-tab">
                                             
-                                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                            <table id="bootstrap-data-table4" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Nomor Kartu Keluarga</th>
@@ -170,7 +170,7 @@
                                         </div>
 
                                         <div class="tab-pane fade" id="data-sholat" role="tabpanel" aria-labelledby="data-sholat-tab">
-                                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                            <table id="bootstrap-data-table5" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
                                                         <th>Nomor KK</th>
