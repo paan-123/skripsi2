@@ -52,16 +52,15 @@
                                 <div class="default-tab">
                                     <nav>
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <a class="nav-item nav-link active" id="data-pekerjaan-tab" data-toggle="tab" href="#data-pekerjaan" role="tab" aria-controls="data-pekerjaan" aria-selected="true">PEKERJAAN</a>
-                                            <a class="nav-item nav-link" id="data-keahlian-tab" data-toggle="tab" href="#data-keahlian" role="tab" aria-controls="data-keahlian" aria-selected="false">KEAHLIAN</a>
-                                            <a class="nav-item nav-link" id="data-ekonomi-tab" data-toggle="tab" href="#data-ekonomi" role="tab" aria-controls="data-ekonomi" aria-selected="false">LEVEL EKONOMI</a>
-                                            <a class="nav-item nav-link" id="data-darah-tab" data-toggle="tab" href="#data-darah" role="tab" aria-controls="data-darah" aria-selected="false">GOLONGAN DARAH</a>
-                                            <a class="nav-item nav-link" id="data-sholat-tab" data-toggle="tab" href="#data-sholat" role="tab" aria-controls="data-sholat" aria-selected="false">SHOLAT JAMAAH</a>
+                                            <a class="nav-item nav-link active" id="data-anak-tab" data-toggle="tab" href="#data-anak" role="tab" aria-controls="data-anak" aria-selected="true">ANAK-ANAK</a>
+                                            <a class="nav-item nav-link" id="data-remaja-tab" data-toggle="tab" href="#data-remaja" role="tab" aria-controls="data-remaja" aria-selected="false">REMAJA</a>
+                                            <a class="nav-item nav-link" id="data-dewasa-tab" data-toggle="tab" href="#data-dewasa" role="tab" aria-controls="data-dewasa" aria-selected="false">DEWASA</a>
+                                            <a class="nav-item nav-link" id="data-manula-tab" data-toggle="tab" href="#data-manula" role="tab" aria-controls="data-manula" aria-selected="false">MANULA</a>
                                         </div>
                                     </nav>
                                     
                                         <div class="tab-content pl-3 pt-2" id="nav-tabContent">
-                                            <div class="tab-pane fade show active" id="data-pekerjaan" role="tabpanel" aria-labelledby="data-pekerjaan-tab">
+                                            <div class="tab-pane fade show active" id="data-anak" role="tabpanel" aria-labelledby="data-anak-tab">
                                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                     <thead>
                                                         <tr>
@@ -70,20 +69,18 @@
                                                             <th>Nama</th>
                                                             <th>Pekerjaan</th>
                                                             <th>Level Ekonomi</th>
-                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        @foreach( $rt1 as $p )
+                                                        {{-- @foreach( $rt1 as $p )
                                                         <tr>
                                                             <td>{{$p->no_kk}}</td>
                                                             <td>{{$p->no_ktp}}</td>
                                                             <td>{{$p->nama}}</td>
                                                             <td>{{$p->nama_pekerjaan}}</td>
                                                             <td>{{$p->nama_level}}</td>
-                                                            
                                                         </tr>
-                                                        @endforeach
+                                                        @endforeach --}}
                 
                                                     </tbody>
                                                 </table>   
@@ -93,7 +90,7 @@
 
 
 
-                                        <div class="tab-pane fade" id="data-keahlian" role="tabpanel" aria-labelledby="data-keahlian-tab">
+                                        <div class="tab-pane fade" id="data-remaja" role="tabpanel" aria-labelledby="data-remaja-tab">
                                             <table id="bootstrap-data-table2" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
@@ -105,7 +102,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach( $join as $k )
+                                                    {{-- @foreach( $join as $k )
                                                     <tr>
                                                         <td>{{$k->no_ktp}}</td>
                                                         <td>{{$k->no_kk}}</td>
@@ -113,13 +110,13 @@
                                                         <td>{{$k->nama_keahlian}}</td>
                                                         <td>{{$k->deskripsi_sertifikat}}</td>
                                                     </tr>
-                                                    @endforeach
+                                                    @endforeach --}}
                 
                                                 </tbody>
                                             </table>
                                             
                                         </div>
-                                        <div class="tab-pane fade" id="data-ekonomi" role="tabpanel" aria-labelledby="data-ekonomi-tab">
+                                        <div class="tab-pane fade" id="data-dewasa" role="tabpanel" aria-labelledby="data-dewasa-tab">
                                             <table id="bootstrap-data-table3" class="table table-striped table-bordered">
                                                 <thead>
                                                     <tr>
@@ -130,14 +127,14 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach( $lv as $p )
+                                                    {{-- @foreach( $lv as $p )
                                                     <tr>
                                                         <td>{{$p->no_kk}}</td>
                                                         <td>{{$p->nm_kk}}</td>
                                                         <td>{{$p->nama_level}}</td>
                                                      
                                                     </tr>
-                                                    @endforeach
+                                                    @endforeach --}}
             
                                                 </tbody>
                                             </table>   
@@ -145,7 +142,7 @@
                                         </div>
 
 
-                                        <div class="tab-pane fade" id="data-darah" role="tabpanel" aria-labelledby="data-darah-tab">
+                                        <div class="tab-pane fade" id="data-manula" role="tabpanel" aria-labelledby="data-manula-tab">
                                             
                                             <table id="bootstrap-data-table4" class="table table-striped table-bordered">
                                                 <thead>
@@ -157,49 +154,21 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach( $gd as $gd )
+                                                    {{-- @foreach( $gd as $gd )
                                                     <tr>
                                                         <td>{{$gd->no_kk}}</td>
                                                         <td>{{$gd->no_ktp}}</td>
                                                         <td>{{$gd->nama}}</td>
                                                         <td>{{$gd->gol_darah}}</td>
                                                     </tr>
-                                                    @endforeach
+                                                    @endforeach --}}
                 
                                                 </tbody>
                                             </table>   
 
                                         </div>
 
-                                        <div class="tab-pane fade" id="data-sholat" role="tabpanel" aria-labelledby="data-sholat-tab">
-                                            <table id="bootstrap-data-table10" class="table table-striped table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Nomor KK</th>
-                                                        <th>NIK</th>
-                                                        <th>Nama</th>
-                                                        <th>Sholat 5 Waktu</th>
-                                                        <th>Sholat Jamaah di Masjid</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @foreach( $sh as $sh )
-                                                    <tr>
-                                                        <td>{{$sh->no_kk}}</td>
-                                                        <td>{{$sh->no_ktp}}</td>
-                                                        <td>{{$sh->nama}}</td>
-                                                        <td>{{$sh->is_5waktu}}</td>
-                                                        <td>{{$sh->is_jamaah}}</td>
-                                                        
-                                                    </tr>
-                                                    @endforeach
-                
-                                                </tbody>
-                                            </table>
-
-                                        
-                                    
-                                        </div>
+                                  
 
 
                                 </div>

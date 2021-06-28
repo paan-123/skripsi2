@@ -22,7 +22,7 @@
         <div class="breadcrumbs">
             <div class="breadcrumbs-inner">
                 <div class="row m-0">
-                    <div class="col-sm-4">
+                    <div class="col-sm-8s">
                         <div class="page-header float-left">
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">

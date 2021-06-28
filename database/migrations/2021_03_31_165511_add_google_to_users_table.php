@@ -15,6 +15,7 @@ class AddGoogleToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('google_id')->after('id');
+            $table->string('role')->after('password');
         });
     }
 

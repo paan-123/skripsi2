@@ -62,18 +62,19 @@
                                         <th>NIK</th>
                                         <th>Nama</th>
                                         <th>Nomor RT</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach( $pkj as $p )
+                                    @foreach( $warga as $w )
                                     <tr>
-                                        <td>{{$p->no_kk}}</td>
-                                        <td>{{$p->no_ktp}}</td>
-                                        <td>{{$p->nama}}</td>
-                                        <td>{{$p->nama_pekerjaan}}</td>
-                                        <td>{{$p->nama_level}}</td>
+                                        <td>{{$w->no_kk}}</td>
+                                        <td>{{$w->no_ktp}}</td>
+                                        <td>{{$w->nama}}</td>
+                                        <td>{{$w->kd_rt}}</td>
+                                        <td>{{$w->status}}</td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </tbody>
                             </table>

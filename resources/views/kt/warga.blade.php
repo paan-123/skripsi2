@@ -1,5 +1,5 @@
-@extends('layout/rolerw')
-@section('title', 'Data Kartu Keluarga')
+@extends('layout/kt')
+@section('title', 'Warga')
 
 <body>
     <!-- Left Panel -->
@@ -25,7 +25,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>TABEL DATA KARTU KELUARGA</h1>
+                                <h1>DATA PEMUDA</h1>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="/">Dashboard</a></li>
-                                    <li><a href="#">Data Warga</a></li>
-                                    <li class="active">Data KK</li>
+                                    <li><a href="#">Data Lainnya</a></li>
+                                    <li class="active">Data Pemuda</li>
                                 </ol>
                             </div>
                         </div>
@@ -52,32 +52,36 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Tabel Data Kartu Keluarga</strong>
+                            <strong class="card-title">Tabel Pemuda</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
-                                        <th>Nama Kepala Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nama</th>
                                         <th>Nomor RT</th>
-                                        <th>Nomor RW</th>
-                                        <th>Keterangan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($kk as $dkk)
+                                    @foreach( $data_induk as $w )
                                     <tr>
-
-                                        <td>{{$dkk->no_kk}}</td>
-                                        <td>{{$dkk->nm_kk}}</td>
-                                        <td>{{$dkk->no_rt}}</td>
-                                        <td>{{$dkk->no_rw}}</td>
-                                        <td>{{$dkk->keterangan}}</td>
+                                        <td>{{$w->no_kk}}</td>
+                                        <td>{{$w->no_ktp}}</td>
+                                        <td>{{$w->nama}}</td>
+                                        <td>{{$w->kd_rt}}</td>
+                                        
                                     </tr>
                                     @endforeach
 
                                 </tbody>
+                            </table>
+
+                            <table>
+
+
+
                             </table>
                         </div>
                     </div>

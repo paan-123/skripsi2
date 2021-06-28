@@ -72,12 +72,37 @@ class RwController extends Controller
 
     public function warga()
     {
-        return view('/rw/warga');
+        $warga = DB::table('datainduk')
+            ->get();
+        return view('/rw/warga', ['warga' => $warga]);
     }
 
     public function datakk()
     {
-        return view('/rw/datakk');
+        $kk = DB::table('data_kk')
+            ->get();
+        return view('/rw/datakk', ['kk' => $kk]);
+    }
+
+    public function jeniskelamin()
+    {
+        $lk = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Laki-laki')
+            ->get();
+
+        $pr = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Perempuan')
+            ->get();
+
+        return view('/rw/jeniskelamin', [
+            "lk" => $lk,
+            "pr" => $pr,
+        ]);
+    }
+
+    public function usia()
+    {
+        return view('/rw/usia');
     }
 
     public function detail()
@@ -120,12 +145,6 @@ class RwController extends Controller
             'sh' => $sh,
         ]);
     }
-
-
-
-
-
-
 
 
     public function detail2()

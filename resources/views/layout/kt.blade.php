@@ -87,16 +87,17 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/rw"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="/pkk"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
-                    <li class="menu-title">REKAP</li>
+                    <li class="menu-title">REKAP</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Data Warga</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/warga')}}">Jumlah Warga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/datakk')}}">Data Kartu Keluarga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/jeniskelamin')}}">Penggolongan Jenis Kelamin</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/usia')}}">Penggolongan Usia</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/warga')}}">Warga Pemuda</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/laki')}}">Pemuda Laki-laki</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/perempuan')}}">Pemuda Perempuan</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/karangtaruna')}}">Anggota Karang Taruna</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/keahlian')}}">Keahlian</a></li>
                             
                         </ul>
                     </li>
@@ -105,9 +106,9 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Detail Data</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/detail')}}">Data RT 1</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/detail2')}}">Data RT 2</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/detail13')}}">Data RT 13</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/detail')}}">Data RT 1</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/detail2')}}">Data RT 2</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/kt/detail13')}}">Data RT 13</a></li>
                           
                     </li>
                     
