@@ -63,7 +63,6 @@
                                         <th>Nama</th>
                                         <th>Pekerjaan</th>
                                         <th>Level Ekonomi</th>
-                                        <th>Kode RT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -73,8 +72,7 @@
                                         <td>{{$p->no_ktp}}</td>
                                         <td>{{$p->nama}}</td>
                                         <td>{{$p->nama_pekerjaan}}</td>
-                                        <td>{{$p->nama_level}}</td>
-                                        <td>{{$p->kd_rt}}</td>
+                                        <td>{{$p->nama_level}}</td>                                       
                                     </tr>
                                     @endforeach
 
