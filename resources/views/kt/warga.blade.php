@@ -61,7 +61,8 @@
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>NIK</th>
                                         <th>Nama</th>
-                                        <th>Nomor RT</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Kode RT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -70,6 +71,7 @@
                                         <td>{{$w->no_kk}}</td>
                                         <td>{{$w->no_ktp}}</td>
                                         <td>{{$w->nama}}</td>
+                                        <td>{{$w->j_kelamin}}</td>
                                         <td>{{$w->kd_rt}}</td>
                                         
                                     </tr>

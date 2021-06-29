@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Psy\Command\WhereamiCommand;
 
 class KTController extends Controller
 {
@@ -42,6 +43,14 @@ class KTController extends Controller
 
         return view('/kt/warga', ['data_induk' => $data_induk]);
     }
+    public function karangtaruna()
+    {
+        $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->get();
+
+        return view('/kt/karangtaruna', ['data_induk' => $data_induk]);
+    }
 
     public function keahlian()
     {
@@ -60,20 +69,29 @@ class KTController extends Controller
     //detail
     public function detail()
     {
-        $data = '';
-        return view('/kt/detail', ['data' => $data]);
+        $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('datainduk.kd_rt', '=', 1)
+            ->get();
+        return view('/kt/detail', ['data_induk' => $data_induk]);
     }
 
     public function detail2()
     {
-        $data = '';
-        return view('/kt/detail', ['data' => $data]);
+        $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('datainduk.kd_rt', '=', 2)
+            ->get();
+        return view('/kt/detail', ['data_induk' => $data_induk]);
     }
 
     public function detail13()
     {
-        $data = '';
-        return view('/kt/detail', ['data' => $data]);
+        $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('datainduk.kd_rt', '=', 13)
+            ->get();
+        return view('/kt/detail', ['data_induk' => $data_induk]);
     }
 
 

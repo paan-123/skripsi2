@@ -1,5 +1,5 @@
 @extends('layout/kt')
-@section('title', 'Laki')
+@section('title', 'Detail RT 1')
 
 <body>
     <!-- Left Panel -->
@@ -61,7 +61,9 @@
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>NIK</th>
                                         <th>Nama</th>
-                                        <th>Nomor RT</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Status Kawin</th>
+                                        <th>Berjamaah di Masjid</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -70,7 +72,9 @@
                                         <td>{{$p->no_kk}}</td>
                                         <td>{{$p->no_ktp}}</td>
                                         <td>{{$p->nama}}</td>
-                                        <td>{{$p->kd_rt}}</td>
+                                        <td>{{$p->j_kelamin}}</td>
+                                        <td>{{$p->status_kawin}}</td>
+                                        <td>{{$p->is_5waktu}}</td>
                                         
                                     </tr>
                                     @endforeach

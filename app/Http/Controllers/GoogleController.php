@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
+
 class GoogleController extends Controller
 {
     public function redirectToGoogle()
@@ -60,5 +61,11 @@ class GoogleController extends Controller
         } catch (\Throwable $th) {
             //throw $th;
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

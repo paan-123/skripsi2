@@ -86,7 +86,7 @@ Route::middleware(['karangtaruna'])->group(function () {
     Route::get('/kt/warga', 'App\Http\Controllers\KTController@warga');
     Route::get('/kt/laki', 'App\Http\Controllers\KTController@laki');
     Route::get('/kt/perempuan', 'App\Http\Controllers\KTController@perempuan');
-    Route::get('/kt/kt', 'App\Http\Controllers\KTController@kt');
+    Route::get('/kt/karangtaruna', 'App\Http\Controllers\KTController@karangtaruna');
     Route::get('/kt/keahlian', 'App\Http\Controllers\KTController@keahlian');
 
     //detail
@@ -118,10 +118,16 @@ Route::middleware(['rw'])->group(function () {
     Route::get('/rw/detail13', 'App\Http\Controllers\RwController@detail13');
 });
 
-Route::get('/out', function () {
-    Auth::logout();
-    return redirect('/');
-});
+// Route::get('/out', function () {
+//     Auth::logout();
+//     return redirect('/')->name('logout');
+// });
+
+Route::get('/logout', 'App\Http\Controllers\GoogleController@logout')->name('logout');
+
+
+
+
 // });
 
 // Route::get('/adb', function () {
