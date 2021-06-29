@@ -94,6 +94,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Transaksi</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-id-badge"></i><a href="{{ url ('transaksi')}}">Data Kartu Keluarga</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('data_induk')}}">Pindah Data KK</a></li>
                             
                         </ul>
                     </li>
@@ -119,9 +120,11 @@
                             <li><i class="fa fa-table"></i><a href="{{ url ('md_rt')}}">MD RT</a></li>
                         </ul>
                     </li>
-
+                    
+                    
+                    
+                    
                     <li class="menu-title">INPUT</li><!-- /.menu-title -->
-
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Formulir</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -129,6 +132,18 @@
                             <li><i class="menu-icon fa fa-th"></i><a href="{{ url ('form_datainduk')}}">Data Induk</a></li>
                         </ul>
                     </li>
+                    
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Master Data</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rumah')}}">MD Rumah</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rw')}}">MD RW</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rt')}}">MD RT</a></li>
+                        </ul>
+                    </li>
+                    
+                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -184,7 +199,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h2 class="box-title">Selamat Datang, Takmir</h2>
+                                <h2 class="box-title">Selamat Datang, Admin</h2>
                             </div>
                             <div class="row">
                                 <div class="col-lg-8">

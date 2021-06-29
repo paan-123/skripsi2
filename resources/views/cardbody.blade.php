@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h2 class="box-title">Selamat Datang, (USER ROLE)</h2>
+                        <h2 class="box-title">Selamat Datang, Admin</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-8">

@@ -51,12 +51,12 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>Nomor KK</th>
                                             <th>NIK</th>
                                             <th>Nama</th>
                                             <th>Nama Panggilan</th>
                                             <th>Tempat Tanggal Lahir</th>
                                             <th>Jenis Kelamin</th>
-                                            <th>Nomor KK</th>
                                             <th>Status Hubungan</th>
                                             <th>Action</th>
                                         </tr>
@@ -64,12 +64,12 @@
                                     <tbody>
                                         @foreach($data_induk as $did)
                                         <tr>
+                                            <td>{{$did->no_kk}}</td>
                                             <td>{{$did->no_ktp}}</td>
                                             <td>{{$did->nama}}</td>
                                             <td>{{$did->nm_panggilan}}</td>
                                             <td>{{$did->tmp_lahir}}, {{$did->tgl_lahir}}</td>
                                             <td>{{$did->j_kelamin}}</td>
-                                            <td>{{$did->no_kk}}</td>
                                             <td>{{$did->status_hub_kk}}</td>
                                             <td>
                                                 <a href="/edit_data_induk/{{$did->kd_induk}}" class="btn btn-info">EDIT</a>

@@ -53,12 +53,13 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Status Hubungan Kartu Keluarga</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="hubungan" id="hubungan" class="form-control" value="{{$post->status_hub_kk}}">
-                                                    <option value="Ayah/Kepala Keluarga">Ayah/Kepala Keluargra</option>
-                                                    <option value="Istri/Ibu">Istri/Ibu</option>
-                                                    <option value="Saudara Laki-laki/Perempuan">Saudara Laki-laki/Perempuan</option>
-                                                    <option value="Suami/Istri">Suami/Istri</option>
+                                                    <option value="Kepala Keluarga">Kepala Keluarga</option>
+                                                    <option value="Istri">Istri</option>
                                                     <option value="Anak">Anak</option>
-                                                    <option value="Saudara Lainnya">Saudara Lain(Paman, Bibi, Sepupu, Keponakan, dll)</option>
+                                                    <option value="Orang Tua">Orang Tua</option>
+                                                    <option value="Menantu">Menantu</option>
+                                                    <option value="Cucu">Cucu</option>
+                                                    <option value="Lain-lain">Lain-lain</option>
 
                                                 </select>
                                             </div>
