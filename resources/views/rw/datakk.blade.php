@@ -60,9 +60,11 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>Nama Kepala Keluarga</th>
-                                        <th>Nomor RT</th>
                                         <th>Nomor RW</th>
-                                        <th>Keterangan</th>
+                                        <th>Nomor RT</th>
+                                        <th>Kode Rumah</th>
+                                        <th>Level Ekonomi</th>
+                                        {{-- <th>Keterangan</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -71,9 +73,11 @@
 
                                         <td>{{$dkk->no_kk}}</td>
                                         <td>{{$dkk->nm_kk}}</td>
-                                        <td>{{$dkk->no_rt}}</td>
                                         <td>{{$dkk->no_rw}}</td>
-                                        <td>{{$dkk->keterangan}}</td>
+                                        <td>{{$dkk->no_rt}}</td>
+                                        <td>{{$dkk->kd_rumah}}</td>
+                                        <td>{{$dkk->nama_level}}</td>
+                                        {{-- <td>{{$dkk->keterangan}}</td> --}}
                                     </tr>
                                     @endforeach
 

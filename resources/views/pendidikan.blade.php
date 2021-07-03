@@ -59,7 +59,7 @@
                                 <thead>
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
-                                        <th>Kode Induk</th>
+                                        <th>NIK</th>
                                         <th>Nama</th>
                                         <th>Jenjang Pendidikan</th>
                                         <th>Keterangan</th>
@@ -69,7 +69,7 @@
                                     @foreach( $pd as $pd )
                                     <tr>
                                         <td>{{$pd->no_kk}}</td>
-                                        <td>{{$pd->kd_induk}}</td>
+                                        <td>{{$pd->no_ktp}}</td>
                                         <td>{{$pd->nama}}</td>
                                         <td>{{$pd->nama_jenjang}}</td>
                                         <td>{{$pd->keterangan}}</td>

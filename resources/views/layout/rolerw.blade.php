@@ -91,17 +91,20 @@
                     </li>
                     <li class="menu-title">REKAP</li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Data Warga</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Menu</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/warga')}}">Jumlah Warga</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/warga')}}">Data Warga</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/datakk')}}">Data Kartu Keluarga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/jeniskelamin')}}">Penggolongan Jenis Kelamin</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/usia')}}">Penggolongan Usia</a></li>
-                            
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/ekonomi')}}">Data Level Ekonomi</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/pekerjaan')}}">Data Pekerjaan Warga</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/pendidikan')}}">Data Pendidikan</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/agama')}}">Data Agama</a></li>
+                    
                         </ul>
                     </li>
 
-                    <li class="menu-title">DETAIL</li>
+                    {{-- <li class="menu-title">DETAIL</li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Detail Data</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -109,7 +112,7 @@
                             <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/detail2')}}">Data RT 2</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="{{ url ('/rw/detail13')}}">Data RT 13</a></li>
                           
-                    </li>
+                    </li> --}}
                     
                    
 

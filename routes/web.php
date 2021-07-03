@@ -111,11 +111,15 @@ Route::middleware(['rw'])->group(function () {
     Route::get('/rw', 'App\Http\Controllers\RwController@home');
     Route::get('/rw/warga', 'App\Http\Controllers\RwController@warga');
     Route::get('/rw/datakk', 'App\Http\Controllers\RwController@datakk');
-    Route::get('/rw/jeniskelamin', 'App\Http\Controllers\RwController@jeniskelamin');
     Route::get('/rw/usia', 'App\Http\Controllers\RwController@usia');
+    Route::get('/rw/ekonomi', 'App\Http\Controllers\RwController@ekonomi');
+    Route::get('/rw/pekerjaan', 'App\Http\Controllers\RwController@pekerjaan');
+    Route::get('/rw/pendidikan', 'App\Http\Controllers\RwController@pendidikan');
+    Route::get('/rw/agama', 'App\Http\Controllers\RwController@agama');
     Route::get('/rw/detail', 'App\Http\Controllers\RwController@detail');
     Route::get('/rw/detail2', 'App\Http\Controllers\RwController@detail2');
     Route::get('/rw/detail13', 'App\Http\Controllers\RwController@detail13');
+    // Route::get('/rw/jeniskelamin', 'App\Http\Controllers\RwController@jeniskelamin');
 });
 
 // Route::get('/out', function () {

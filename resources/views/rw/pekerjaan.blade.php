@@ -34,7 +34,7 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="/">Dashboard</a></li>
-                                    <li><a href="#">Data Lainnya</a></li>
+                                    <li><a href="#">Rekap</a></li>
                                     <li class="active">Data Pekerjaan Warga</li>
                                 </ol>
                             </div>
@@ -60,29 +60,25 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>NIK</th>
-                                        <th>Nomor RW</th>
-                                        <th>Nomor RT</th>
                                         <th>Nama</th>
                                         <th>Jenis Kelamin</th>
                                         <th>Status Kawin</th>
                                         <th>Status Mukim</th>
-                                        <th>Golongan Darah</th>
-                                        <th>Status</th>
+                                        <th>Pekerjaan</th>
+                                        <th>Level Ekonomi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach( $warga as $w )
+                                    @foreach( $pekerjaan as $w )
                                     <tr>
                                         <td>{{$w->no_kk}}</td>
                                         <td>{{$w->no_ktp}}</td>
-                                        <td>{{$w->no_rw}}</td>
-                                        <td>{{$w->kd_rt}}</td>
                                         <td>{{$w->nama}}</td>
                                         <td>{{$w->j_kelamin}}</td>
                                         <td>{{$w->status_kawin}}</td>
                                         <td>{{$w->status_mukim}}</td>
-                                        <td>{{$w->gol_darah}}</td>
-                                        <td>{{$w->status}}</td>
+                                        <td>{{$w->nama_pekerjaan}}</td>
+                                        <td>{{$w->nama_level}}</td>
                                     </tr>
                                     @endforeach
 

@@ -73,6 +73,7 @@ class RwController extends Controller
     public function warga()
     {
         $warga = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->get();
         return view('/rw/warga', ['warga' => $warga]);
     }
@@ -80,24 +81,43 @@ class RwController extends Controller
     public function datakk()
     {
         $kk = DB::table('data_kk')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
             ->get();
         return view('/rw/datakk', ['kk' => $kk]);
     }
 
-    public function jeniskelamin()
+    public function ekonomi()
     {
-        $lk = DB::table('datainduk')
-            ->where('datainduk.j_kelamin', '=', 'Laki-laki')
+        $ekonomi = DB::table('datainduk')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->get();
+        return view('/rw/ekonomi', ['ekonomi' => $ekonomi]);
+    }
 
-        $pr = DB::table('datainduk')
-            ->where('datainduk.j_kelamin', '=', 'Perempuan')
+
+    public function pekerjaan()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->get();
+        return view('/rw/pekerjaan', ['pekerjaan' => $join]);
+    }
 
-        return view('/rw/jeniskelamin', [
-            "lk" => $lk,
-            "pr" => $pr,
-        ]);
+    public function pendidikan()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
+            ->get();
+        return view('/rw/pendidikan', ['pendidikan' => $join]);
+    }
+
+    public function agama()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_agama', 'md_agama.kd_agama', '=', 'datainduk.kd_agama')
+            ->get();
+        return view('/rw/agama', ['agama' => $join]);
     }
 
     public function usia()

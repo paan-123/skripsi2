@@ -25,7 +25,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>TABEL PEKERJAAN WARGA</h1>
+                                <h1>DATA PENDIDIKAN WARGA</h1>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="/">Dashboard</a></li>
-                                    <li><a href="#">Data Lainnya</a></li>
-                                    <li class="active">Data Pekerjaan Warga</li>
+                                    <li><a href="#">Rekap</a></li>
+                                    <li class="active">Data Pendidikan Warga</li>
                                 </ol>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Tabel Pekerjaan Warga</strong>
+                            <strong class="card-title">Tabel Pendidikan Warga</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -60,29 +60,19 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>NIK</th>
-                                        <th>Nomor RW</th>
-                                        <th>Nomor RT</th>
                                         <th>Nama</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Status Kawin</th>
-                                        <th>Status Mukim</th>
-                                        <th>Golongan Darah</th>
-                                        <th>Status</th>
+                                        <th>Jenjang Pendidikan</th>
+                                        <th>Keterangan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach( $warga as $w )
+                                    @foreach( $pendidikan as $w )
                                     <tr>
                                         <td>{{$w->no_kk}}</td>
                                         <td>{{$w->no_ktp}}</td>
-                                        <td>{{$w->no_rw}}</td>
-                                        <td>{{$w->kd_rt}}</td>
                                         <td>{{$w->nama}}</td>
-                                        <td>{{$w->j_kelamin}}</td>
-                                        <td>{{$w->status_kawin}}</td>
-                                        <td>{{$w->status_mukim}}</td>
-                                        <td>{{$w->gol_darah}}</td>
-                                        <td>{{$w->status}}</td>
+                                        <td>{{$w->nama_jenjang}}</td>
+                                        <td>{{$w->keterangan}}</td>
                                     </tr>
                                     @endforeach
 
