@@ -25,7 +25,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>TABEL PEKERJAAN WARGA</h1>
+                                <h1>TABEL DATA WARGA</h1>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                                 <ol class="breadcrumb text-right">
                                     <li><a href="/">Dashboard</a></li>
                                     <li><a href="#">Data Lainnya</a></li>
-                                    <li class="active">Data Pekerjaan Warga</li>
+                                    <li class="active">Data Warga</li>
                                 </ol>
                             </div>
                         </div>
@@ -46,13 +46,10 @@
         <div class="content">
             <div class="animated fadeIn">
 
-
-
-
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Tabel Pekerjaan Warga</strong>
+                            <strong class="card-title">Tabel Data Warga</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -87,13 +84,23 @@
                                     @endforeach
 
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Nomor Kartu Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nomor RW</th>
+                                        <th>Nomor RT</th>
+                                        <th>Nama</th>
+                                        <th>Jenis Kelamin</th>
+                                        <th>Status Kawin</th>
+                                        <th>Status Mukim</th>
+                                        <th>Golongan Darah</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </tfoot>
                             </table>
 
-                            <table>
 
-
-
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -114,5 +121,62 @@
     @section('container')
 </body>
 @endsection('container')
+
+
+@section('customscript')
+<script>
+    $(document).ready(function () {
+
+        // $('#bootstrap-data-table tfoot th').each( function () {
+        //     var title = $(this).text();
+        //     $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        // } );
+        // var table = $('#datatable').DataTable({
+        //     'processing': true,
+        //     'serverSide': true,
+
+        //     'columns': [
+        //         {'data': 'no_kk'},
+        //         {'data': 'no_ktp'},
+        //         {'data': 'no_rw'},
+        //         {'data': 'no_rt'},
+        //         {'data': 'nama'},
+        //         {'data': 'j_kelamin'},
+        //         {'data': 'status_kawin'},
+        //         {'data': 'status_mukim'},
+        //         {'data': 'gol_darah'},
+        //         {'data': 'status'}
+        //     ],
+        // });
+
+        // $('.filter-input').keyup(function() {
+        //     var value = $(this).val().toLowerCase();
+        //     $("#bootstrap-data-table tr").filter(function() {
+        //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        //  });
+        // });
+
+        // $('.filter-input').keyup(function() {
+
+        // });
+
+        // var table = $('#bootstrap-data-table').DataTable({
+
+        // });
+        //     $('#bootstrap-data-table').column( $(this).data('column') )
+        //     .search( $(this).val() )
+        //     .draw();
+        // });
+
+        // $('.filter-select').change(function() {
+        //     table.column( $(this).data('column') )
+        //     .search( $(this).val() )
+        //     .draw();
+        // });
+    })
+
+
+</script>
+@endsection('customscript')
 
 </html>

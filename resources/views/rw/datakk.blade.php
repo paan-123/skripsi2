@@ -82,6 +82,14 @@
                                     @endforeach
 
                                 </tbody>
+                                <tfoot>
+                                    <th>Nomor Kartu Keluarga</th>
+                                        <th>Nama Kepala Keluarga</th>
+                                        <th>Nomor RW</th>
+                                        <th>Nomor RT</th>
+                                        <th>Kode Rumah</th>
+                                        <th>Level Ekonomi</th>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

@@ -78,12 +78,14 @@
                                     @endforeach
 
                                 </tbody>
-                            </table>
-
-                            <table>
-
-
-
+                                <tfoot>
+                                    <th>Nomor Kartu Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nama</th>
+                                        <th>Agama</th>
+                                        <th>Sholat 5 Waktu</th>
+                                        <th>Sholat Jamaah di Masjid</th>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

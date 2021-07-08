@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Expr\Cast\Array_;
 
+use function PHPUnit\Framework\callback;
+
 class RwController extends Controller
 {
     public function home()
@@ -67,8 +69,6 @@ class RwController extends Controller
 
         ]);
     }
-
-
 
     public function warga()
     {
