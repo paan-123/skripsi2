@@ -1,5 +1,5 @@
 @extends('layout/kt')
-@section('title', 'Detail')
+@section('title', 'Home')
 <style>
     .counter {
         background-color: #f5f5f5;

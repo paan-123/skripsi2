@@ -159,39 +159,7 @@
         <!-- /#header -->
         <!-- Content -->
 
-        <div class="content">
-            @section('cutbody')
-            <div class="animated fadeIn">
-                <div class="row">
-
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h2 class="box-title">Selamat Datang, Takmir</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="card-body">
-
-                                        <div id="traffic-chart" class="traffic-chart"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-                            </div>
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @stop
+            
 
         <!-- /.content -->
         <div class="clearfix"></div>

@@ -116,32 +116,7 @@
                                                         <p class="count-text ">Berdasarkan Keahlian</p>
                                                     </div>
                                                 </div>
-                                                {{-- <div class="col">
-                                                    <div class="counter">
-                                                    <i class="fa fa-child fa-2x"> <br></i>
-                                                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
-                                                     <p class="count-text ">Anak-anak </p>
-                                                 </div></div>
-                                                 <div class="col">
-                                                    <div class="counter">
-                                                     <i class="fa fa-user fa-2x"> <br></i>
-                                                        <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
-                                                        <p class="count-text ">Remaja</p>
-                                                        </div></div>
-
-                                                        <div class="col">
-                                                            <div class="counter">
-                                                <i class="fa fa-users fa-2x"></i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
-                                                <p class="count-text ">Dewasa</p>
-                                              </div></div>
-
-                                              <div class="col">
-                                                <div class="counter">
-                                                <i class="fa fa-wheelchair fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
-                                                <p class="count-text ">Manula</p>
-                                                </div></div> --}}
+                                                
                                             </div>
                                         </div>
                                     </section>
