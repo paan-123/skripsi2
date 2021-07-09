@@ -79,6 +79,16 @@ Route::middleware(['admin'])->group(function () {
     // Route::get('/tambah-anggota/{no_kk}', [PostDataKK::class, 'tambahAnggota'])->name('tambah.post');
     Route::get('transaksi_datainduk/{no_kk}', 'App\Http\Controllers\PostDataKK@transaksi_datainduk');
     Route::post('tambah-anggota', [PostDataKK::class, 'saveTambahAnggota'])->name('save.tambah');
+
+
+
+    Route::get('red_rw', 'App\Http\Controllers\JamaahController@home');
+    Route::get('red_rw/warga', 'App\Http\Controllers\JamaahController@warga');
+    Route::get('red_rw/datakk', 'App\Http\Controllers\JamaahController@data_kk');
+    Route::get('red_rw/ekonomi', 'App\Http\Controllers\JamaahController@ekonomi');
+    Route::get('red_rw/pekerjaan', 'App\Http\Controllers\JamaahController@pekerjaan');
+    Route::get('red_rw/pendidikan', 'App\Http\Controllers\JamaahController@pendidikan');
+    Route::get('red_rw/agama', 'App\Http\Controllers\JamaahController@agama');
 });
 
 Route::middleware(['karangtaruna'])->group(function () {
@@ -122,33 +132,10 @@ Route::middleware(['rw'])->group(function () {
     // Route::get('/rw/jeniskelamin', 'App\Http\Controllers\RwController@jeniskelamin');
 });
 
-// Route::get('/out', function () {
-//     Auth::logout();
-//     return redirect('/')->name('logout');
-// });
+
 
 Route::get('/logout', 'App\Http\Controllers\GoogleController@logout')->name('logout');
 
 
 
-
-// });
-
-// Route::get('/adb', function () {
-//     return dd("hehe");
-// })->middleware('admin');
-
-
-// Route::get('/auth/redirect', function () {
-//     return Socialite::driver('google')->redirect();
-// });
-
-// Route::get('/auth/google/callback', function () {
-//     $user = Socialite::driver('google')->user();
-// });
-
-
-// Role
-// Admin
-
-//->view (Rt, Rw, Kt)
+//REDIRECT KE RW//

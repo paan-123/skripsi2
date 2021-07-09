@@ -52,7 +52,7 @@
                                     <br>
                                     <div class="row text-center">
                                         <div class="col">
-                                            <a href="{{ url('/rw') }}">
+                                            <a href="{{ url('/red_rw') }}">
                                             <div class="counter">
                                                 <i class="fa fa-users fa-2x"> <br></i>
                                                 <h2 class="timer count-title count-number" data-to="100"
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <a href="{{ url('/pkk') }}">
+                                            <a href="{{ url('/red_pkk') }}">
                                             <div class="counter">
                                                 <i class="fa fa-female fa-2x"> <br></i>
                                                 <h2 class="timer count-title count-number" data-to="1700"
@@ -72,7 +72,7 @@
                                             </a>
                                         </div>
                                         <div class="col">
-                                            <a href="{{ url('/karangtaruna') }}">
+                                            <a href="{{ url('/red_kt') }}">
                                             <div class="counter">
                                                 <i class="fa fa-child fa-2x"> <br></i>
                                                 <h2 class="timer count-title count-number" data-to="11900"
@@ -80,9 +80,7 @@
                                                 <p class="count-text ">Halaman Karang Taruna</p>
                                             </div>
                                             </a>
-                                        </div>
-                                        
-                                        
+                                        </div>                       
                                     </div>
                                 </div>
                             </section>

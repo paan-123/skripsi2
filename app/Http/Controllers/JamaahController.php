@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 // use App\Models\KeahlianJamaah;
 
 class JamaahController extends Controller
@@ -191,6 +192,137 @@ class JamaahController extends Controller
 
 
         return view('transaksi', compact('data'));
+    }
+
+
+
+    public function birthCounter($dt)
+    {
+        $dt_born = Carbon::parse($dt);
+        $dt_now = Carbon::now();
+        $dt_age = $dt_born->diffInYears($dt_now);
+        return $dt_age;
+    }
+
+    public function ageCategory($age)
+    {
+        if ($age <= 12) :
+            return 'Anak-anak';
+        elseif ($age <= 25) :
+            return 'Remaja';
+        elseif ($age <= 55) :
+            return 'Dewasa';
+        else :
+            return 'Manula';
+        endif;
+    }
+
+    public function home()
+    {
+        $counter = [];
+        $counter['age'] = [];
+        $counter['age']['Anak-anak'] = 0;
+        $counter['age']['Remaja'] = 0;
+        $counter['age']['Dewasa'] = 0;
+        $counter['age']['Manula'] = 0;
+        $counter['total'] = 0;
+
+
+        $data_kk = DB::table('data_kk')
+            ->count();
+
+
+        $laki = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Laki-laki')
+            ->count();
+
+        $perempuan = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Perempuan')
+            ->count();
+
+        $rumah = DB::table('md_rumah')
+            ->count();
+
+        $data = DB::table('datainduk')
+            ->select('tgl_lahir')
+            ->get();
+
+
+        foreach ($data as $row) {
+            $ageCategory = $this->ageCategory($this->birthCounter($row->tgl_lahir));
+            if ($ageCategory == 'Anak-anak') {
+                // array_push($counter['age']['Anak-anak'], $row->tgl_lahir);
+                $counter['age']['Anak-anak']++;
+            } elseif ($ageCategory == 'Remaja') {
+                $counter['age']['Remaja']++;
+            } elseif ($ageCategory == 'Dewasa') {
+                $counter['age']['Dewasa']++;
+            } elseif ($ageCategory == 'Manula') {
+                $counter['age']['Manula']++;
+            }
+
+            $counter['total']++;
+        }
+
+
+
+        return view('/red_rw/home', [
+            "counter" => $counter,
+            "data_kk" => $data_kk,
+            "laki" => $laki,
+            "perempuan" => $perempuan,
+            "rumah" => $rumah,
+
+        ]);
+    }
+
+    public function warga()
+    {
+        $warga = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->get();
+        return view('/red_rw/warga', ['warga' => $warga]);
+    }
+
+    public function data_kk()
+    {
+        $kk = DB::table('data_kk')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
+            ->get();
+        return view('/red_rw/datakk', ['kk' => $kk]);
+    }
+
+    public function ekonomi()
+    {
+        $ekonomi = DB::table('datainduk')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
+            ->get();
+        return view('/red_rw/ekonomi', ['ekonomi' => $ekonomi]);
+    }
+
+    public function pekerjaan()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
+            ->get();
+        return view('/red_rw/pekerjaan', ['pekerjaan' => $join]);
+    }
+
+    public function pendidikan()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
+            ->get();
+        return view('/red_rw/pendidikan', ['pendidikan' => $join]);
+    }
+
+    public function agama()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_agama', 'md_agama.kd_agama', '=', 'datainduk.kd_agama')
+            ->get();
+        return view('/rw/agama', ['agama' => $join]);
     }
 
 
