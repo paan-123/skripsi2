@@ -46,7 +46,14 @@ class PkkController extends Controller
 
     public function keahlian()
     {
-        return view('/pkk/keahlian');
+        $data_induk =  DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            ->where('datainduk.j_kelamin', '=', "Perempuan")
+            ->get();
+
+
+        return view('/pkk/keahlian', ['data_induk' => $data_induk]);
     }
 
     public function detail()

@@ -78,12 +78,13 @@
                                     @endforeach
 
                                 </tbody>
-                            </table>
-
-                            <table>
-
-
-
+                                <tfoot>
+                                    <th>Nomor Kartu Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nomor RT</th>
+                                        <th>Nama</th>
+                                        <th>Pekerjaan</th>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
