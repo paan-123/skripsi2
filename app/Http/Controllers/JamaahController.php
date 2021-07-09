@@ -365,7 +365,78 @@ class JamaahController extends Controller
 
         return view('/red_pkk/keahlian', ['data_induk' => $data_induk]);
     }
+    //==================================================================================================================//
+    //==============================================RED KARANG TARUNA===================================================//
+    public function RemajaCounter()
+    {
+        $counter = [];
+        $counter['Remaja'] = [];
+        $counter['Remaja']['Total'] = $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->count();
+        $counter['Remaja']['Laki'] = $data_induk = DB::table('datainduk')
+            ->where('j_kelamin', '=', 'Laki-laki')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->count();
+        $counter['Remaja']['Perempuan'] = $data_induk = DB::table('datainduk')
+            ->where('j_kelamin', '=', 'Perempuan')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->count();
+        $counter['Remaja']['Keahlian'] = DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->count();
+        return $counter;
+    }
 
+    public function homekt()
+    {
+        return view('/red_kt/home', ['data' => $this->RemajaCounter()]);
+    }
+
+    public function wargakt()
+    {
+        $data_induk = DB::table('datainduk')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->get();
+
+        return view('/red_kt/warga', ['data_induk' => $data_induk]);
+    }
+
+
+    public function laki()
+    {
+        $data_induk = DB::table('datainduk')
+            ->where('j_kelamin', '=', 'Laki-laki')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->get();
+
+        return view('/red_kt/laki', ['data_induk' => $data_induk]);
+    }
+
+    public function perempuan()
+    {
+        $data_induk = DB::table('datainduk')
+            ->where('j_kelamin', '=', 'Perempuan')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->get();
+
+        return view('/red_kt/perempuan', ['data_induk' => $data_induk]);
+    }
+
+    public function keahliankt()
+    {
+
+        $data_induk =  DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->get();
+
+
+        return view('/red_kt/keahlian', ['data_induk' => $data_induk]);
+    }
     /**
      * Show the form for creating a new resource.
      *

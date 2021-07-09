@@ -95,6 +95,13 @@ Route::middleware(['admin'])->group(function () {
     Route::get('red_pkk/warga', 'App\Http\Controllers\JamaahController@wargapkk');
     Route::get('red_pkk/pekerjaan', 'App\Http\Controllers\JamaahController@pekerjaanpkk');
     Route::get('red_pkk/keahlian', 'App\Http\Controllers\JamaahController@keahlianpkk');
+
+
+    Route::get('red_kt', 'App\Http\Controllers\JamaahController@homekt');
+    Route::get('red_kt/warga', 'App\Http\Controllers\JamaahController@wargakt');
+    Route::get('red_kt/laki', 'App\Http\Controllers\JamaahController@laki');
+    Route::get('red_kt/perempuan', 'App\Http\Controllers\JamaahController@perempuan');
+    Route::get('red_kt/keahlian', 'App\Http\Controllers\JamaahController@keahliankt');
 });
 
 Route::middleware(['karangtaruna'])->group(function () {

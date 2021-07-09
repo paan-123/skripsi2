@@ -119,10 +119,6 @@ class KTController extends Controller
 
     public function RemajaCounter()
     {
-        //Remaja total
-        //Remaja Laki-laki
-        //Remaja Perempuan
-        //Remaja Keahlian
         $counter = [];
         $counter['Remaja'] = [];
         $counter['Remaja']['Total'] = $data_induk = DB::table('datainduk')
@@ -141,10 +137,6 @@ class KTController extends Controller
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
             ->count();
-
-
-        // dd($counter);
-
         return $counter;
     }
 }
