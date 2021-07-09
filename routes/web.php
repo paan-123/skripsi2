@@ -89,6 +89,12 @@ Route::middleware(['admin'])->group(function () {
     Route::get('red_rw/pekerjaan', 'App\Http\Controllers\JamaahController@pekerjaan');
     Route::get('red_rw/pendidikan', 'App\Http\Controllers\JamaahController@pendidikan');
     Route::get('red_rw/agama', 'App\Http\Controllers\JamaahController@agama');
+
+
+    Route::get('red_pkk', 'App\Http\Controllers\JamaahController@homepkk');
+    Route::get('red_pkk/warga', 'App\Http\Controllers\JamaahController@wargapkk');
+    Route::get('red_pkk/pekerjaan', 'App\Http\Controllers\JamaahController@pekerjaanpkk');
+    Route::get('red_pkk/keahlian', 'App\Http\Controllers\JamaahController@keahlianpkk');
 });
 
 Route::middleware(['karangtaruna'])->group(function () {

@@ -60,22 +60,31 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>NIK</th>
-                                        <th>Nama</th>
                                         <th>Nomor RT</th>
+                                        <th>Nama</th>
+                                        <th>Keahlian</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($data_induk as $p )
+                                    @foreach( $data_induk as $p )
                                     <tr>
                                         <td>{{$p->no_kk}}</td>
                                         <td>{{$p->no_ktp}}</td>
-                                        <td>{{$p->nama}}</td>
                                         <td>{{$p->kd_rt}}</td>
+                                        <td>{{$p->nama}}</td>
+                                        <td>{{$p->nama_keahlian}}</td>
                                         
                                     </tr>
                                     @endforeach
 
                                 </tbody>
+                                <tfoot>
+                                    <th>Nomor Kartu Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nomor RT</th>
+                                        <th>Nama</th>\
+                                        <th>Keahlian</th>
+                                </tfoot>
                             </table>
 
                             <table>

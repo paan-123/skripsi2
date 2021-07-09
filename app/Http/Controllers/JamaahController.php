@@ -216,7 +216,7 @@ class JamaahController extends Controller
             return 'Manula';
         endif;
     }
-
+    //=========================================RED RW=======================================//
     public function home()
     {
         $counter = [];
@@ -325,7 +325,46 @@ class JamaahController extends Controller
         return view('/rw/agama', ['agama' => $join]);
     }
 
+    //===============================================================================================================//
+    //==============================================RED PKK==========================================================//
+    public function homepkk()
+    {
 
+        return view('/red_pkk/home');
+    }
+
+    public function wargapkk()
+    {
+        $pk = DB::table('datainduk')
+            ->where('datainduk.j_kelamin', '=', 'Perempuan')
+            ->get();
+        return view(
+            '/red_pkk/warga',
+            ['pk' => $pk]
+        );
+    }
+
+    public function pekerjaanpkk()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
+            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
+            ->where('datainduk.j_kelamin', '=', "Perempuan")
+            ->get();
+        return view('/red_pkk/pekerjaan', ['pkj' => $join]);
+    }
+
+    public function keahlianpkk()
+    {
+        $data_induk =  DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            ->where('datainduk.j_kelamin', '=', "Perempuan")
+            ->get();
+
+
+        return view('/red_pkk/keahlian', ['data_induk' => $data_induk]);
+    }
 
     /**
      * Show the form for creating a new resource.

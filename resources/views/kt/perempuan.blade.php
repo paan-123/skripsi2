@@ -76,9 +76,12 @@
                                     @endforeach
 
                                 </tbody>
-                            </table>
-
-                            <table>
+                                <tfoot>
+                                    <th>Nomor Kartu Keluarga</th>
+                                        <th>NIK</th>
+                                        <th>Nama</th>
+                                        <th>Nomor RT</th>
+                                </tfoot>
 
 
 
