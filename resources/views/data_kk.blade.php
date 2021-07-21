@@ -1,7 +1,5 @@
 @extends('layout/paan')
 @section('title', 'Form')
-
-<body>
     <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
@@ -13,6 +11,7 @@
     <!-- Left Panel -->
 
     <!-- Right Panel -->
+    @section('container')
 
     <div id="right-panel" class="right-panel">
 
@@ -48,6 +47,96 @@
 
 
 
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Tabel Data Kartu Keluarga</strong>
+                        </div>
+                        <div class="card-body">
+
+
+                            {{-- <div id="cFilter row">
+
+                              <div class="col">
+                                <div class="form-group row">
+
+                                  <label class="col-sm-2 col-form-label">Email</label>
+                                  <div class="col-sm-10">
+                                    <select class="select form-control" name="Nama Kepala Keluarga"></select>
+                                  </div>
+
+                                  <label class="col-sm-2 col-form-label">aaa</label>
+                                  <div class="col-sm-10">
+                                    <select class="select form-control" name="Nama Kepala Keluarga"></select>
+                                  </div>
+
+                                </div>
+                              </div>
+
+                              <div class="col">
+                                <div class="form-group row">
+
+                                  <label class="col-sm-2 col-form-label">Email</label>
+                                  <div class="col-sm-10">
+                                    <select class="select form-control" name="Nama Kepala Keluarga"></select>
+                                  </div>
+
+                                  <label class="col-sm-2 col-form-label">Email</label>
+                                  <div class="col-sm-10">
+                                    <select class="select form-control" name="Nama Kepala Keluarga"></select>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div> --}}
+
+
+                            <div id="cFilter" class='container-fluid'>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label class="control-label">Nama Kepala Keluarga</label>
+                                        <select class="select form-control"></select>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label class="control-label">Nomor RT</label>
+                                        <select class="select form-control"></select>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label class="control-label">Nomor RW</label>
+                                        <select class="select form-control"></select>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label class="control-label">Keterangan</label>
+                                        <select class="select form-control"></select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                      
+                            </div>
+
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class='btn' onclick="cFilter()">Filter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-12">
                     <div class="card">
@@ -103,8 +192,29 @@
     <!-- Right Panel -->
 
     <!-- Scripts -->
-    @section('container')
-</body>
-@endsection('container')
+    @section('customscript')
+    <script>
+        
+      $(document).ready(function() {
 
-</html>
+        // $('#bootstrap-data-table').DataTable().columns().every(function() {
+        //     console.log(this)
+        // })
+
+        $('.select').select2();
+
+      });
+
+      function cFilter(){
+          try{
+                tab = $('#bootstrap-data-table').DataTable()
+                $('#cFilter').find('select').each(function(i, e){
+                    tab.column(i).search($(e).val(), true, false).draw()
+                })
+            }catch(er){
+                
+            }
+      }
+    </script>
+    @endsection
+@endsection

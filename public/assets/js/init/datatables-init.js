@@ -15,22 +15,53 @@
 
 	$('#bootstrap-data-table').DataTable({
 		lengthMenu: [[10, 20, 50, -1], [10, 20, 50, "All"]],
-		initComplete: function () {
-			// Apply the search
-			this.api().columns().every(function () {
-				var that = this;
+		// initComplete: function () {
+		// 	// Apply the search
+		// 	this.api().columns().every(function () {
+		// 		var that = this;
 
-				$('input', this.footer()).on('keyup change clear', function () {
-					console.log('jalan')
-					if (that.search() !== this.value) {
-						that
-							.search(this.value)
-							.draw();
-					}
-				});
-			});
-		}
+		// 		$('input', this.footer()).on('keyup change clear', function () {
+		// 			console.log('jalan')
+		// 			if (that.search() !== this.value) {
+		// 				console.log(this.value)
+		// 				that.search(this.value)
+		// 					.draw();
+		// 			}
+		// 		});
+		// 	});
+		// }
 	});
+	var wrap_filter = $('#cFilter')
+	if(wrap_filter.length !== 0){
+		// wrap_filter.each(function(index, e){
+
+		// })
+		let wSelect = document.createElement('select')
+		wSelect.classList.add("select");
+		wSelect.append(document.createElement('option'))
+		// let all_length = 
+		
+		wrap_filter.find('select').each(function(i, e){
+			e.append(document.createElement('option'))
+			$('#bootstrap-data-table').DataTable().column(i).data().unique().sort().each( function ( d ) {
+				let wOption = document.createElement('option')
+				wOption.value = d
+				wOption.innerHTML = d
+				e.append(wOption)
+			} );
+		})
+
+		// for(let i = 0; i <= all_length; i++)
+		// let wOption = document.createElement('option')
+		// wOption.classList.add("mystyle");
+
+	}
+	// $('.select').select2();
+
+	// $('#bootstrap-data-table').DataTable().columns().every(function(){
+	// 	console.log(this)
+	// })
+	// debugger;
 
 	$('#bootstrap-data-transaksi').DataTable({
 		order: [[2, 'asc']],
