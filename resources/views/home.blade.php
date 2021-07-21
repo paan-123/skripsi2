@@ -1,18 +1,9 @@
 @extends('layout/paan')
 @section('title', 'Home')
 
-<!-- Optional JavaScript; choose one of the two! -->
-
-
-<body>
-    <div id="right-panel" class="right-panel">
-        @include("cardbody")
-    </div>
-</body>
-
-
-
-
+@section('container')
+    @include("cardbody")
+@endsection
 
 
 <!-- Option 1: Bootstrap Bundle with Popper -->

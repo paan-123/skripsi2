@@ -1,15 +1,6 @@
 @extends('layout/paan')
 @section('title', 'Data Induk ')
-
-<body>
-
-
-    <aside id="left-panel" class="left-panel">
-
-    </aside><!-- /#left-panel -->
-
-    <div id="right-panel" class="right-panel">
-
+@section('container')
         @if(Session::has('post_delete'))
         <span>{{Session::get('post_delete')}}</span>
         @endif
@@ -89,24 +80,13 @@
             </div><!-- .animated -->
         </div><!-- .content -->
 
-
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
-
-    <!-- Scripts -->
-    @section('container')
+    @endsection
 
 
+    @section('customscript')
     <script type="text/javascript">
         $(document).ready(function() {
             $('#bootstrap-data-table-export').DataTable();
         });
     </script>
-
-    <div class="clearfix"></div>
-
-</body>
-@endsection('container')
-
-</html>
+    @endsection
