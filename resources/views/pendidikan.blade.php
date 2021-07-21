@@ -92,7 +92,7 @@
             </div><!-- .animated -->
         </div><!-- .content -->
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
 
 
 

@@ -22,13 +22,13 @@
         <div class="breadcrumbs">
             <div class="breadcrumbs-inner">
                 <div class="row m-0">
-                    <div class="col-sm-4">
+                    <div class="col-sm-8s">
                         <div class="page-header float-left">
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="home">Dashboard</a></li>
-                                    <li><a href="#">Transaksi</a></li>
-                                    <li><a href="#">Input Data Kartu Keluarga</a></li>
+                                    <li><a href="#">Data Kartu Keluarga</a></li>
+                                    <li><a href="#">Edit Kartu Keluarga</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 </div> --}}
                                 <div class="card-body card-block">
                                     <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                        <h2><strong>Input Data Kartu Keluarga</strong></h2>
+                                        <h2><strong>Edit Data Kartu Keluarga</strong></h2>
                                         <hr> <br>
                                         <div class="row justify-content-md-center">
                                             <div class="col-lg-6">

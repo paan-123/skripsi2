@@ -60,10 +60,10 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>Nama Kepala Keluarga</th>
-                                        <th>Nomor RT</th>
-                                        <th>Nomor RW</th>
+                                        <th>RT</th>
+                                        <th>RW</th>
                                         <th>Keterangan</th>
-                                        <th>Action</th>
+                                        {{-- <th>Action</th> --}}
 
 
                                     </tr>
@@ -77,10 +77,10 @@
                                         <td>{{$dkk->no_rt}}</td>
                                         <td>{{$dkk->no_rw}}</td>
                                         <td>{{$dkk->keterangan}}</td>
-                                        <td>
-                                            <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info">EDIT</a>
-                                            <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger">DELETE</a>
-                                        </td>
+                                        {{-- <td>
+                                            <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info" id="edit">EDIT</a>
+                                            <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger" id="delete">DELETE</a>
+                                        </td> --}}
                                     </tr>
                                     @endforeach
 
@@ -94,7 +94,7 @@
             </div><!-- .animated -->
         </div><!-- .content -->
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
 
 
 

@@ -26,8 +26,8 @@ class PostDataKK extends Controller
             'keterangan' => $request->keterangan,
 
         ]);
-
-        return back()->with('post_add_dkk', 'Data berhasil ditambahkan');
+        return redirect('/transaksi');
+        // return back()->with('post_add_dkk', 'Data berhasil ditambahkan');
     }
 
     public function tambahAnggota(Request $no_kk)
@@ -135,6 +135,7 @@ class PostDataKK extends Controller
             ->select('nama', 'no_kk', 'status_hub_kk', 'j_kelamin', 'tmp_lahir', 'tgl_lahir', 'kd_agama', 'kd_pendidikan', 'kd_pekerjaan')
             ->where('no_kk', $no_kk)
             ->get();
+
         return json_encode($tampil);
     }
 }

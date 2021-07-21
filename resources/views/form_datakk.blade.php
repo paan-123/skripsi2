@@ -25,7 +25,7 @@
                     <div class="row">
 
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     Form Input <strong>Data Kartu Keluarga</strong>
@@ -44,6 +44,7 @@
                                                     <option value="0">Default</option>
                                                     <option value="1">RT 1</option>
                                                     <option value="2">RT 2</option>
+                                                    <option value="13">RT 13</option>
 
                                                 </select>
                                             </div>
@@ -53,7 +54,6 @@
                                             <div class="col-12 col-md-9">
                                                 <select name="norw" id="select" class="form-control">
                                                     <option value="1">RW 1</option>
-                                                    <option value="2">RW 2</option>
 
                                                 </select>
                                             </div>
@@ -71,10 +71,10 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="levelekonomi" id="select" class="form-control">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - Menengah</option>
-                                                    <option value="2">2 - Menengah Keatas</option>
-                                                    <option value="3">3 - Menengah Kebawah</option>
+                                                    <option value="0">Default</option>
+                                                    <option value="1">Menengah</option>
+                                                    <option value="2">Menengah Keatas</option>
+                                                    <option value="3">Menengah Kebawah</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@
             </div><!-- .animated -->
         </div><!-- .content -->
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
 
 
 

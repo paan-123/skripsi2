@@ -48,8 +48,8 @@ class PostDataInduk extends Controller
             'no_ktp'            => $request->nomorktp,
             'status'            => $request->status,
         ]);
-
-        return back()->with('post_add', 'Data berhasil ditambahkan');
+        return redirect('/data_induk');
+        // return back()->with('post_add', 'Data berhasil ditambahkan');
     }
 
 
@@ -102,6 +102,6 @@ class PostDataInduk extends Controller
     public function deletePost($kd_induk)
     {
         DB::table('datainduk')->where('kd_induk', $kd_induk)->delete();
-        return back()->with('post_delete', 'Post Berhasil Dihapus');
+        return back()->with('post_delete');
     }
 }
