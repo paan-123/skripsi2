@@ -94,39 +94,36 @@
                             <div id="cFilter" class='container-fluid'>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label class="control-label">Nama Kepala Keluarga</label>
-                                        <select class="select form-control"></select>
-                                      </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Nama Kepala Keluarga</label>
+                                            <select class="select form-control"></select>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label class="control-label">Nama</label>
-                                        <select class="select form-control"></select>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label class="control-label">Nomor RT</label>
-                                        <select class="select form-control"></select>
-                                      </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Nama</label>
+                                            <select class="select form-control"></select>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label class="control-label">Nomor RW</label>
-                                        <select class="select form-control"></select>
-                                      </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Nomor RT</label>
+                                            <select class="select form-control"></select>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                      <div class="form-group">
-                                        <label class="control-label">Keterangan</label>
-                                        <select class="select form-control"></select>
-                                      </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Nomor RW</label>
+                                            <select class="select form-control"></select>
+                                        </div>
                                     </div>
-                                  </div>
-                                      
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Keterangan</label>
+                                            <select class="select form-control"></select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
@@ -149,10 +146,10 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>Nama Kepala Keluarga</th>
-                                        <th>Nomor RT</th>
-                                        <th>Nomor RW</th>
+                                        <th>RT</th>
+                                        <th>RW</th>
                                         <th>Keterangan</th>
-                                        <th>Action</th>
+                                        {{-- <th>Action</th> --}}
 
 
                                     </tr>
@@ -166,10 +163,10 @@
                                         <td>{{$dkk->no_rt}}</td>
                                         <td>{{$dkk->no_rw}}</td>
                                         <td>{{$dkk->keterangan}}</td>
-                                        <td>
-                                            <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info">EDIT</a>
-                                            <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger">DELETE</a>
-                                        </td>
+                                        {{-- <td>
+                                            <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info" id="edit">EDIT</a>
+                                            <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger" id="delete">DELETE</a>
+                                        </td> --}}
                                     </tr>
                                     @endforeach
 
@@ -194,27 +191,21 @@
     <!-- Scripts -->
     @section('customscript')
     <script>
-        
-      $(document).ready(function() {
+        $(document).ready(function() {
+            $('.select').select2();
 
-        // $('#bootstrap-data-table').DataTable().columns().every(function() {
-        //     console.log(this)
-        // })
+        });
 
-        $('.select').select2();
-
-      });
-
-      function cFilter(){
-          try{
+        function cFilter() {
+            try {
                 tab = $('#bootstrap-data-table').DataTable()
-                $('#cFilter').find('select').each(function(i, e){
+                $('#cFilter').find('select').each(function(i, e) {
                     tab.column(i).search($(e).val(), true, false).draw()
                 })
-            }catch(er){
-                
+            } catch (er) {
+
             }
-      }
+        }
     </script>
     @endsection
 @endsection

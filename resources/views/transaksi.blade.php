@@ -27,8 +27,8 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="home">Dashboard</a></li>
-                                    <li><a href="#">Transaksi</a></li>
-                                    <li><a href="#">Input Data Kartu Keluarga</a></li>
+                                    <li><a href="#">Data Jamaah</a></li>
+                                    <li><a href="#">Data Kepala Keluarga</a></li>
                                 </ol>
                             </div>
                         </div>
@@ -48,11 +48,11 @@
 
 
                         <div class="col-lg-12">
-                            <div class="card">
+                            {{-- <div class="card">
                                 
                                 <div class="card-body card-block">
                                     <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                        <h2><strong>Input Data Kartu Keluarga</strong></h2>
+                                        <h4><strong>Input Data Kartu Keluarga</strong></h4>
                                         <hr> <br>
                                         <div class="row justify-content-md-center">
                                             <div class="col-lg-6">
@@ -120,18 +120,22 @@
                                     </form>
 
                                 </div>
-                            </div>
+                            </div> --}}
 
                                 <div class="card">
+                                    
                                     <div class="card-body">
+                                     
+                                        <a href="form_datakk" class="btn btn-success" >Tambah Data Kartu Keluarga</a> <br>
+                                        <hr>
                                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                             
                                             <thead>
                                                 <tr>
                                                     <th>Nomor Kartu Keluarga</th>
                                                     <th>Nama Kepala Keluarga</th>
-                                                    <th>Nomor RW</th>
-                                                    <th>Nomor RT</th>
+                                                    <th>RW</th>
+                                                    <th>RT</th>
                                                     <th>Keterangan</th>
                                                     <th>Action</th>
             
@@ -147,9 +151,9 @@
                                                     <td>{{$join->no_rt}}</td>
                                                     <td>{{$join->keterangan}}</td>
                                                     <td>
-                                                        <a href="transaksi_datainduk/{{$join->no_kk}}"><i class="fa fa-plus-circle" style="font-size: 24.32446px; color:rgb(8, 106, 233);"></i></a>
-                                                        <a href="/edit_dkk/{{$join->no_kk}}"><i class="fa fa-edit" style="font-size: 24.32446px; color:rgb(22, 206, 62);"></i></a>
-                                                        <a href="/delete_data_kk/{{$join->no_kk}}"><i class="fa fa-trash" style="font-size: 24.32446px; color:rgb(247, 10, 10);"></i></a>
+                                                        <a href="transaksi_datainduk/{{$join->no_kk}}" class="btn btn-primary" id="edit">TAMBAH ANGGOTA</a>
+                                                        <a href="/edit_dkk/{{$join->no_kk}}" class="btn btn-warning" id="edit">EDIT</a>
+                                                        <a href="/delete_data_kk/{{$join->no_kk}}" class="btn btn-danger" id="delete">HAPUS</a>
                                                     </td>
                                                 </tr>
                                                 @endforeach 
@@ -213,8 +217,7 @@
                                             <td>{{$did->kd_pekerjaan}}</td>
                                              --}}
                                         {{--   --}}
-
-                                    </tbody>                                       
+                                    </tbody>
                                 </table>
                             </div>
                     
@@ -228,7 +231,7 @@
         
             
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
 
 
 

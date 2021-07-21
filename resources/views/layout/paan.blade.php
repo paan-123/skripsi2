@@ -179,6 +179,22 @@
                 /* Firefox 16+, IE 10+, Opera */
             }
         }
+
+        th {
+            font-size: 14px;
+        }
+
+        td{
+            font-size: 14px;
+        }
+
+        #edit{
+            font-size: 10px;
+        }
+
+        #delete{
+            font-size: 10px;
+        }
     </style>
 </head>
 
@@ -198,45 +214,46 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
-                    </li>
-                    <li class="menu-title">TRANSAKSI DATA</li><!-- /.menu-title -->
+                        <a href="/"><i class="menu-icon fa fa-laptop"></i><strong>Dashboard</strong></a>
+                    </li> 
+                
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Transaksi</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('transaksi')}}">Data Kartu Keluarga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('data_induk')}}">Pindah Data KK</a></li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-id-badge"></i><strong>Data Jamaah</strong></a>
+                        <ul class="sub-menu  dropdown-menu">
+                            <li><a href="{{ url ('transaksi')}}">Data Kartu Keluarga</a></li>
+                            <li><a href="{{ url ('data_induk')}}">Data Warga</a></li>
+                            <li><a href="{{ url ('data_induk')}}">Pindah KK</a></li>
                             
                         </ul>
                     </li>
                    
 
-                    <li class="menu-title"> TAMPILKAN DATA</li><!-- /.menu-title -->
+                    
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Data Lainnya</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-info-circle"></i><strong>Tampilkan Data</strong></a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('data_kk')}}">Data Kartu Keluarga</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url ('data_induk')}}">Data Induk</a></li>
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url ('data_keahlian')}}">Data Keahlian Warga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('golongan_darah')}}">Data Golongan Darah</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('pekerjaan')}}">Data Pekerjaan Warga</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="{{ url ('pendidikan')}}">Data Pendidikan Warga</a></li>
+                            <li><a href="{{ url ('data_kk')}}">Tampil KK</a></li>
+                            <li><a href="{{ url ('data_induk')}}">Tampil Warga</a></li>
+                            <li><a href="{{ url ('data_keahlian')}}">Tampil Keahlian</a></li>
+                            <li><a href="{{ url ('golongan_darah')}}">Tampil Golongan Darah</a></li>
+                            <li><a href="{{ url ('pekerjaan')}}">Tampil Pekerjaan</a></li>
+                            <li><a href="{{ url ('pendidikan')}}">Tampil Pendidikan</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Master Data</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-database"></i><strong>Data Master</strong></a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rumah')}}">MD Rumah</a></li>
-                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rw')}}">MD RW</a></li>
-                            <li><i class="fa fa-table"></i><a href="{{ url ('md_rt')}}">MD RT</a></li>
+                            <li><a href="{{ url ('md_rumah')}}">Data Master Rumah</a></li>
+                            <li><a href="{{ url ('md_rw')}}">Data Master RW</a></li>
+                            <li><a href="{{ url ('md_rt')}}">Data Master RT</a></li>
                         </ul>
                     </li>
                     
                     
                     
                     
-                    <li class="menu-title">INPUT</li><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown">
+                   
+                    {{-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Formulir</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-th"></i><a href="{{ url ('form_datakk')}}">Data Kartu Keluarga</a></li>
@@ -251,7 +268,7 @@
                             <li><i class="fa fa-table"></i><a href="{{ url ('md_rw')}}">MD RW</a></li>
                             <li><i class="fa fa-table"></i><a href="{{ url ('md_rt')}}">MD RT</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     
                     
 
@@ -293,12 +310,7 @@
                 </div>
             </div>
         </header>
-        <!-- /#header -->
-        <!-- Content -->
-
-        
-
-        <!-- /.content -->
+      
         <div class="clearfix"></div>
     </div>
 
@@ -358,7 +370,23 @@
             setTimeout(() => {
                 document.querySelector('#loader-wrapper').remove()
             }, 300);
+
+            try {
+                $('.select').select2();
+            } catch (error) {
+                
+            }
         })
+        function cFilter(){
+            try{
+                tab = $('#bootstrap-data-table').DataTable()
+                $('#cFilter').find('select').each(function(i, e){
+                    tab.column(i).search($(e).val(), true, false).draw()
+                })
+            }catch(er){
+                
+            }
+        }
     </script>
 </div>
 </body>

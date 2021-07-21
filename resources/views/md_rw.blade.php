@@ -94,7 +94,7 @@
         });
     </script>
 
-    <div class="clearfix"></div>
+    {{-- <div class="clearfix"></div> --}}
 
 </body>
 @endsection('container')

@@ -35,7 +35,7 @@
 
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Kode Induk</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="kd_induk" name="kodeinduk" placeholder="Kode Induk" class="form-control" required value="{{$post->kd_induk}}"></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="kd_induk" name="kodeinduk" placeholder="Kode Induk" class="form-control" required value="{{$post->kd_induk}}" readonly></div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nomor Kartu Keluarga</strong></label></div>
@@ -271,6 +271,7 @@
                                                     <option value="0">0</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
+                                                    <option value="13">13</option>
 
                                                 </select>
                                             </div>
@@ -301,7 +302,7 @@
             </div><!-- .animated -->
         </div><!-- .content -->
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
 
 
 

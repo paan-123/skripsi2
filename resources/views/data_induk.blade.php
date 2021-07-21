@@ -19,7 +19,7 @@
                     <div class="col-sm-4">
                         <div class="page-header float-left">
                             <div class="page-title">
-                                <h1>TABEL DATA INDUK</h1>
+                                <h1>TABEL DATA WARGA</h1>
                             </div>
                         </div>
                     </div>
@@ -44,18 +44,19 @@
 
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Tabel Data Induk</strong>
-                            </div>
+                            
+                            
                             <div class="card-body">
+                                <a href="form_datainduk" class="btn btn-success" >Tambah Data Warga</a> <br>
+                                        <hr>
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th>Nomor KK</th>
                                             <th>NIK</th>
                                             <th>Nama</th>
-                                            <th>Nama Panggilan</th>
-                                            <th>Tempat Tanggal Lahir</th>
+                                            {{-- <th>Nama Panggilan</th> --}}
+                                            <th>TTL</th>
                                             <th>Jenis Kelamin</th>
                                             <th>Status Hubungan</th>
                                             <th>Action</th>
@@ -67,13 +68,13 @@
                                             <td>{{$did->no_kk}}</td>
                                             <td>{{$did->no_ktp}}</td>
                                             <td>{{$did->nama}}</td>
-                                            <td>{{$did->nm_panggilan}}</td>
+                                            {{-- <td>{{$did->nm_panggilan}}</td> --}}
                                             <td>{{$did->tmp_lahir}}, {{$did->tgl_lahir}}</td>
                                             <td>{{$did->j_kelamin}}</td>
                                             <td>{{$did->status_hub_kk}}</td>
                                             <td>
-                                                <a href="/edit_data_induk/{{$did->kd_induk}}" class="btn btn-info">EDIT</a>
-                                                <a href="/delete_data_induk/{{$did->kd_induk}}" class="btn btn-danger">DELETE</a>
+                                                <a href="/edit_data_induk/{{$did->kd_induk}}" class="btn btn-warning" id="edit">EDIT</a>
+                                                <a href="/delete_data_induk/{{$did->kd_induk}}" class="btn btn-danger"id="delete">DELETE</a>
                                             </td>
                                         </tr>
                                         @endforeach

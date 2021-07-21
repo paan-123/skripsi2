@@ -13,6 +13,14 @@
         text-align: center;
     }
 
+    .content {
+        height: 950px;
+    }
+
+
+    .card-body {
+        height: 500px;
+    }
     .count-text {
         font-size: 14px;
         font-weight: normal;
