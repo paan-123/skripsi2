@@ -1,5 +1,11 @@
-@extends('red_kt/layout')
-@section('title', 'Home')
+@extends('red_kt/layout',[
+"InfoPage" => [
+"Navbar" => '/home'
+]
+])
+@section('title', 'Dashboard')
+
+@section('container')
 <style>
     .counter {
         background-color: #f5f5f5;
@@ -31,106 +37,93 @@
         color: #00c3ff;
     }
 </style>
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-
-<body>
-    <aside id="left-panel" class="left-panel"></aside>
-    <div id="right-panel" class="right-panel">
-
-        <div class="breadcrumbs">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col-sm-4">
-                        <div class="page-header float-left">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    <li><a href="#">Dashboard</a></li>
-                                    {{-- <li><a href="#">Transaksi</a></li>
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            {{-- <li><a href="#">Transaksi</a></li>
                                     <li><a href="#">Input Data Kartu Keluarga</a></li> --}}
-                                </ol>
-                            </div>
-                        </div>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="content">
-            <div class="animated fadeIn">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body card-block">
-                                <h2><strong>Rekap Data Pemuda Karang Taruna</strong></h2>
-                                <hr> <br>
-                                <div class="row justify-content-md-center">
-                                    <section class="wow fadeIn animated"
-                                        style="visibility: visible; animation-name: fadeIn;">
-                                        <div class="container">
-                                            <div class="row">
-                                                <br />
-                                                <div class="col text-center">
-                                                    <h2>Rekap Data</h2>
-                                                    <p>Data Warga Pemuda dan Anggota Karang Taruna</p>
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body card-block">
+                        <h2><strong>Rekap Data Pemuda Karang Taruna</strong></h2>
+                        <hr> <br>
+                        <div class="row justify-content-md-center">
+                            <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="container">
+                                    <div class="row">
+                                        <br />
+                                        <div class="col text-center">
+                                            <h2>Rekap Data</h2>
+                                            <p>Data Warga Pemuda dan Anggota Karang Taruna</p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <a href="{{ url('red_kt/warga') }}">
+                                                <div class="counter">
+                                                    <i class="fa fa-users fa-2x">
+                                                        <br>{{$data['Remaja']['Total']}}</i>
+                                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                                    <p class="count-text ">Jumlah Pemuda</p>
                                                 </div>
-                                            </div>
-                                            <br>
-                                            <div class="row text-center">
-                                                <div class="col">
-                                                    <a href="{{ url('red_kt/warga') }}">
-                                                        <div class="counter">
-                                                            <i class="fa fa-users fa-2x">
-                                                                <br>{{$data['Remaja']['Total']}}</i>
-                                                            <h2 class="timer count-title count-number" data-to="100"
-                                                                data-speed="1500"></h2>
-                                                            <p class="count-text ">Jumlah Pemuda</p>
-                                                        </div>
-                                                    </a>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="{{ url('red_kt/laki') }}">
+                                                <div class="counter">
+                                                    <i class="fa fa-male fa-2x">
+                                                        <br>{{$data['Remaja']['Laki']}}</i>
+                                                    <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                                                    <p class="count-text ">Pemuda Laki-laki</p>
                                                 </div>
-                                                <div class="col">
-                                                    <a href="{{ url('red_kt/laki') }}">
-                                                        <div class="counter">
-                                                            <i class="fa fa-male fa-2x">
-                                                                <br>{{$data['Remaja']['Laki']}}</i>
-                                                            <h2 class="timer count-title count-number" data-to="1700"
-                                                                data-speed="1500"></h2>
-                                                            <p class="count-text ">Pemuda Laki-laki</p>
-                                                        </div>
-                                                    </a>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="{{ url('red_kt/perempuan') }}">
+                                                <div class="counter">
+                                                    <i class="fa fa-female fa-2x">
+                                                        <br>{{$data['Remaja']['Perempuan']}}</i>
+                                                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                    <p class="count-text ">Pemuda Perempuan</p>
                                                 </div>
-                                                <div class="col">
-                                                    <a href="{{ url('red_kt/perempuan') }}">
-                                                        <div class="counter">
-                                                            <i class="fa fa-female fa-2x">
-                                                                <br>{{$data['Remaja']['Perempuan']}}</i>
-                                                            <h2 class="timer count-title count-number" data-to="11900"
-                                                                data-speed="1500"></h2>
-                                                            <p class="count-text ">Pemuda Perempuan</p>
-                                                        </div>
-                                                    </a>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="{{ url('red_kt/kt') }}">
+                                                <div class="counter">
+                                                    <i class="fa fa-briefcase fa-2x"> <br></i>
+                                                    <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                                                    <p class="count-text ">Anggota Karang Taruna</p>
                                                 </div>
-                                                <div class="col">
-                                                    <a href="{{ url('red_kt/kt') }}">
-                                                        <div class="counter">
-                                                            <i class="fa fa-briefcase fa-2x"> <br></i>
-                                                            <h2 class="timer count-title count-number" data-to="157"
-                                                                data-speed="1500"></h2>
-                                                            <p class="count-text ">Anggota Karang Taruna</p>
-                                                        </div>
-                                                    </a>
+                                            </a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="{{ url('red_kt/keahlian') }}">
+                                                <div class="counter">
+                                                    <i class="fa fa-book fa-2x"><br>{{$data['Remaja']['Keahlian']}}</i>
+                                                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                    <p class="count-text ">Berdasarkan Keahlian</p>
                                                 </div>
-                                                <div class="col">
-                                                    <a href="{{ url('red_kt/keahlian') }}">
-                                                        <div class="counter">
-                                                            <i
-                                                                class="fa fa-book fa-2x"><br>{{$data['Remaja']['Keahlian']}}</i>
-                                                            <h2 class="timer count-title count-number" data-to="11900"
-                                                                data-speed="1500"></h2>
-                                                            <p class="count-text ">Berdasarkan Keahlian</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                    {{-- <div class="col">
+                                            </a>
+                                        </div>
+                                        {{-- <div class="col">
                                                     <div class="counter">
                                                     <i class="fa fa-child fa-2x"> <br></i>
                                                     <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
@@ -156,29 +149,27 @@
                                                 <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
                                                 <p class="count-text ">Manula</p>
                                                 </div></div> --}}
-                                            </div>
-                                        </div>
-                                    </section>
+                                    </div>
                                 </div>
-
-                            </div>
+                            </section>
                         </div>
+
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="clearfix"></div>
     </div>
-</body>
 
+</div>
+@endsection
 
+@section('customscript')
 <script>
-    (function ($) {
-        $.fn.countTo = function (options) {
+    (function($) {
+        $.fn.countTo = function(options) {
             options = options || {};
 
-            return $(this).each(function () {
+            return $(this).each(function() {
                 // set options for current element
                 var settings = $.extend({}, $.fn.countTo.defaults, {
                     from: $(this).data('from'),
@@ -216,7 +207,7 @@
 
                     render(value);
 
-                    if (typeof (settings.onUpdate) == 'function') {
+                    if (typeof(settings.onUpdate) == 'function') {
                         settings.onUpdate.call(self, value);
                     }
 
@@ -226,7 +217,7 @@
                         clearInterval(data.interval);
                         value = settings.to;
 
-                        if (typeof (settings.onComplete) == 'function') {
+                        if (typeof(settings.onComplete) == 'function') {
                             settings.onComplete.call(self, value);
                         }
                     }
@@ -255,10 +246,10 @@
         }
     }(jQuery));
 
-    jQuery(function ($) {
+    jQuery(function($) {
         // custom formatting example
         $('.count-number').data('countToOptions', {
-            formatter: function (value, options) {
+            formatter: function(value, options) {
                 return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
             }
         });
@@ -274,4 +265,4 @@
     });
 </script>
 
-</html>
+@endsection

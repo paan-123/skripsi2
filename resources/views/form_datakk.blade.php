@@ -1,30 +1,18 @@
-@extends('layout/paan')
-@section('title', 'Form')
+@extends('layout/paan',[
+'InfoPage' => [
+'Navbar' => '/transaksi'
+]])
+@section('title', 'Form Data KK')
 
-<body>
-    <!-- Left Panel -->
-
-    <aside id="left-panel" class="left-panel">
-
-
-    </aside><!-- /#left-panel -->
-
-
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-        <div class="content">
-            <div class="animated fadeIn">
-                @if(Session::has('post_add'))
-                <span>{{Session::get('post_add')}}</span>
-                @endif
+@section('container')
+<div class="content">
+    <div class="animated fadeIn">
+        <div @if(Session::has('post_add')) <span>{{Session::get('post_add')}}</span>
+            @endif
+            <div class="col-md-12">
                 <form method="post" action="{{route('savedkk.post')}}">
                     @csrf
                     <div class="row">
-
-
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
@@ -90,25 +78,10 @@
                             </div>
 
                         </div>
-
-
-
                     </div>
-
                 </form>
-            </div><!-- .animated -->
-        </div><!-- .content -->
-
-        {{-- <div class="clearfix"></div> --}}
-
-
-
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
-
-    <!-- Scripts -->
-
-</body>
-
-</html>
+            </div>
+        </div><!-- .animated -->
+    </div>
+</div><!-- .content -->
+@endsection
