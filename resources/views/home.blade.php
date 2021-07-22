@@ -1,4 +1,7 @@
-@extends('layout/paan')
+@extends('layout/paan',[
+'InfoPage' => [
+'Navbar' => '/home'
+]])
 @section('title', 'Home')
 
 @section('container')

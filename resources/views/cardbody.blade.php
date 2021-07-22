@@ -21,6 +21,7 @@
     .card-body {
         height: 500px;
     }
+
     .count-text {
         font-size: 14px;
         font-weight: normal;
@@ -47,8 +48,7 @@
                         <h4>Selamat Datang, Admin</h4>
                         <hr> <br>
                         <div class="row justify-content-md-center">
-                            <section class="wow fadeIn animated"
-                                style="visibility: visible; animation-name: fadeIn;">
+                            <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
                                 <div class="container">
                                     <div class="row">
                                         <br />
@@ -61,43 +61,37 @@
                                     <div class="row text-center">
                                         <div class="col">
                                             <a href="{{ url('/red_rw') }}">
-                                            <div class="counter">
-                                                <i class="fa fa-users fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="100"
-                                                    data-speed="1500"></h2>
-                                                <p class="count-text ">Halaman Rukun Warga</p>
+                                                <div class="counter">
+                                                    <i class="fa fa-users fa-2x"> <br></i>
+                                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                                    <p class="count-text ">Halaman Rukun Warga</p>
                                             </a>
-                                            </div>
                                         </div>
-                                        <div class="col">
-                                            <a href="{{ url('/red_pkk') }}">
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{ url('/red_pkk') }}">
                                             <div class="counter">
                                                 <i class="fa fa-female fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="1700"
-                                                    data-speed="1500"></h2>
+                                                <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
                                                 <p class="count-text ">Halaman PKK/KWT</p>
                                             </div>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a href="{{ url('/red_kt') }}">
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{ url('/red_kt') }}">
                                             <div class="counter">
                                                 <i class="fa fa-child fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="11900"
-                                                    data-speed="1500"></h2>
+                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
                                                 <p class="count-text ">Halaman Karang Taruna</p>
                                             </div>
-                                            </a>
-                                        </div>                       
+                                        </a>
                                     </div>
                                 </div>
                             </section>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>

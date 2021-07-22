@@ -1,4 +1,8 @@
-@extends('layout/paan')
+@extends('layout/paan',[
+    "InfoPage" => [
+        "Navbar" => '/data_kk'
+    ]
+])
 @section('title', 'Data Kartu Keluarga')
 
 @section('container')
@@ -35,7 +39,7 @@
                         <strong class="card-title">Tabel Data Kartu Keluarga</strong>
                     </div>
                     <div class="card-body">
-                        <div id="cFilter" class='container-fluid'>
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -128,20 +132,6 @@
 <!-- Scripts -->
 @section('customscript')
 <script>
-    $(document).ready(function() {
-        $('.select').select2();
 
-    });
-
-    function cFilter() {
-        try {
-            tab = $('#bootstrap-data-table').DataTable()
-            $('#cFilter').find('select').each(function(i, e) {
-                tab.column(i).search($(e).val(), true, false).draw()
-            })
-        } catch (er) {
-
-        }
-    }
 </script>
 @endsection
