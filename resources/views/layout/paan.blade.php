@@ -112,6 +112,7 @@
                                         <li class="{{ '/transaksi'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/transaksi')}}">Data Kartu Keluarga</a>
                                         </li>
+                                        
                                         <li class="{{ '/data_induk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/data_induk')}}">Data Induk
                                                 <span class="badge badge-pill badge-success"></span>

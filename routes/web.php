@@ -5,6 +5,7 @@ use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\JamaahController;
+use App\Http\Controllers\PostKeahlian;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\PostDataKK;
 use App\Http\Controllers\PostDataInduk;
@@ -37,7 +38,12 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/data_induk', 'App\Http\Controllers\JamaahController@datainduk');
     Route::get('/datainduk', 'App\Http\Controllers\JamaahController@data_induk');
     Route::get('/ibadah', 'App\Http\Controllers\JamaahController@ibadah');
-    Route::get('/keahlian', 'App\Http\Controllers\JamaahController@ibadah');
+
+
+    Route::get('/keahlian', 'App\Http\Controllers\JamaahController@keahlian');
+    Route::get('/form_keahlian', 'App\Http\Controllers\JamaahController@keahlian');
+    Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
+    Route::post('/add-post-keahlian', [PostKeahlian::class, 'savePostKeahlian'])->name('keahlian.save');
 
     /////////TAMPIL DATA///////////
     Route::get('/md_rumah', 'App\Http\Controllers\JamaahController@mdrumah');

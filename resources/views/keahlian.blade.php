@@ -3,7 +3,7 @@
         'Navbar' => '/keahlian'
         ]
     ])
-@section('title', 'Data Induk')
+@section('title', 'Data Keahlian')
 
 @section('container')
 @if(Session::has('post_delete'))
@@ -15,7 +15,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>TABEL DATA KEAHLIAN</h1>
+                        <h1>TABEL DATA WARGA</h1>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Data Jamaah</a></li>
-                            <li class="active">Data Keahlian</li>
+                            <li class="active">Data Induk</li>
                         </ol>
                     </div>
                 </div>
@@ -43,35 +43,34 @@
 
 
                     <div class="card-body">
-                        <a href="form_datainduk" class="btn btn-success">Tambah Data Keahlian</a> <br>
+                        <a href="form_keahlian" class="btn btn-success">Tambah Data Keahlian</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>No. KK</th>
+                                    <th>Nomor KK</th>
                                     <th>NIK</th>
-                                    <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Nama Panggilan</th>
-                                    <th>Keahlian</th>
-                                    <th>Level Sertifikat</th>
-                                    <th>Deskripsi</th>
+                                    {{-- <th>Nama Panggilan</th> --}}
+                                    <th>TTL</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Status Hubungan</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- @foreach($keahlian as $k)
+                                {{-- @foreach($data_induk as $did)
                                 <tr>
-                                    <td>{{$k->no_kk}}</td>
-                                    <td>{{$k->no_ktp}}</td>
-                                    <td>{{$k->kd_rt}}</td>
-                                    <td>{{$k->nama}}</td>
-                                    <td>{{$k->nm_panggilan}}</td>
-                                    <td>{{$k->nama_keahlian}}</td>
-                                    <td>{{$k->level_sertifikat}}</td>
-                                    <td>{{$k->deskripsi_sertifikat}}</td>
+                                    <td>{{$did->no_kk}}</td>
+                                    <td>{{$did->no_ktp}}</td>
+                                    <td>{{$did->nama}}</td>
+                                    <td>{{$did->nm_panggilan}}</td>
+                                    <td>{{$did->tmp_lahir}}, {{$did->tgl_lahir}}</td>
+                                    <td>{{$did->j_kelamin}}</td>
+                                    <td>{{$did->status_hub_kk}}</td>
                                     <td>
-                                        <a href="/edit_data_induk/{{$k->kd_induk}}" class="btn btn-warning" id="edit">EDIT</a>
-                                        <a href="/delete_data_induk/{{$k->kd_induk}}" class="btn btn-danger" id="delete">DELETE</a>
+                                        <a href="/edit_data_induk/{{$did->kd_induk}}" class="btn btn-warning" id="edit">EDIT</a>
+                                        <a href="/delete_data_induk/{{$did->kd_induk}}" class="btn btn-danger" id="delete">DELETE</a>
                                     </td>
                                 </tr>
                                 @endforeach --}}

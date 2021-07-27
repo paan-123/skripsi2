@@ -13,19 +13,22 @@ class PostKeahlian extends Controller
     }
     public function savePostKeahlian(Request $request)
     {
+        // dd($request->all());
         DB::table('data_keahlian_warga')->insert([
 
-            'kd_induk' => $request->nomorkk,
-            'kd_keahlian' => $request->nort,
-            'is_sertifikat' => $request->nort,
-            'deskripsi_sertifikat' => $request->namakk,
-            'level_sertifikat' => $request->koderumah,
+            'kd_induk' => $request->kd_induk,
+            'kd_keahlian' => $request->kd_keahlian,
+            'is_sertifikat' => $request->sertifikat,
+            'deskripsi_sertifikat' => $request->deskripsi,
+            'level_sertifikat' => $request->level,
             'keterangan' => $request->keterangan,
 
         ]);
+
         return redirect('/keahlian');
         // return back()->with('post_add_dkk', 'Data berhasil ditambahkan');
     }
+
 
     public function editPost($kd_induk)
     {

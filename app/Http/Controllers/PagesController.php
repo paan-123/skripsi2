@@ -61,7 +61,6 @@ class PagesController extends Controller
     }
     public function transaksi()
     {
-
         $data = DB::table('data_induk')
             ->leftJoin('data_kk', 'data_kk.no_kk', '=', 'data_induk.no_kk')
             ->get();

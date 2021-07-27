@@ -94,14 +94,13 @@ class PostDataKK extends Controller
 
     public function editPost($no_kk)
     {
-        $post = DB::table('data_kk')->where('no_kk', $no_kk)->first();
-        return view('edit_dkk', compact('post'));
+        $edit = DB::table('data_kk')->where('no_kk', $no_kk)->first();
+        return view('edit_dkk', compact('edit'));
     }
 
 
     public function updatePost(Request $request)
     {
-
 
         DB::table('data_kk')->where('no_kk', $request->id)->update(
 
@@ -117,9 +116,7 @@ class PostDataKK extends Controller
 
         );
         $post = DB::table('data_kk')->where('no_kk', $request->nomorkk)->first();
-        return view('edit_dkk', compact('post'))->with('post_updatedkk', 'Data Updated');
-        // dd($request->post());
-        // return ba()->with('post_updatedkk', 'Data Berhasil Dirubah');
+        return redirect('transaksi');
     }
 
     public function deletePost($no_kk)

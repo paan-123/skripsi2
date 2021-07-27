@@ -130,6 +130,14 @@ class JamaahController extends Controller
         return view('pekerjaan', ['pkj' => $join]);
     }
 
+    public function keahlian()
+    {
+        $join = DB::table('data_keahlian_warga')
+            ->rightJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->get();
+        return view('/form_keahlian', ['join' => $join]);
+    }
+
     public function ibadah()
     {
         $ibadah = DB::table('datainduk')
