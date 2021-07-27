@@ -1,8 +1,9 @@
 @extends('layout/paan',[
-'InfoPage' => [
-'Navbar' => '/pekerjaan'
-]])
-@section('title', 'Pekerjaan')
+    "InfoPage" => [
+        "Navbar" => '/datainduk'
+    ]
+])
+@section('title', 'Data Warga')
 
 @section('container')
 <div class="breadcrumbs">
@@ -11,7 +12,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>TABEL PEKERJAAN WARGA</h1>
+                        <h1>TABEL DATA WARGA</h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Tampilkan Data</a></li>
-                            <li class="active">Data Pekerjaan Warga</li>
+                            <li class="active">Data Warga</li>
                         </ol>
                     </div>
                 </div>
@@ -35,18 +36,18 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Filter Data Pekerjaan</strong>
+                        <strong class="card-title">Filter Data Warga</strong>
                     </div>
                     <div class="card-body">
                         <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
                             <div class="row">
-                                <div class="col-sm-6" hidden>
+                                <div class="col-sm-3" hidden>
                                     <div class="form-group">
-                                        <label class="control-label">Nomor KK</label>
+                                        <label class="control-label">No. Kartu Keluarga</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-6" hidden>
+                                <div class="col-sm-3" hidden>
                                     <div class="form-group">
                                         <label class="control-label">NIK</label>
                                         <select class="select form-control"></select>
@@ -70,39 +71,61 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-6" hidden>
+                                <div class="col-sm-3" hidden>
                                     <div class="form-group">
                                         <label class="control-label">Nama Panggilan</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-3" hidden>
                                     <div class="form-group">
-                                        <label class="control-label">Pekerjaan</label>
+                                        <label class="control-label">TTL</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label class="control-label">Level Ekonomi</label>
+                                        <label class="control-label">Jenis Kelamin</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Status Hubungan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label class="control-label">Status Mukim</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Status</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class='btn' onclick="cFilter()">Filter</button>
+                                </div>
+                            </div>
+
+
+
                         </div>
 
-                        <div class="row">
-                            <div class="col text-center">
-                                <button class='btn' onclick="cFilter()">Filter</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Tabel Pekerjaan Warga</strong>
+                        <strong class="card-title">Tabel Data Warga</strong>
                     </div>
                     <div class="card-body">
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -114,29 +137,46 @@
                                     <th>RT</th>
                                     <th>Nama</th>
                                     <th>Nama Panggilan</th>
-                                    <th>Pekerjaan</th>
-                                    <th>Level Ekonomi</th>
+                                    <th>TTL</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Status Hubungan</th>
+                                    <th>Status Mukim</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach( $pkj as $p )
+                                @foreach($datainduk as $d)
                                 <tr>
-                                    <td>{{$p->no_kk}}</td>
-                                    <td>{{$p->no_ktp}}</td>
-                                    <td>{{$p->no_rw}}</td>
-                                    <td>{{$p->no_rt}}</td>
-                                    <td>{{$p->nama}}</td>
-                                    <td>{{$p->nm_panggilan}}</td>
-                                    <td>{{$p->nama_pekerjaan}}</td>
-                                    <td>{{$p->nama_level}}</td>
+
+                                    <td>{{$d->no_kk}}</td>
+                                    <td>{{$d->no_ktp}}</td>
+                                    <td>{{$d->no_rw}}</td>
+                                    <td>{{$d->no_rt}}</td>
+                                    <td>{{$d->nama}}</td>
+                                    <td>{{$d->nm_panggilan}}</td>
+                                    <td>{{$d->tmp_lahir}}, {{$d->tgl_lahir}}</td>
+                                    <td>{{$d->j_kelamin}}</td>
+                                    <td>{{$d->status_hub_kk}}</td>
+                                    <td>{{$d->status_mukim}}</td>
+                                    <td>{{$d->status}}</td>
+                                    
                                 </tr>
                                 @endforeach
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->
+@endsection
+
+<!-- Scripts -->
+@section('customscript')
+<script>
+
+</script>
 @endsection

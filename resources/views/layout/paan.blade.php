@@ -114,11 +114,11 @@
                                         </li>
                                         <li class="{{ '/data_induk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/data_induk')}}">Data Induk
-                                                <span class="badge badge-pill badge-success">Pro</span>
+                                                <span class="badge badge-pill badge-success"></span>
                                             </a>
                                         </li>
                                         <li class="{{ '/data_warga' == $InfoPage['Navbar'] ? 'active' : ''}}">
-                                            <a href="{{ url ('/data_warga')}}">Data Warga</a>
+                                            <a href="{{ url ('/keahlian')}}">Data Keahlian</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -127,15 +127,18 @@
                                 <a href="#">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Tampilkan Data</span>
-                                    <span class="badge badge-pill badge-danger">3</span>
+                                    <span class="badge badge-pill badge-danger"></span>
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li class="{{ '/data_kk'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/data_kk')}}">Tampil KK</a>
                                         </li>
-                                        <li class="{{ '/data_induk' == $InfoPage['Navbar'] ? 'active' : ''}}">
-                                            <a href="{{ url ('/data_induk')}}">Tampil Warga</a>
+                                        <li class="{{ '/datainduk' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/datainduk')}}">Tampil Warga</a>
+                                        </li>
+                                        <li class="{{ '/ibadah' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/ibadah')}}">Tampil Ibadah</a>
                                         </li>
                                         <li class="{{ '/data_keahlian' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/data_keahlian')}}">Tampil Keahlian</a>

@@ -20,28 +20,7 @@
                         <div class="card-header">
                             Form Input <strong>Data Induk</strong>
                         </div>
-                        <li class="header-menu justify-content-start">
-                            <span>Extra</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-book"></i>
-                                <span>Documentation</span>
-                                <span class="badge badge-pill badge-primary">Beta</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-calendar"></i>
-                                <span>Calendar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-folder"></i>
-                                <span>Examples</span>
-                            </a>
-                        </li>
+                     
                         <div class="card-body card-block">
                             <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
 

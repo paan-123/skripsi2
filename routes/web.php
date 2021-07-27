@@ -35,6 +35,9 @@ Route::middleware(['admin'])->group(function () {
     /////////DATA WARGA INDUK///////////
     Route::get('/data_induk', 'App\Http\Controllers\PagesController@data_induk');
     Route::get('/data_induk', 'App\Http\Controllers\JamaahController@datainduk');
+    Route::get('/datainduk', 'App\Http\Controllers\JamaahController@data_induk');
+    Route::get('/ibadah', 'App\Http\Controllers\JamaahController@ibadah');
+    Route::get('/keahlian', 'App\Http\Controllers\JamaahController@ibadah');
 
     /////////TAMPIL DATA///////////
     Route::get('/md_rumah', 'App\Http\Controllers\JamaahController@mdrumah');
