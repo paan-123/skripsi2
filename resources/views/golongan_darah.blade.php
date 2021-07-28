@@ -104,7 +104,7 @@
                                     <th>RT</th>
                                     <th>No. Rumah</th>
                                     <th>Nama</th>
-                                    <th>Nama Panggilan</th>
+                                    <th>Panggilan</th>
                                     <th>Golongan Darah</th>
                                 </tr>
                             </thead>

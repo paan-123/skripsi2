@@ -113,7 +113,7 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Nama Panggilan</th>
+                                    <th>Panggilan</th>
                                     <th>Pekerjaan</th>
                                     <th>Level Ekonomi</th>
                                 </tr>

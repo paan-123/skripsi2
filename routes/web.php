@@ -41,9 +41,15 @@ Route::middleware(['admin'])->group(function () {
 
 
     Route::get('/keahlian', 'App\Http\Controllers\JamaahController@keahlian');
-    Route::get('/form_keahlian', 'App\Http\Controllers\JamaahController@keahlian');
+    // Route::get('/keahlian', [JamaahController::class, 'joinkj'])->name('JamaahController.joinkj');
+
+    Route::get('/form_keahlian', 'App\Http\Controllers\PagesController@formkeahlian');
     Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
     Route::post('/add-post-keahlian', [PostKeahlian::class, 'savePostKeahlian'])->name('keahlian.save');
+    Route::get('/edit_keahlian/{kd_induk}', [PostKeahlian::class, 'editPost'])->name('postdk.edit');
+    Route::post('/update-post-keahlian', [PostKeahlian::class, 'updatePost'])->name('updatedk.post');
+
+    Route::get('/delete_data_keahlian/{kd_induk}', [PostKeahlian::class, 'deletePost'])->name('post.delete');
 
     /////////TAMPIL DATA///////////
     Route::get('/md_rumah', 'App\Http\Controllers\JamaahController@mdrumah');

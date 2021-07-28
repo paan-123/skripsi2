@@ -16,12 +16,10 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    Form Input <strong>Data Kartu Keluarga</strong>
+                                     Input Data Keahlian Warga
                                 </div>
                                 <div class="card-body card-block">
                                     <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
-
-                                        
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nama</strong></label></div>
                                             <div class="col-12 col-md-9">
@@ -36,11 +34,11 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kode Keahlian</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kd_keahlian" id="select" class="form-control">
-                                                    <option value="0">Default</option>
-                                                    <option value="1"> 1</option>
-                                                    <option value="2"> 2</option>
-                                                    <option value="3"> 13</option>
-                                                    <option value="4"> 13</option>
+                                                    <option value="1">Musik</option>
+                                                    <option value="2">Gambar</option>
+                                                    <option value="3">Sepak Bola</option>
+                                                    <option value="4">Badminton</option>
+                                                    <option value="5">Berkebun</option>
                                                     
                                                 </select>
                                             </div>

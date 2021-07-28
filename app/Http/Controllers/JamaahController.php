@@ -94,12 +94,12 @@ class JamaahController extends Controller
         $join =  DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
-            // ->leftJoin('datainduk.kd_rt', '=', 'md_rt.kd_rt')
+            // ->leftJoin('md_rt', 'datainduk.kd_rt', '=', 'md_rt.kd_rt')
             ->select(
                 'datainduk.no_kk',
                 'datainduk.no_ktp',
                 'datainduk.kd_rt',
-                // 'md_rt_no_rt',
+                // 'md_rt.no_rw',
                 'datainduk.nama',
                 'datainduk.nm_panggilan',
                 'md_keahlian.nama_keahlian',
@@ -107,6 +107,7 @@ class JamaahController extends Controller
                 'data_keahlian_warga.deskripsi_sertifikat'
             )
             ->get();
+
         return view('data_keahlian', ['keahlian' => $join]);
     }
 
@@ -132,10 +133,25 @@ class JamaahController extends Controller
 
     public function keahlian()
     {
-        $join = DB::table('data_keahlian_warga')
-            ->rightJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+        $keahlian =  DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            // ->leftJoin('md_rt', 'datainduk.kd_rt', '=', 'md_rt.kd_rt')
+            ->select(
+                'datainduk.kd_induk',
+                'datainduk.no_kk',
+                'datainduk.no_ktp',
+                'datainduk.kd_rt',
+                // 'md_rt.no_rw',
+                'datainduk.nama',
+                'datainduk.nm_panggilan',
+                'md_keahlian.nama_keahlian',
+                'data_keahlian_warga.is_sertifikat',
+                'data_keahlian_warga.level_sertifikat',
+                'data_keahlian_warga.deskripsi_sertifikat'
+            )
             ->get();
-        return view('/form_keahlian', ['join' => $join]);
+        return view('/keahlian', ['keahlian' => $keahlian]);
     }
 
     public function ibadah()

@@ -45,7 +45,7 @@
             @if(Session::has('post_add'))
             <span>{{Session::get('post_add')}}</span>
             @endif
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <form method="post" action="{{route('savedi.post')}}">
@@ -133,8 +133,8 @@
                                             <div class="col-12 col-md-9">
                                                 <select name="kodeagama" id="kodeagama" class="form-control">
                                                     <option value="0">Default</option>
-                                                    <option value="1">Muslim</option>
-                                                    <option value="2">Protestan</option>
+                                                    <option value="1">Islam</option>
+                                                    <option value="2">Kristen</option>
                                                     <option value="3">Katolik</option>
                                                     <option value="4">Hindu</option>
                                                     <option value="5">Budha</option>
@@ -363,8 +363,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <input class='btn btn-primary' type="submit" value="submit">
                         </form>
-                        <input class='btn' type="submit" value="submit">
                     </div>
                 </div>
             </div>

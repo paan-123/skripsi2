@@ -55,8 +55,8 @@ class PostDataInduk extends Controller
 
     public function editPost($kd_induk)
     {
-        $post = DB::table('datainduk')->where('kd_induk', $kd_induk)->first();
-        return view('edit_data_induk', compact('post'));
+        $edit = DB::table('datainduk')->where('kd_induk', $kd_induk)->first();
+        return view('edit_data_induk', compact('edit'));
     }
 
 
@@ -94,8 +94,8 @@ class PostDataInduk extends Controller
             'no_ktp'            => $request->nomorktp,
             'status'            => $request->status,
         ]);
-
-        return back()->with('post_update', 'Berhasil Update');
+        return redirect('data_induk');
+        // return back()->with('post_update', 'Berhasil Update');
     }
 
 

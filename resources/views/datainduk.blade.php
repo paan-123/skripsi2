@@ -136,7 +136,7 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Nama Panggilan</th>
+                                    <th>Panggilan</th>
                                     <th>TTL</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Status Hubungan</th>

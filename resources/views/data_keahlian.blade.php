@@ -113,20 +113,21 @@
                                 <tr>
                                     <th>No. KK</th>
                                     <th>NIK</th>
+                                    {{-- <th>RW</th> --}}
                                     <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Nama Panggilan</th>
+                                    <th>Panggilan</th>
                                     <th>Keahlian</th>
                                     <th>Level Sertifikat</th>
                                     <th>Deskripsi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach( $keahlian as $k )
+                                @foreach($keahlian as $k)
                                 <tr>
                                     <td>{{$k->no_kk}}</td>
                                     <td>{{$k->no_ktp}}</td>
-                                    {{-- <td>{{$k->no_rw}}</td> --}}
+                                    {{-- <td>{{$r->no_rw}}</td> --}}
                                     <td>{{$k->kd_rt}}</td>
                                     <td>{{$k->nama}}</td>
                                     <td>{{$k->nm_panggilan}}</td>

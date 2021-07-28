@@ -51,9 +51,6 @@
 
                 <div class="col-lg-12">
                     <div class="card">
-                        {{-- <div class="card-header">
-                                    Input <strong>Data Kartu Keluarga</strong>
-                                </div> --}}
                         <div class="card-body card-block">
                             <form action="#" method="post" enctype="multipart/form-data" class="form-horizontal">
                                 <h2><strong>Edit Data Kartu Keluarga</strong></h2>
@@ -63,6 +60,15 @@
                                         <div class="form-group">
                                             <div class="col col-md-12"><label for="text-input" class=" form-control-label"><strong>Nomor Kartu Keluarga</strong></label></div>
                                             <div class="col-12 col-md-6"><input type="text" id="text-input" name="nomorkk" placeholder="Nomor Kartu Keluarga" class="form-control" value="{{$edit->no_kk}}"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RW</strong></label></div>
+                                            <div class="col-12 col-md-6">
+                                                <select name="norw" id="select" class="form-control">
+                                                    <option value="1"{{ '1'    == $edit->no_rw ? 'selected' : ''}}>RW 1</option>
+                                                    
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RT</strong></label></div>
@@ -76,16 +82,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RW</strong></label></div>
-                                            <div class="col-12 col-md-6">
-                                                <select name="norw" id="select" class="form-control" value="{{$edit->no_rw}}">
-                                                    <option value="1">RW 1</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nama Kepala Keluarga</strong></label></div>
+                                            <div class="col col-md-5"><label for="text-input" class=" form-control-label"><strong>Nama Kepala Keluarga</strong></label></div>
                                             <div class="col-12 col-md-6"><input type="text" id="text-input" name="namakk" placeholder="Nama Kepala Keluarga" class="form-control" value="{{$edit->nm_kk}}"></div>
                                         </div>
 
@@ -100,11 +97,11 @@
                                         <div class="form-group">
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                             <div class="col-12 col-md-6">
-                                                <select name="levelekonomi" id="select" class="form-control" aria-valuemax="{{$edit->kd_level_ekonomi}}">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - Menengah</option>
-                                                    <option value="2">2 - Menengah Keatas</option>
-                                                    <option value="3">3 - Menengah Kebawah</option>
+                                                <select name="levelekonomi" id="select" class="form-control">
+                                                    <option value="0"{{ '0'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Default</option>
+                                                    <option value="1"{{ '1'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah</option>
+                                                    <option value="2"{{ '2'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Keatas</option>
+                                                    <option value="3"{{ '3'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Kebawah</option>
                                                 </select>
                                             </div>
                                         </div>

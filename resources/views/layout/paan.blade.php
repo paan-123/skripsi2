@@ -97,13 +97,13 @@
                             </li>
                             <li class="{{ '/home'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                 <a href="{{ url ('/home')}}">
-                                    <i class="fa fa-tachometer-alt"></i>
+                                    <i class="fa fa-home"></i>
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li class="sidebar-dropdown">
                                 <a href="#">
-                                    <i class="fa fa-tachometer-alt"></i>
+                                    <i class="fa fa-user-edit"></i>
                                     <span>Data Jamaah</span>
                                     {{-- <span class="badge badge-pill badge-warning">New</span> --}}
                                 </a>
@@ -118,7 +118,7 @@
                                                 <span class="badge badge-pill badge-success"></span>
                                             </a>
                                         </li>
-                                        <li class="{{ '/data_warga' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                        <li class="{{ '/keahlian' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/keahlian')}}">Data Keahlian</a>
                                         </li>
                                     </ul>
@@ -126,7 +126,7 @@
                             </li>
                             <li class="sidebar-dropdown">
                                 <a href="#">
-                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-database"></i>
                                     <span>Tampilkan Data</span>
                                     <span class="badge badge-pill badge-danger"></span>
                                 </a>
@@ -158,7 +158,7 @@
                             </li>
                             <li class="sidebar-dropdown">
                                 <a href="#">
-                                    <i class="far fa-gem"></i>
+                                    <i class="fa fa-briefcase"></i>
                                     <span>Data Master</span>
                                 </a>
                                 <div class="sidebar-submenu">
