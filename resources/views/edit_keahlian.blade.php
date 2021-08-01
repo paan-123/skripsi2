@@ -2,7 +2,7 @@
 'InfoPage' => [
 'Navbar' => '/edit_keahlian'
 ]])
-@section('title', 'Form Ubah Data')
+@section('title', 'Form Edit Data')
 
 @section('container')
 <style>
@@ -43,7 +43,7 @@
         @if(Session::has('post_updatedk'))
         <span>{{Session::get('post_updatedk')}}</span>
         @endif
-        <form method="post" action="{{route('updatedk.post')}}">
+        <form method="post" action="{{route('updatekeahlian.post')}}">
             @csrf
             <input type="hidden" name="id" value="{{$edit->kd_induk}}">
             <div class="row">
@@ -87,9 +87,9 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="form-group">
+                                        <div class="form-group" >
                                             <div class="col col-md-5"><label for="text-input" class=" form-control-label"><strong>Deskripsi Sertifikat</strong></label></div>
-                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="deskripsi" placeholder="Sertifikat" class="form-control" value="{{$edit->deskripsi_sertifikat}}"></div>
+                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="deskripsi" placeholder="Sertifikat" class="form-control"  value="{{$edit->deskripsi_sertifikat}}"></div>
                                         </div>
 
                                     </div>
@@ -97,11 +97,11 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Level Sertifikat</strong></label></div>
-                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="level" placeholder="Level Sertifikat" class="form-control" value="{{$edit->level_sertifikat}}"></div>
+                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="level" placeholder="Level Sertifikat" class="form-control"  value="{{$edit->level_sertifikat}}"></div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Keterangan</strong></label></div>
-                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="keterangan" placeholder="Keterangan" class="form-control" value="{{$edit->keterangan}}"></div>
+                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="keterangan" placeholder="Keterangan" class="form-control"  value="{{$edit->keterangan}}" ></div>
                                         </div>
 
                                        

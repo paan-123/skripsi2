@@ -1,17 +1,20 @@
 @extends('layout/paan',[
 'InfoPage' => [
-'Navbar' => '/md_rt'
+'Navbar' => '/md_agama'
 ]])
-@section('title', 'md_rt')
+@section('title', 'Master Data Agama')
 
 @section('container')
+@if(Session::has('post_delete'))
+<span>{{Session::get('post_delete')}}</span>
+@endif
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">
         <div class="row m-0">
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Tabel MD RT</h1>
+                        <h1>Tabel MD Agama</h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +24,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Master Data</a></li>
-                            <li class="active">MD RT</li>
+                            <li class="active">MD Agama</li>
                         </ol>
                     </div>
                 </div>
@@ -35,31 +38,28 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">Tabel MD RT</strong>
-                    </div>
                     <div class="card-body">
+                        <a href="form_agama" class="btn btn-success">Tambah Master Data Agama</a> <br>
+                        <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Kode RT</th>
-                                    <th>Nomor RT</th>
-                                    <th>Nomor RW</th>
-                                    <th>Nama Pejabat</th>
-                                    <th>Nama Ibu Pejabat</th>
+                                    <th>Kode Agama</th>
+                                    <th>Nama Agama</th>
                                     <th>Keterangan</th>
-
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($md_rt as $mdrt)
+                                @foreach($agama as $a)
                                 <tr>
-                                    <td>{{$mdrt->kd_rt}}</td>
-                                    <td>{{$mdrt->no_rt}}</td>
-                                    <td>{{$mdrt->no_rw}}</td>
-                                    <td>{{$mdrt->nm_pejabat}}</td>
-                                    <td>{{$mdrt->nm_bu_pejabat}}</td>
-                                    <td>{{$mdrt->keterangan}}</td>
+                                    <td>{{$a->kd_agama}}</td>
+                                    <td>{{$a->nama_agama}}</td>
+                                    <td>{{$a->keterangan}}</td>
+                                    <td>
+                                    <a href="/edit_agama/{{$a->kd_agama}}" class="btn btn-warning" id="edit">EDIT</a>
+                                    <a href="/delete_agama/{{$a->kd_agama}}}" class="btn btn-danger" id="delete">DELETE</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

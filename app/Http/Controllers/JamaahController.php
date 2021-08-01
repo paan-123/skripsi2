@@ -54,20 +54,45 @@ class JamaahController extends Controller
     public function mdrumah()
     {
         $md_rumah = DB::table('md_rumah')->get();
-        return view('md_rumah', ['md_rumah' => $md_rumah]);
+        return view('/md/md_rumah/md_rumah', ['md_rumah' => $md_rumah]);
     }
 
     public function mdrw()
     {
         $md_rw = DB::table('md_rw')->get();
-        return view('md_rw', ['md_rw' => $md_rw]);
+        return view('/md/md_rw/md_rw', ['md_rw' => $md_rw]);
     }
 
     public function mdrt()
     {
         $md_rt = DB::table('md_rt')->get();
-        return view('md_rt', ['md_rt' => $md_rt]);
+        return view('/md/md_rt/md_rt', ['md_rt' => $md_rt]);
     }
+
+    public function mdagama()
+    {
+        $md_agama = DB::table('md_agama')->get();
+        return view('/md/md_agama/md_agama', ['md_agama' => $md_agama]);
+    }
+
+    public function mdpekerjaan()
+    {
+        $md_pekerjaan = DB::table('md_pekerjaan')->get();
+        return view('/md/md_pekerjaan/md_pekerjaan', ['md_pekerjaan' => $md_pekerjaan]);
+    }
+
+    public function mdpendidikan()
+    {
+        $md_pendidikan = DB::table('md_pendidikan')->get();
+        return view('/md/md_pendidikan/md_pendidikan', ['md_pendidikan' => $md_pendidikan]);
+    }
+
+    public function mdkeahlian()
+    {
+        $md_keahlian = DB::table('md_keahlian')->get();
+        return view('/md/md_keahlian/md_keahlian', ['md_keahlian' => $md_keahlian]);
+    }
+
 
     public function join()
     {
@@ -170,6 +195,14 @@ class JamaahController extends Controller
             ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->get();
         return view('pendidikan', ['pd' => $join]);
+    }
+    public function baca() ///PENDIDIKAN///
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->get();
+        return view('baca', ['pd' => $join]);
     }
 
     public function transaksi_datakk()

@@ -5,6 +5,7 @@ use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\JamaahController;
+use App\Http\Controllers\MDController;
 use App\Http\Controllers\PostKeahlian;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\PostDataKK;
@@ -46,15 +47,80 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/form_keahlian', 'App\Http\Controllers\PagesController@formkeahlian');
     Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
     Route::post('/add-post-keahlian', [PostKeahlian::class, 'savePostKeahlian'])->name('keahlian.save');
-    Route::get('/edit_keahlian/{kd_induk}', [PostKeahlian::class, 'editPost'])->name('postdk.edit');
-    Route::post('/update-post-keahlian', [PostKeahlian::class, 'updatePost'])->name('updatedk.post');
+    Route::get('/edit_keahlian/{kd_induk}', [PostKeahlian::class, 'editPost'])->name('postkeahlian.edit');
+    Route::post('/update-post-keahlian', [PostKeahlian::class, 'updatePost'])->name('updatekeahlian.post');
 
     Route::get('/delete_data_keahlian/{kd_induk}', [PostKeahlian::class, 'deletePost'])->name('post.delete');
 
     /////////TAMPIL DATA///////////
+    Route::get('/md_agama', 'App\Http\Controllers\MDController@agama');
+    Route::get('/form_agama', 'App\Http\Controllers\MDController@formAgama');
+    Route::get('/add-post-agama', [MDController::class, 'addPostAgama'])->name('agama.add');
+    Route::post('/add-post-agama', [MDController::class, 'savePostAgama'])->name('agama.save');
+    Route::get('/edit_agama/{kd_agama}', [MDController::class, 'editAgama'])->name('postagama.edit');
+    Route::post('/update-post-agama', [MDController::class, 'updateAgama'])->name('updateagama.post');
+    Route::get('/delete_mdagama/{kd_agama}', [MDController::class, 'deleteAgama'])->name('post.delete');
+
+
+    Route::get('/md_pekerjaan', 'App\Http\Controllers\MDController@mdp');
+    Route::get('/form_pekerjaan', 'App\Http\Controllers\MDController@formPekerjaan');
+    Route::get('/add-post-pekerjaan', [MDController::class, 'addPostPekerjaan'])->name('pekerjaan.add');
+    Route::post('/add-post-pekerjaan', [MDController::class, 'savePostPekerjaan'])->name('pekerjaan.save');
+    Route::get('/edit_pekerjaan/{kd_pekerjaan}', [MDController::class, 'editPekerjaan'])->name('postpekerjaan.edit');
+    Route::post('/update-post-pekerjaan', [MDController::class, 'updatePekerjaan'])->name('updatepekerjaan.post');
+    Route::get('/delete_pekerjaan/{kd_pekerjaan}', [MDController::class, 'deletePekerjaan'])->name('post.delete');
+
+
+    Route::get('/md_pendidikan', 'App\Http\Controllers\MDController@mdPendidikan');
+    Route::get('/form_pendidikan', 'App\Http\Controllers\MDController@formPendidikan');
+    Route::get('/add-post-pendidikan', [MDController::class, 'addPostPendidikan'])->name('pendidikan.add');
+    Route::post('/add-post-pendidikan', [MDController::class, 'savePostPendidikan'])->name('pendidikan.save');
+    Route::get('/edit_pendidikan/{kd_pendidikan}', [MDController::class, 'editPendidikan'])->name('postpendidikan.edit');
+    Route::post('/update-post-pendidikan', [MDController::class, 'updatePendidikan'])->name('updatependidikan.post');
+    Route::get('/delete_pendidikan/{kd_pendidikan}', [MDController::class, 'deletePendidikan'])->name('post.delete');
+
+    Route::get('/md_ekonomi', 'App\Http\Controllers\MDController@mdEkonomi');
+    Route::get('/form_ekonomi', 'App\Http\Controllers\MDController@formEkonomi');
+    Route::get('/add-post-ekonomi', [MDController::class, 'addPostEkonomi'])->name('ekonomi.add');
+    Route::post('/add-post-ekonomi', [MDController::class, 'savePostEkonomi'])->name('ekonomi.save');
+    Route::get('/edit_ekonomi/{kd_level_ekonmi}', [MDController::class, 'editEkonomi'])->name('postekonomi.edit');
+    Route::post('/update-post-ekonomi', [MDController::class, 'updateEkonomi'])->name('updateekonomi.post');
+    Route::get('/delete_ekonomi/{kd_level_ekonomi}', [MDController::class, 'deleteEkonomi'])->name('post.delete');
+
+    Route::get('/md_keahlian', 'App\Http\Controllers\MDController@mdKeahlian');
+    Route::get('/form_keahlian', 'App\Http\Controllers\MDController@formKeahlian');
+    Route::get('/add-post-keahlian', [MDController::class, 'addPostKeahlian'])->name('keahlian.add');
+    Route::post('/add-post-keahlian', [MDController::class, 'savePostKeahlian'])->name('keahlian.save');
+    Route::get('/edit_mdkeahlian/{kd_keahlian}', [MDController::class, 'editKeahlian'])->name('postMdKeahlian.edit');
+    Route::post('/update-post-keahlian', [MDController::class, 'updateKeahlian'])->name('updateMdKeahlian.post');
+    Route::get('/delete_mdkeahlian/{kd_keahlian}', [MDController::class, 'deleteKeahlian'])->name('post.delete');
+
+
     Route::get('/md_rumah', 'App\Http\Controllers\JamaahController@mdrumah');
+    Route::get('/form_rumah', 'App\Http\Controllers\MDController@formRumah');
+    Route::get('/form_rumah', 'App\Http\Controllers\MDController@formInputRumah');
+    Route::get('/add-post-rumah', [MDController::class, 'addPostRumah'])->name('rumah.add');
+    Route::post('/add-post-rumah', [MDController::class, 'savePostRumah'])->name('rumah.save');
+    Route::get('/edit_mdrumah/{kd_rumah}', [MDController::class, 'editRumah'])->name('postrumah.edit');
+    Route::post('/update-post-rumah', [MDController::class, 'updateRumah'])->name('updaterumah.post');
+    Route::get('/delete_mdrumah/{no_rumah}', [MDController::class, 'deleteRumah'])->name('post.delete');
+
     Route::get('/md_rw', 'App\Http\Controllers\JamaahController@mdrw');
+    Route::get('/form_rw', 'App\Http\Controllers\MDController@formRW');
+    Route::get('/add-post-rw', [MDController::class, 'addPostRW'])->name('rw.add');
+    Route::post('/add-post-rw', [MDController::class, 'savePostRW'])->name('rw.save');
+    Route::get('/edit_mdrw/{no_rw}', [MDController::class, 'editRW'])->name('postrw.edit');
+    Route::post('/update-post-rw', [MDController::class, 'updateRW'])->name('updaterw.post');
+    Route::get('/delete_mdrw/{no_rw}', [MDController::class, 'deleteRW'])->name('post.delete');
+
     Route::get('/md_rt', 'App\Http\Controllers\JamaahController@mdrt');
+    Route::get('/form_rt', 'App\Http\Controllers\MDController@formRT');
+    Route::get('/add-post-rt', [MDController::class, 'addPostRT'])->name('rt.add');
+    Route::post('/add-post-rt', [MDController::class, 'savePostRT'])->name('rt.save');
+    Route::get('/edit_mdrt/{kd_rt}', [MDController::class, 'editRT'])->name('postrt.edit');
+    Route::post('/update-post-rt', [MDController::class, 'updateRT'])->name('updatert.post');
+    Route::get('/delete_mdrt/{kd_rt}', [MDController::class, 'deleteRT'])->name('post.delete');
+
 
     Route::get('transaksi', 'App\Http\Controllers\JamaahController@transaksi_datakk');
     Route::get('transaksi', 'App\Http\Controllers\PagesController@transaksi')->name('transaksi');
@@ -72,6 +138,8 @@ Route::middleware(['admin'])->group(function () {
 
     Route::get('/pendidikan', 'App\Http\Controllers\PagesController@pendidikan');
     Route::get('/pendidikan', [JamaahController::class, 'joinpd'])->name('JamaahController.joinpd');
+
+    Route::get('/baca', [JamaahController::class, 'baca']);
 
     Route::get('/form_datakk', 'App\Http\Controllers\PagesController@form_datakk');
     Route::get('/form_datainduk', 'App\Http\Controllers\PagesController@form_datainduk');

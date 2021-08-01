@@ -153,6 +153,9 @@
                                         <li class="{{ '/pendidikan' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/pendidikan')}}">Tampil Pendidikan</a>
                                         </li>
+                                        <li class="{{ '/baca' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/baca')}}">Tampil Kemampuan Baca</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -163,6 +166,9 @@
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
+                                        <li class="{{ '/md_agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/md_agama')}}">Data Master Agama</a>
+                                        </li>
                                         <li class="{{ '/md_rumah' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/md_rumah')}}">Data Master Rumah</a>
                                         </li>
@@ -171,6 +177,18 @@
                                         </li>
                                         <li class="{{ '/md_rt' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/md_rt')}}">Data Master RT</a>
+                                        </li>
+                                        <li class="{{ '/md_pekerjaan' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/md_pekerjaan')}}">Data Master Pekerjaan</a>
+                                        </li>
+                                        <li class="{{ '/md_pendidikan' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/md_pendidikan')}}">Data Master Pendidikan</a>
+                                        </li>
+                                        <li class="{{ '/md_ekonomi' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/md_ekonomi')}}">Data Master Ekonomi</a>
+                                        </li>
+                                        <li class="{{ '/md_keahlian' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/md_keahlian')}}">Data Master Keahlian</a>
                                         </li>
                                     </ul>
                                 </div>

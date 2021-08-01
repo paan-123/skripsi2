@@ -1,17 +1,20 @@
 @extends('layout/paan',[
 'InfoPage' => [
-'Navbar' => '/md_rumah'
+'Navbar' => '/md_pekerjaan'
 ]])
-@section('title', 'md_rumah')
+@section('title', 'Master Data Pekerjaan')
 
 @section('container')
+@if(Session::has('post_delete'))
+<span>{{Session::get('post_delete')}}</span>
+@endif
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">
         <div class="row m-0">
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>TABEL MD RUMAH</h1>
+                        <h1>Tabel MD Pekerjaan</h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +24,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Master Data</a></li>
-                            <li class="active">MD Rumah</li>
+                            <li class="active">MD Pekerjaan</li>
                         </ol>
                     </div>
                 </div>
@@ -33,43 +36,32 @@
 <div class="content">
     <div class="animated fadeIn">
         <div class="row">
-
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <strong class="card-title">Tabel MD Rumah</strong>
-                    </div>
                     <div class="card-body">
+                        <a href="form_pekerjaan" class="btn btn-success">Tambah Master Data Pekerjaan</a> <br>
+                        <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Kode Rumah</th>
-                                    <th>Nomor Rumah</th>
-                                    <th>Kode RT</th>
-                                    <th>Jumlah KK</th>
-                                    <th>Jumlah Penghuni</th>
-                                    <th>Nama KK</th>
+                                    <th>Kode Pekerjaan</th>
+                                    <th>Nama Pekerjaan</th>
                                     <th>Keterangan</th>
-                                    <th>Status Kontrakan</th>
                                     <th>Status</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($md_rumah as $mdrum)
+                                @foreach($pekerjaan as $p)
                                 <tr>
-                                    <td>{{$mdrum->kd_rumah}}</td>
-                                    <td>{{$mdrum->no_rumah}}</td>
-                                    <td>{{$mdrum->kd_rt}}</td>
-                                    <td>{{$mdrum->jml_kk}}</td>
-                                    <td>{{$mdrum->jml_penghuni}}</td>
-                                    <td>{{$mdrum->nm_kk}}</td>
-                                    <td>{{$mdrum->keterangan}}</td>
-                                    <td>{{$mdrum->is_kontrakan}}</td>
-                                    <td>{{$mdrum->status}}</td>
-                                    <td>{{$mdrum->latitude}}</td>
-                                    <td>{{$mdrum->longitude}}</td>
+                                    <td>{{$p->kd_pekerjaan}}</td>
+                                    <td>{{$p->nama_pekerjaan}}</td>
+                                    <td>{{$p->status}}</td>
+                                    <td>{{$p->keterangan}}</td>
+                                    <td>
+                                    <a href="/edit_pekerjaan/{{$p->kd_pekerjaan}}" class="btn btn-warning" id="edit">EDIT</a>
+                                    <a href="/delete_pekerjaan/{{$p->kd_pekerjaan}}}" class="btn btn-danger" id="delete">DELETE</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -77,6 +69,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div><!-- .animated -->
 </div><!-- .content -->
