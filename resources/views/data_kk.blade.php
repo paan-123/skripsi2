@@ -5,6 +5,7 @@
 ])
 @section('title', 'Data Kartu Keluarga')
 
+
 @section('container')
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">
@@ -53,28 +54,29 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">No. RW</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5">Nomor RW</label>
+                                            <select class="select form-control col-sm-7"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">No. RT</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Nomor RT</label>
+                                        <select class="select form-control col-sm-7"></select>
                                     </div>
                                 </div>
+                                
                                 <div class="col-sm-4" hidden>
                                     <div class="form-group">
                                         <label class="control-label">No. Rumah</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">Ekonomi</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Ekonomi</label>
+                                        <select class="select form-control col-sm-7"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -83,16 +85,12 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button class='btn' onclick="cFilter()">Filter</button>
+                                <div class="col-sm-3 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
                                 </div>
                             </div>
-
-
-
-                        </div>
+                            
+                            </div>
 
                     </div>
                 </div>

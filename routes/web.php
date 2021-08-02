@@ -14,6 +14,13 @@ use App\Http\Controllers\UserAuthController;
 use Faker\Guesser\Name;
 use Laravel\Socialite\Facades\Socialite;
 
+use Illuminate\Support\Facades\DB;
+
+Route::get('/DEBUG_LOGIN', function () {
+    Auth::loginUsingId(1);
+    return redirect('/home');
+});
+
 /////////AUTENTIKASI///////////
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');

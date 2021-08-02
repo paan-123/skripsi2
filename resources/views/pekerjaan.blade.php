@@ -52,16 +52,16 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label class="control-label">RW</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">RW</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label class="control-label">RT</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">RT</label>
+                                            <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -77,25 +77,24 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label class="control-label">Pekerjaan</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Pekerjaan</label>
+                                            <select class="select form-control col-sm-6"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label class="control-label">Level Ekonomi</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">Level Ekonomi</label>
+                                            <select class="select form-control col-sm-5"></select>
                                     </div>
+                                </div>
+                                <div class="col-sm-2 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col text-center">
-                                <button class='btn' onclick="cFilter()">Filter</button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

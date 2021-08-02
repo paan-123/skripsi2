@@ -52,10 +52,10 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">RT</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 ">Nomor RT</label>
+                                        <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -71,15 +71,15 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Keahlian</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 text-right">Keahlian</label>
+                                        <select class="select form-control col-sm-7"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label class="control-label">Level Sertifikat</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Level Sertifikat</label>
+                                        <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -87,13 +87,12 @@
                                         <label class="control-label">Jenis Kelamin</label>
                                         <select class="select form-control"></select>
                                     </div>
-                                </div>    
+                                </div>   
+                                <div class="col-sm-2 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div> 
                             </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button class='btn' onclick="cFilter()">Filter</button>
-                                </div>
-                            </div>
+                            
 
 
 

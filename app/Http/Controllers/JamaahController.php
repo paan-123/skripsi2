@@ -202,6 +202,7 @@ class JamaahController extends Controller
             ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
             ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->get();
+        // $join = '';
         return view('baca', ['pd' => $join]);
     }
 

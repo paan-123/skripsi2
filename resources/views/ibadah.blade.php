@@ -48,15 +48,15 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">RW</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-6">No. RW</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">RT</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">No. RT</label>
+                                            <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -65,60 +65,62 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-2" >
-                                    <div class="form-group">
-                                        <label class="control-label">Agama</label>
-                                        <select class="select form-control"></select>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Agama</label>
+                                        <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">5 Waktu</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">5 Waktu</label>
+                                        <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Berjamaah</label>
-                                        <select class="select form-control"></select>
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Berjamaah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Zakat Fitrah</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Zakat Mal</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Kurban</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Haji</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label class="control-label">Umrah</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col text-center">
-                                <button class='btn' onclick="cFilter()">Filter</button>
+                                <div class="col-sm-1 text-right">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6">Fitrah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">Mal</label>
+                                            <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Kurban</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Haji</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Umrah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         </div>
                     </div>
