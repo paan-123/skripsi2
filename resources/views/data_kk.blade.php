@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-5 text-right">Ekonomi</label>
+                                        <label class="col-sm-5 text-right">EkonomiO</label>
                                         <select class="select form-control col-sm-7"></select>
                                     </div>
                                 </div>
