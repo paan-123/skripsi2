@@ -45,7 +45,7 @@
         @endif
         <form method="post" action="{{route('updatekeahlian.post')}}">
             @csrf
-            <input type="hidden" name="id" value="{{$edit->kd_induk}}">
+            <input type="hidden" name="id" value="{{$edit->id}}">
             <div class="row">
 
 
@@ -69,11 +69,13 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nama Keahlian</strong></label></div>
                                             <div class="col-12 col-md-6">
                                                 <select name="kd_keahlian" id="select" class="form-control">
-                                                    <option value="1"{{ '1'    == $edit->kd_keahlian ? 'selected' : ''}}>Musik</option>
-                                                    <option value="2"{{ '2'    == $edit->kd_keahlian ? 'selected' : ''}}>Gambar</option>
-                                                    <option value="3"{{ '3'    == $edit->kd_keahlian ? 'selected' : ''}}>Sepak Bola</option>
-                                                    <option value="4"{{ '4'    == $edit->kd_keahlian ? 'selected' : ''}}>Badminton</option>
-                                                    <option value="5"{{ '5'    == $edit->kd_keahlian ? 'selected' : ''}}>Berkebun</option>
+                                                 @foreach($k as $k)
+                                                    <option value='{{$k->kd_keahlian}}'{{ $k->kd_keahlian    == $edit->kd_keahlian ? 'selected' : ''}}>{{$k->nama_keahlian}}</option>
+                                                    {{-- <option value="2"{{ '2'    == $edit->kd_keahlian ? 'selected' : ''}}></option>
+                                                    <option value="3"{{ '3'    == $edit->kd_keahlian ? 'selected' : ''}}></option>
+                                                    <option value="4"{{ '4'    == $edit->kd_keahlian ? 'selected' : ''}}></option>
+                                                    <option value="5"{{ '5'    == $edit->kd_keahlian ? 'selected' : ''}}></option> --}}
+                                                 @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -81,8 +83,8 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Sertifikat</strong></label></div>
                                             <div class="col-12 col-md-6">
                                                 <select name="sertifikat" id="select" class="form-control">
-                                                    <option value="Ya"{{ 'Ya'    == $edit->kd_keahlian ? 'selected' : ''}}>Ya</option>
-                                                    <option value="Tidak"{{ 'Tidak'    == $edit->kd_keahlian ? 'selected' : ''}}>Tidak</option>
+                                                    <option value="Ya"{{ 'Ya'    == $edit->is_sertifikat ? 'selected' : ''}}>Ya</option>
+                                                    <option value="Tidak"{{ 'Tidak'    == $edit->is_sertifikat ? 'selected' : ''}}>Tidak</option>
                                                 </select>
                                             </div>
                                         </div>

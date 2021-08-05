@@ -59,11 +59,11 @@
                                     <div class="col-lg-6">
                                         <div class="form-group" >
                                             <div class="col col-md-12"><label for="text-input" class=" form-control-label"><strong>Nomor KK</strong></label></div>
-                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="no_kk" placeholder="Nomor KK" class="form-control" value="{{$edit->no_kk}}" readonly></div>
+                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="no_kk" placeholder="Nomor KK" class="form-control" value="{{$edit->no_kk}}"></div>
                                         </div>
                                         <div class="form-group" >
                                             <div class="col col-md-12"><label for="text-input" class=" form-control-label"><strong>Nama KK</strong></label></div>
-                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="nm_kk" placeholder="Nama KK" class="form-control" value="{{$edit->nm_kk}}" readonly></div>
+                                            <div class="col-12 col-md-6"><input type="text" id="text-input" name="nm_kk" placeholder="Nama KK" class="form-control" value="{{$edit->nm_kk}}"></div>
                                         </div>
                                         <div class="form-group" >
                                             <div class="col col-md-12"><label for="text-input" class=" form-control-label"><strong>Kode Rumah</strong></label></div>

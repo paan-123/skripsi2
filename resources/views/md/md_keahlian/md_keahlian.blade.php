@@ -1,6 +1,6 @@
 @extends('layout/paan',[
 'InfoPage' => [
-'Navbar' => '/md_pendidikan'
+'Navbar' => '/md_keahlian'
 ]])
 @section('title', 'Master Data Keahlian')
 
@@ -39,7 +39,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="form_keahlian" class="btn btn-success">Tambah Master Data Keahlian</a> <br>
+                        <a href="form_mdkeahlian" class="btn btn-success" id="tambah">Tambah Master Data Keahlian</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

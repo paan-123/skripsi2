@@ -10,7 +10,7 @@
         <div @if(Session::has('post_add')) <span>{{Session::get('post_add')}}</span>
             @endif
             <div class="col-md-12">
-                <form method="post" action="{{route('keahlian.save')}}">
+                <form method="post" action="{{route('mdkeahlian.save')}}">
                     @csrf
                     <div class="row">
                         <div class="col-lg-12">
@@ -26,7 +26,7 @@
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nama Keahlian</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama_keahlian" placeholder="Nama Level" class="form-control"></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama_keahlian" placeholder="Nama Keahlian" class="form-control"></div>
                                         </div>
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Deskripsi</strong></label></div>

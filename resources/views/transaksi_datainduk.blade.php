@@ -113,13 +113,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Agama</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodeagama" id="kodeagama" class="form-control">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - Muslim</option>
-                                                    <option value="2">2 - Protestan</option>
-                                                    <option value="3">3 - Katolik</option>
-                                                    <option value="4">4 - Hindu</option>
-                                                    <option value="5">5 - Budha</option>
-                                                    <option value="6">6 - Konghucu</option>
+                                                    @foreach ($ag as $ag)
+                                                    <option value='{{$ag->kd_agama}}'>{{$ag->nama_agama}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -152,14 +148,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pendidikan</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodependidikan" id="select" class="form-control">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - Sekolah Dasar</option>
-                                                    <option value="2">2 - SLTP/Sederajat</option>
-                                                    <option value="3">3 - SLTA/Sederajat</option>
-                                                    <option value="4">4 - S1</option>
-                                                    <option value="5">5 - S2</option>
-                                                    <option value="6">6 - S3</option>
-                                                    <option value="7">7 - Lainnya</option>
+                                                    @foreach ($pd as $pd)
+                                                    <option value='{{$pd->kd_pendidikan}}'>{{$pd->nama_jenjang}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -168,14 +159,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pekerjaan</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodepekerjaan" id="select" class="form-control">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - TNI/Polri</option>
-                                                    <option value="1">2 - Pegawai Negeri Sipil</option>
-                                                    <option value="1">3 - Pegawai BUMN</option>
-                                                    <option value="1">4 - Guru/Dosen</option>
-                                                    <option value="1">5 - Karyawan Swasta</option>
-                                                    <option value="1">6 - Pelajar Mahasiswa</option>
-                                                    <option value="1">7 - Lainnya</option>
+                                                    @foreach ($pk as $pk)
+                                                    <option value='{{$pk->kd_pekerjaan}}'>{{$pk->nama_pekerjaan}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -184,10 +170,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="levelekonomi" id="select" class="form-control">
-                                                    <option value="0">0 - Default</option>
-                                                    <option value="1">1 - Menengah Kebawah</option>
-                                                    <option value="2">2 - Menengah</option>
-                                                    <option value="3">3 - Menengah Keatas</option>
+                                                    @foreach ($le as $le)
+                                                    <option value='{{$le->kd_level_ekonomi}}'>{{$le->nama_level}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -196,8 +181,8 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Status Kawin</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="statuskawin" id="select" class="form-control">
-                                                    <option value="0">Belum Kawin</option>
-                                                    <option value="1">Kawin</option>
+                                                    <option value="Belum Kawin">Belum Kawin</option>
+                                                    <option value="Kawin">Kawin</option>
 
                                                 </select>
                                             </div>
@@ -218,10 +203,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kode RT</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodert" id="select" class="form-control">
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-
+                                                    @foreach ($rt as $rt)
+                                                    <option value='{{$rt->kd_rt}}'>RT {{$rt->kd_rt}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>

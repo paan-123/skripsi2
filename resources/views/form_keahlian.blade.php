@@ -34,12 +34,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kode Keahlian</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kd_keahlian" id="select" class="form-control">
-                                                    <option value="1">Musik</option>
-                                                    <option value="2">Gambar</option>
-                                                    <option value="3">Sepak Bola</option>
-                                                    <option value="4">Badminton</option>
-                                                    <option value="5">Berkebun</option>
-                                                    
+                                                    @foreach ($k as $i)
+                                                    <option value='{{$i->kd_keahlian}}'>{{$i->nama_keahlian}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>

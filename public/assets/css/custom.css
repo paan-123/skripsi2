@@ -140,20 +140,119 @@
     }
 }
 
+/* ==============cFilter===================== */
+/* .card-body #cFilter, .card-body{
+  parent-selec
+  background-color: black;
+} */
+
+.custom_body_card{
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  margin-bottom: 0 !important;
+}
+#cFilter .row{
+  display: flex;
+  align-items: center;
+}
+#cFilter label{
+  margin-bottom: 0 !important;
+}
+
+#cFilter .form-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 0 !important; */
+}
+
+#cFilter .form-group label{
+
+  display:flex !important;
+  flex-basis: 50%;
+  /* white-space: nowrap !important; */
+}
+
+/* .select2-container{
+  display:flex !important;
+} */
+
+
+/* .card-body:has(:is(#cFilter)){
+  background-color: black !important;
+} */
+/* .card-body div[id^="cFilter"]{
+  background-color: black;
+} */
+
+
+/* ==============Custom Select2===================== */
+/* .select2-selection__rendered {
+  height: calc(2.25rem + 2px) !important;
+}
+.select2-container .select2-selection--single {
+  height: calc(2.25rem + 2px) !important;
+}
+.select2-selection__arrow {
+  height: calc(2.25rem + 2px) !important;
+} */
+
+.select2.select2-container{
+  width: 100% !important;
+}
+
+#cFilter .select2.select2-container {
+    margin-top: -28px;
+    display: flex;
+    width: 100% !important;
+    flex-basis: 50%;
+}
+
+#cFilter .selection{
+  /* background-color: black; */
+  /* width: auto; */
+  display: flex;
+  flex-basis: 100%;
+}
+#cFilter .select2-selection, #cFilter .select2-selection--single{
+  position:absolute;
+  left: 0;
+  right: 0;
+}
+
+/* ==============Custom Table===================== */
+
 th {
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center !important;
+
 }
 
 td {
-    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
 }
 
 #edit {
-    font-size: 10px;
+    font-size: 9px;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 #delete {
-    font-size: 10px;
+    font-size: 9px;
+    text-align: center !important;
+
+}
+
+#tambah {
+  font-size: 14px;
+}
+
+#tk {
+  width: 250px !important;
 }
 
 

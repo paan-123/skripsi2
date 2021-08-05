@@ -38,7 +38,7 @@
                 <div class="card">
                 
                     <div class="card-body">
-                        <a href="form_rw" class="btn btn-success">Tambah Master Data RW</a> <br>
+                        <a href="form_rw" class="btn btn-success" id="tambah">Tambah Master Data RW</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

@@ -14,12 +14,112 @@ use App\Http\Controllers\UserAuthController;
 use Faker\Guesser\Name;
 use Laravel\Socialite\Facades\Socialite;
 
+
+
+/////////Debugging///////////
+// Route::get('/DEBUG_LOGIN', function () {
+//     Auth::loginUsingId(1);
+//     return redirect('/home');
+// });
+
 use Illuminate\Support\Facades\DB;
 
-Route::get('/DEBUG_LOGIN', function () {
-    Auth::loginUsingId(1);
-    return redirect('/home');
+use function PHPSTORM_META\type;
+
+function NToS($before)
+{
+    if ($before === 1) {
+        return "001";
+    } else if ($before === 2) {
+        return "002";
+    } else if ($before === 13) {
+        return "013";
+    }
+    dd($before);
+}
+
+Route::get('/transfer_db', function () {
+    $data_kk = DB::table('data_kk')->get();
+
+    foreach ($data_kk as $data) :
+        DB::table('sementara')->insert([
+            "no_kk"             => $data->no_kk,
+            "no_rt"             => NToS($data->no_rt),
+            "no_rw"             => NToS($data->no_rw),
+            "nm_kk"             => $data->nm_kk,
+            "kd_rumah"          => $data->kd_rumah,
+            "kd_level_ekonomi"  => $data->kd_level_ekonomi,
+            "keterangan"        => $data->keterangan
+        ]);
+    endforeach;
+    return 'Transfer db';
 });
+Route::get('/inspect_db', function () {
+    dd(DB::table('datainduk')->first());
+});
+
+Route::get('/db_data_keahlian_warga', function () {
+    $data_kk = DB::table('data_keahlian_warga')->get();
+    foreach ($data_kk as $data) :
+        DB::table('sementara_data_keahlian_warga')->insert([
+            "id"                    => $data->id,
+            "kd_induk"              => $data->kd_induk,
+            "kd_keahlian"           => $data->kd_keahlian,
+            "is_sertifikat"         => $data->is_sertifikat,
+            "deskripsi_sertifikat"  => $data->deskripsi_sertifikat,
+            "level_sertifikat"      => $data->level_sertifikat,
+            "keterangan"            => $data->keterangan
+        ]);
+    endforeach;
+    return 'db_data_keahlian_warga';
+});
+Route::get('/insert_db_data_keahlian_warga_insert', function () {
+    $data_kk = DB::table('sementara_data_keahlian_warga')->get();
+    foreach ($data_kk as $data) :
+        DB::table('data_keahlian_warga')->insert((array) $data);
+    endforeach;
+    return 'insert_db_data_keahlian_warga_insert';
+});
+Route::get('/db_datainduk', function () {
+    $data_kk = DB::table('datainduk')->get();
+    foreach ($data_kk as $data) :
+        $data->kd_rt = NToS($data->kd_rt);
+        DB::table('sementara_datainduk')->insert((array) $data);
+    endforeach;
+    return 'db_datainduk -> sementara_db_datainduk';
+});
+Route::get('/insert_db_datainduk', function () {
+    $data_kk = DB::table('sementara_datainduk')->get();
+    foreach ($data_kk as $data) :
+        DB::table('datainduk')->insert((array) $data);
+    endforeach;
+    return 'sementara_datainduk -> insert_db_datainduk';
+});
+Route::get('/db_data_kk', function () {
+    $data_kk = DB::table('data_kk')->get();
+    foreach ($data_kk as $data) :
+        DB::table('sementara_data_kk')->insert([
+            "no_kk"             => $data->no_kk,
+            "no_rt"             => NToS($data->no_rt),
+            "no_rw"             => NToS($data->no_rw),
+            "nm_kk"             => $data->nm_kk,
+            "kd_rumah"          => $data->kd_rumah,
+            "kd_level_ekonomi"  => $data->kd_level_ekonomi,
+            "keterangan"        => $data->keterangan
+        ]);
+    endforeach;
+    return 'db_data_kk -> sementara_data_kk';
+});
+Route::get('/insert_db_data_kk', function () {
+    $data_kk = DB::table('sementara_data_kk')->get();
+    foreach ($data_kk as $data) :
+        DB::table('data_kk')->insert((array) $data);
+    endforeach;
+    return 'sementara_db_data_kk -> db_data_kk';
+});
+
+
+////////////////
 
 /////////AUTENTIKASI///////////
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
@@ -48,16 +148,15 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/ibadah', 'App\Http\Controllers\JamaahController@ibadah');
 
 
-    Route::get('/keahlian', 'App\Http\Controllers\JamaahController@keahlian');
     // Route::get('/keahlian', [JamaahController::class, 'joinkj'])->name('JamaahController.joinkj');
 
+    Route::get('/keahlian', 'App\Http\Controllers\JamaahController@keahlian');
     Route::get('/form_keahlian', 'App\Http\Controllers\PagesController@formkeahlian');
-    Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
     Route::post('/add-post-keahlian', [PostKeahlian::class, 'savePostKeahlian'])->name('keahlian.save');
-    Route::get('/edit_keahlian/{kd_induk}', [PostKeahlian::class, 'editPost'])->name('postkeahlian.edit');
+    Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
+    Route::get('/edit_keahlian/{id}', [PostKeahlian::class, 'editPost'])->name('postkeahlian.edit');
     Route::post('/update-post-keahlian', [PostKeahlian::class, 'updatePost'])->name('updatekeahlian.post');
-
-    Route::get('/delete_data_keahlian/{kd_induk}', [PostKeahlian::class, 'deletePost'])->name('post.delete');
+    Route::get('/delete_data_keahlian/{id}', [PostKeahlian::class, 'deletePost'])->name('post.delete');
 
     /////////TAMPIL DATA///////////
     Route::get('/md_agama', 'App\Http\Controllers\MDController@agama');
@@ -95,12 +194,12 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/delete_ekonomi/{kd_level_ekonomi}', [MDController::class, 'deleteEkonomi'])->name('post.delete');
 
     Route::get('/md_keahlian', 'App\Http\Controllers\MDController@mdKeahlian');
-    Route::get('/form_keahlian', 'App\Http\Controllers\MDController@formKeahlian');
-    Route::get('/add-post-keahlian', [MDController::class, 'addPostKeahlian'])->name('keahlian.add');
-    Route::post('/add-post-keahlian', [MDController::class, 'savePostKeahlian'])->name('keahlian.save');
-    Route::get('/edit_mdkeahlian/{kd_keahlian}', [MDController::class, 'editKeahlian'])->name('postMdKeahlian.edit');
-    Route::post('/update-post-keahlian', [MDController::class, 'updateKeahlian'])->name('updateMdKeahlian.post');
-    Route::get('/delete_mdkeahlian/{kd_keahlian}', [MDController::class, 'deleteKeahlian'])->name('post.delete');
+    Route::get('/form_mdkeahlian', 'App\Http\Controllers\MDController@fk');
+    Route::get('/add-post-mdkeahlian', [MDController::class, 'addPostMDKeahlian'])->name('mdkeahlian.add');
+    Route::post('/add-post-mdkeahlian', [MDController::class, 'savePostMDKeahlian'])->name('mdkeahlian.save');
+    Route::get('/edit_mdkeahlian/{kd_keahlian}', [MDController::class, 'editMDKeahlian'])->name('postMdKeahlian.edit');
+    Route::post('/update-post-mdkeahlian', [MDController::class, 'updateMDKeahlian'])->name('updateMdKeahlian.post');
+    Route::get('/delete_mdkeahlian/{kd_keahlian}', [MDController::class, 'deleteMDKeahlian'])->name('post.delete');
 
 
     Route::get('/md_rumah', 'App\Http\Controllers\JamaahController@mdrumah');

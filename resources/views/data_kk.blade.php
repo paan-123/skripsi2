@@ -56,14 +56,14 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-5">Nomor RW</label>
-                                            <select class="select form-control col-sm-7"></select>
+                                        <label class="col-sm-4">No. RW</label>
+                                            <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-5 text-right">Nomor RT</label>
-                                        <select class="select form-control col-sm-7"></select>
+                                        <label class="col-sm-4">No. RT</label>
+                                        <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>
                                 
@@ -75,8 +75,8 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-5 text-right">Ekonomi</label>
-                                        <select class="select form-control col-sm-7"></select>
+                                        <label class="col-sm-4">Ekonomi</label>
+                                        <select class="select form-control col-sm-6"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -85,12 +85,12 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-3 text-center">
+                                <div class="col-sm-2 text-center">
                                     <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
                                 </div>
                             </div>
                             
-                            </div>
+                        </div>
 
                     </div>
                 </div>

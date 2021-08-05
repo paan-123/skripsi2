@@ -56,13 +56,13 @@
                                 <div class="col-sm-2">
                                     <div class="form-group row">
                                         <label class="col-sm-4 text-right">RW</label>
-                                            <select class="select form-control col-sm-4 text-left"></select>
+                                        <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
                                         <label class="col-sm-4 text-right" >RT</label>
-                                            <select class="select form-control col-sm-4"></select>
+                                        <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3" hidden>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-6 text-right">Jenis Kelamin</label>
+                                        <label class="col-sm-5 text-right">Jenis Kelamin</label>
                                             <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-6 text-right">Status Mukim</label>
+                                        <label class="col-sm-4 text-right">Status Mukim</label>
                                         <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>

@@ -49,13 +49,13 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-6">No. RW</label>
+                                        <label class="col-sm-5">No. RW</label>
                                             <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-6 text-right">No. RT</label>
+                                        <label class="col-sm-5 text-right">No. RT</label>
                                             <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
@@ -67,19 +67,19 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">Agama</label>
+                                        <label class="col-sm-5 text-right">Agama</label>
                                         <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">5 Waktu</label>
+                                        <label class="col-sm-5 text-right">5 Waktu</label>
                                         <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">Berjamaah</label>
+                                        <label class="col-sm-6 text-right">Berjamaah</label>
                                             <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
@@ -90,26 +90,26 @@
 
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-6">Fitrah</label>
+                                        <label class="col-sm-5">Fitrah</label>
                                             <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-6 text-right">Mal</label>
+                                        <label class="col-sm-5 text-right">Mal</label>
                                             <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
                                 
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">Kurban</label>
+                                        <label class="col-sm-5 text-right">Kurban</label>
                                             <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">Haji</label>
+                                        <label class="col-sm-5 text-right">Haji</label>
                                             <select class="select form-control col-sm-4 text-left"></select>
                                     </div>
                                 </div>

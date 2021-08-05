@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-5 ">Nomor RT</label>
+                                        <label class="col-sm-4 ">No. RT</label>
                                         <select class="select form-control col-sm-4"></select>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-7 text-right">Level Sertifikat</label>
+                                        <label class="col-sm-6 text-right">Level Sertifikat</label>
                                         <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>

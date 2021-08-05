@@ -30,8 +30,14 @@
                                     <div class="col-12 col-md-9"><input type="text" id="nomorktp" name="nomorktp" placeholder="Nomor KTP" class="form-control" required value="{{$edit->no_ktp}}"></div>
                                 </div>
                                 <div class="row form-group">
-                                    <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nomor Kartu Keluarga</strong></label></div>
-                                    <div class="col-12 col-md-9"><input type="text" id="no_kk" name="nomorkk" placeholder="Nomor Kartu Keluarga" class="form-control" required value="{{$edit->no_kk}}"></div>
+                                    <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nama Kepala Keluarga</strong></label></div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="nomorkk" id="select" class="form-control select">
+                                            @foreach($kk as $kk)
+                                            <option value="{{$kk->no_kk}}"{{ $kk->no_kk    == $edit->no_kk ? 'selected' : ''}}>{{$kk->nm_kk}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nama Lengkap</strong></label></div>
@@ -80,56 +86,31 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Agama</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="kodeagama" id="kodeagama" class="form-control">
-                                            <option value="0"{{ '0'    == $edit->kd_agama ? 'selected' : ''}}>Default</option>
-                                            <option value="1"{{ '1'    == $edit->kd_agama ? 'selected' : ''}}>Islam</option>
-                                            <option value="2"{{ '2'    == $edit->kd_agama ? 'selected' : ''}}>Kristen</option>
-                                            <option value="3"{{ '3'    == $edit->kd_agama ? 'selected' : ''}}>Katolik</option>
-                                            <option value="4"{{ '4'    == $edit->kd_agama ? 'selected' : ''}}>Hindu</option>
-                                            <option value="5"{{ '5'    == $edit->kd_agama ? 'selected' : ''}}>Budha</option>
-                                            <option value="6"{{ '6'    == $edit->kd_agama ? 'selected' : ''}}>Konghucu</option>
+                                            @foreach($ag as $ag)
+                                            <option value="{{$ag->kd_agama}}"{{ $ag->kd_agama    == $edit->kd_agama ? 'selected' : ''}}>{{$ag->nama_agama}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pendidikan</strong></label></div>
                                     <div class="col-12 col-md-9">
-                                        <select name="kodependidikan" id="kodependidikan" class="form-control">
-                                            <option value="0"{{ '0'    == $edit->kd_pendidikan ? 'selected' : ''}}>Default</option>
-                                            <option value="1"{{ '1'    == $edit->kd_pendidikan ? 'selected' : ''}}>Akademi/Diploma II/Sarjana Muda</option>
-                                            <option value="2"{{ '2'    == $edit->kd_pendidikan ? 'selected' : ''}}>Akademi/Diploma III/Sarjana Muda</option>
-                                            <option value="3"{{ '3'    == $edit->kd_pendidikan ? 'selected' : ''}}>Belum Tamat SD/Sederajat</option>
-                                            <option value="4"{{ '4'    == $edit->kd_pendidikan ? 'selected' : ''}}>Diploma IV/Strata I</option>
-                                            <option value="5"{{ '5'    == $edit->kd_pendidikan ? 'selected' : ''}}>SLTA/Sederajat</option>
-                                            <option value="6"{{ '6'    == $edit->kd_pendidikan ? 'selected' : ''}}>SLTP/Sederajat</option>
-                                            <option value="7"{{ '7'    == $edit->kd_pendidikan ? 'selected' : ''}}>Strata II</option>
-                                            <option value="8"{{ '8'    == $edit->kd_pendidikan ? 'selected' : ''}}>Tamat SD/Sederajat</option>
-                                            <option value="9"{{ '9'    == $edit->kd_pendidikan ? 'selected' : ''}}>Tidak/Belum Sekolah</option>
+                                        <select name="kodependidikan" id="select" class="form-control">
+                                            @foreach($pd as $pd)
+                                            <option value="{{$pd->kd_pendidikan}}"{{ $pd->kd_pendidikan    == $edit->kd_pendidikan ? 'selected' : ''}}>{{$pd->nama_jenjang}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pekerjaan</strong></label></div>
                                     <div class="col-12 col-md-9">
-                                        <select name="kodepekerjaan" id="kodepekerjaan" class="form-control">
-                                            <option value="0"{{ '0'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Default</option>
-                                            <option value="1"{{ '1'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Arsitek</option>
-                                            <option value="2"{{ '2'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Belum/Tidak Bekerja</option>
-                                            <option value="3"{{ '3'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Buruh Harian Lepas</option>
-                                            <option value="4"{{ '4'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Buruh Tani/Perkebunan</option>
-                                            <option value="5"{{ '5'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Guru/Dosen</option>
-                                            <option value="6"{{ '6'    == $edit->kd_pekerjaan ? 'selected' : ''}}>IRT</option>
-                                            <option value="7"{{ '7'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Karyawan BUMN</option>
-                                            <option value="8"{{ '8'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Karyawan Swasta</option>
-                                            <option value="9"{{ '9'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Pelajar/Mahasiswa</option>
-                                            <option value="10"{{ '10'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Pensiunan</option>
-                                            <option value="11"{{ '11'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Perdagangan</option>
-                                            <option value="12"{{ '12'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Pegawai Negeri Sipil</option>
-                                            <option value="13"{{ '13'    == $edit->kd_pekerjaan ? 'selected' : ''}}>POLRI</option>
-                                            <option value="14"{{ '14'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Seniman</option>
-                                            <option value="15"{{ '15'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Sopir</option>
-                                            <option value="16"{{ '16'    == $edit->kd_pekerjaan ? 'selected' : ''}}>TNI</option>
-                                            <option value="17"{{ '17'    == $edit->kd_pekerjaan ? 'selected' : ''}}>Wiraswasta</option>
+                                        <select name="kodepekerjaan" id="select" class="form-control">
+                                            @foreach($pk as $pk)
+                                            <option value="{{$pk->kd_pekerjaan}}"{{ $pk->kd_pekerjaan    == $edit->kd_pekerjaan ? 'selected' : ''}}>{{$pk->nama_pekerjaan}}</option>
+                                            @endforeach
                                         </select>
+
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -152,11 +133,10 @@
                                 <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                     <div class="col-12 col-md-9">
-                                        <select name="levelekonomi" id="levelekonomi" class="form-control">
-                                            <option value="0"{{ '0'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Default</option>
-                                            <option value="1"{{ '1'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Kebawah</option>
-                                            <option value="2"{{ '2'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah</option>
-                                            <option value="3"{{ '3'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Keatas</option>
+                                        <select name="levelekonomi" id="select" class="form-control">
+                                            @foreach($le as $le)
+                                            <option value="{{$le->kd_level_ekonomi}}"{{ $le->kd_level_ekonomi    == $edit->kd_level_ekonomi ? 'selected' : ''}}>{{$le->nama_level}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -267,14 +247,12 @@
                                     </div>
                                 </div>
                                 <div class="row form-group">
-                                    <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kode RT</strong></label></div>
+                                    <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RT</strong></label></div>
                                     <div class="col-12 col-md-9">
-                                        <select name="kodert" id="kodert" class="form-control" value="{{$edit->kd_rt}}">
-                                            <option value="0"{{ '0'    == $edit->kd_rt ? 'selected' : ''}}>0</option>
-                                            <option value="1"{{ '0'    == $edit->kd_rt ? 'selected' : ''}}>1</option>
-                                            <option value="2"{{ '0'    == $edit->kd_rt ? 'selected' : ''}}>2</option>
-                                            <option value="13"{{ '0'    == $edit->kd_rt ? 'selected' : ''}}>13</option>
-
+                                        <select name="kodert" id="select" class="form-control">
+                                            @foreach($rt as $rt)
+                                            <option value="{{$rt->kd_rt}}"{{ $rt->kd_rt    == $edit->kd_rt ? 'selected' : ''}}>{{$rt->no_rt}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

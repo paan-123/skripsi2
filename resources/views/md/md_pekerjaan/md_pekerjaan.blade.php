@@ -39,7 +39,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="form_pekerjaan" class="btn btn-success">Tambah Master Data Pekerjaan</a> <br>
+                        <a href="form_pekerjaan" class="btn btn-success" id="tambah">Tambah Master Data Pekerjaan</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

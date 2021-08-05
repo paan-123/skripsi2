@@ -48,6 +48,13 @@ class PostDataInduk extends Controller
             'no_ktp'            => $request->nomorktp,
             'status'            => $request->status,
         ]);
+
+        $kk = DB::table('data_kk')->where('no_kk', $request->nomorkk);
+        if (!empty($kk->first())) {
+            if (!empty($kk->first()->kd_rumah)) {
+                DB::table('md_rumah')->increment('jml_penghuni');
+            }
+        }
         return redirect('/data_induk');
         // return back()->with('post_add', 'Data berhasil ditambahkan');
     }
@@ -55,13 +62,46 @@ class PostDataInduk extends Controller
 
     public function editPost($kd_induk)
     {
+        $kk = DB::table('data_kk')->get();
+        $ag = DB::table('md_agama')->get();
+        $pd = DB::table('md_pendidikan')->get();
+        $pk = DB::table('md_pekerjaan')->get();
+        $le = DB::table('md_level_ekonomi')->get();
+        $rt = DB::table('md_rt')->get();
         $edit = DB::table('datainduk')->where('kd_induk', $kd_induk)->first();
-        return view('edit_data_induk', compact('edit'));
+        return view('edit_data_induk', compact('edit', 'kk', 'ag', 'pd', 'pk', 'le', 'rt'));
     }
 
 
     public function updatePost(Request $request)
     {
+        $datainduk = DB::table('datainduk')
+            ->where('datainduk.kd_induk', $request->kodeinduk)
+            ->leftJoin('data_kk', 'data_kk.no_kk', '=', 'datainduk.no_kk');
+        $no_kk = $datainduk->first()->no_kk;
+        $kd_rumah = $datainduk->first()->kd_rumah;
+
+        $md_rumah = DB::table('md_rumah')->where('kd_rumah', $kd_rumah);
+
+        if ($no_kk !== $request->nomorkk) {
+            if (!is_null($md_rumah->first())) {
+                $md_rumah->decrement('jml_penghuni');
+            }
+            $total_anggota = DB::table('data_kk')->where('no_kk', $no_kk)->count();
+            if ($total_anggota === 1) {
+                $md_rumah->decrement('jml_kk');
+            }
+            $new_kk = DB::table('data_kk')->where('no_kk', $request->nomorkk);
+            if (!is_null($new_kk->first())) {
+                if (!empty($new_kk->kd_rumah)) {
+                    $new_md_rumah = DB::table('md_rumah')->where('kd_rumah', $new_kk->first()->kd_rumah);
+                    // if (!is_null($new_md_rumah->first())) {
+                    $new_md_rumah->increment('jml_penghuni');
+                    // }
+                }
+            }
+        }
+
         DB::table('datainduk')->where('kd_induk', $request->kodeinduk)->update([
             'kd_induk'          => $request->kodeinduk,
             'no_kk'             => $request->nomorkk,
@@ -101,6 +141,30 @@ class PostDataInduk extends Controller
 
     public function deletePost($kd_induk)
     {
+        //get no_kk
+        $no_kk = DB::table('datainduk')->where('kd_induk', $kd_induk);
+        //get kk
+        if (!empty($no_kk->first())) {
+            $no_kk = $no_kk->first()->no_kk;
+            //get anggota
+            $datainduk = DB::table('datainduk')->where('no_kk', $no_kk);
+
+            if (!empty($datainduk->first())) {
+                $data_kk = DB::table('data_kk')->where('no_kk', $no_kk);
+                if (!empty($data_kk->first())) {
+                    $md_rumah = DB::table('md_rumah')->where('kd_rumah', $data_kk->first()->kd_rumah);
+                    if (!empty($md_rumah->first())) {
+                        $md_rumah->decrement('jml_penghuni');
+                        if ($datainduk->count() < 1) {
+                            $md_rumah->decrement('jml_kk');
+                        }
+                    }
+                }
+            }
+        }
+
+        // dd('skip');
+        //if anggota === 1 remove jml_kk
         DB::table('datainduk')->where('kd_induk', $kd_induk)->delete();
         return back()->with('post_delete');
     }

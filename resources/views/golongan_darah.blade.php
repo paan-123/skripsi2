@@ -43,43 +43,43 @@
                     <div class="card-body">
                         <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-6">No. RW</label>
+                                        <label class="col-sm-4">No. RW</label>
                                             <select class="select form-control col-sm-5"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group row">
-                                        <label class="col-sm-6">No. RT</label>
-                                            <select class="select form-control col-sm-5"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">Nomor Rumah</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">Nomor Rumah</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">Nomor Rumah</label>
-                                        <select class="select form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
-                                        <label class="col-sm-6">Golongan Darah</label>
-                                            <select class="select form-control col-sm-6"></select>
+                                        <label class="col-sm-4">No. RT</label>
+                                            <select class="select form-control col-sm-5"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor Rumah</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor Rumah</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor Rumah</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4">Golongan Darah</label>
+                                        <select class="select form-control col-sm-6"></select>
                                     </div>
                                 </div>    
-                                <div class="col-sm-5 text-center">
+                                <div class="col-sm-2 text-center">
                                     <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
                                 </div>                    
                             </div>

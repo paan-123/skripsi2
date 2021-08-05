@@ -43,7 +43,7 @@
 
 
                     <div class="card-body">
-                        <a href="form_datainduk" class="btn btn-success">Tambah Data Warga</a> <br>
+                        <a href="form_datainduk" class="btn btn-success" id="tambah">Tambah Data Warga</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

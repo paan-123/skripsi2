@@ -19,6 +19,8 @@ class JamaahController extends Controller
         $data_induk = DB::table('datainduk')->get();
         return view('data_induk', compact('data_induk'));
     }
+
+
     public function data_induk()
     {
         $datainduk = DB::table('datainduk')
@@ -38,6 +40,7 @@ class JamaahController extends Controller
                 'datainduk.status'
             )
             ->get();
+        // dd($datainduk);
         return view('datainduk', compact('datainduk'));
     }
 
@@ -163,6 +166,9 @@ class JamaahController extends Controller
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
             // ->leftJoin('md_rt', 'datainduk.kd_rt', '=', 'md_rt.kd_rt')
             ->select(
+
+                'data_keahlian_warga.id',
+                'data_keahlian_warga.kd_keahlian',
                 'datainduk.kd_induk',
                 'datainduk.no_kk',
                 'datainduk.no_ktp',

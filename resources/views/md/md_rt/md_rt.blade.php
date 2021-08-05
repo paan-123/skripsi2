@@ -39,7 +39,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="form_rt" class="btn btn-success">Tambah Master Data RT</a> <br>
+                        <a href="form_rt" class="btn btn-success" id="tambah">Tambah Master Data RT</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

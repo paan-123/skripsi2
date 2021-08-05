@@ -43,7 +43,7 @@
 
 
                     <div class="card-body">
-                        <a href="form_keahlian" class="btn btn-success">Tambah Data Keahlian</a> <br>
+                        <a href="form_keahlian" class="btn btn-success" id="tambah">Tambah Data Keahlian</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
@@ -75,8 +75,8 @@
                                     <td>{{$k->level_sertifikat}}</td>
                                     {{-- <td>{{$k->deskripsi_sertifikat}}</td> --}}
                                     <td>
-                                        <a href="/edit_keahlian/{{$k->kd_induk}}" class="btn btn-warning" id="edit">EDIT</a>
-                                        <a href="/delete_data_keahlian/{{$k->kd_induk}}" class="btn btn-danger" id="delete">DELETE</a>
+                                        <a href="/edit_keahlian/{{$k->id}}" class="btn btn-warning" id="edit">EDIT</a>
+                                        <a href="/delete_data_keahlian/{{$k->id}}" class="btn btn-danger" id="delete">DELETE</a>
                                     </td>
                                 </tr>
                                 @endforeach

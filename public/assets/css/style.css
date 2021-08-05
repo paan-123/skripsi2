@@ -342,7 +342,7 @@ Googel Fonts  */
   .tdl-holder input[type="text"] {
     height: 60px;
     margin-top: 20px;
-    font-size: 14px; }
+    font-size: 12px; }
 
 .transition {
   -webkit-transition: all 0.3s ease;
@@ -352,11 +352,11 @@ body {
   background-color: #e6e8ea;
   display: table;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   width: 100%; }
 
 p {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -439,7 +439,7 @@ canvas {
   border-radius: 3px; }
 
 .text-muted {
-  font-size: 14px; }
+  font-size: 12px; }
   .text-muted.muted-black {
     color: #333648 !important;
     font-weight: 600; }
@@ -514,7 +514,7 @@ canvas {
     color: #9aa0a4;
     padding: 14px 20px; }
     .messenger-box .inner-box .name {
-      font-size: 16px;
+      font-size: 14px;
       padding-bottom: 10px; }
     .messenger-box .inner-box:after {
       content: "";
@@ -600,7 +600,7 @@ aside.left-panel {
     clear: both;
     display: block;
     font-family: 'Roboto';
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 50px;
     padding: 0;
@@ -640,7 +640,7 @@ aside.left-panel {
           text-align: left;
           z-index: 9; }
         .navbar .navbar-nav li > a .menu-title-text {
-          font-size: 14px; }
+          font-size: 12px; }
         .navbar .navbar-nav li > a .badge {
           border-radius: 0;
           font-weight: 600;
@@ -917,7 +917,7 @@ header.fixed-top {
   border: none;
   color: #99abb4;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 55px;
   padding: 0;
   width: 43px; }
@@ -964,7 +964,7 @@ header .form-inline {
       background: transparent;
       border: none;
       color: #fff;
-      font-size: 16px;
+      font-size: 14px;
       position: absolute;
       right: 15px;
       top: 50%;
@@ -994,7 +994,7 @@ header .form-inline {
     background: transparent;
     border: none;
     color: #99abb4;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 55px;
     padding-top: 0;
     padding-bottom: 0; }
@@ -1257,7 +1257,7 @@ header .form-inline {
       padding-top: 15px;
       width: 100%;
       font-weight: 700;
-      font-size: 16px; }
+      font-size: 14px; }
       .card.weather-box .middle .city span {
         font-size: 14px;
         display: block;
@@ -1268,7 +1268,7 @@ header .form-inline {
       top: 10px;
       right: 0; }
       .card.weather-box .middle .temp span {
-        font-size: 16px; }
+        font-size: 14px; }
   .card.weather-box .nextdays {
     clear: both;
     padding-top: 22px;
@@ -1474,7 +1474,7 @@ header .form-inline {
       text-transform: capitalize; }
   .table-stats table td {
     color: #343a40;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: capitalize;
     vertical-align: middle; }
@@ -1574,7 +1574,7 @@ header .form-inline {
     border-left: 1px solid rgba(120, 130, 140, 0.4);
     color: #878787;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     float: left;
     padding: 0 7px;
     width: inherit;
@@ -1972,7 +1972,7 @@ header .form-inline {
   margin-right: 5px; }
 
 .stat-widget-two .stat-text {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 5px;
   color: #868e96; }
 
@@ -2121,7 +2121,7 @@ footer.site-footer {
     top: 0;
     left: 0; }
     .calender-cont .fc-center h2 {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700; }
   .calender-cont td .fc-event {
     border: 0px solid transparent;
@@ -2510,7 +2510,7 @@ footer.site-footer {
   #cellPaiChart .pieLabel {
     top: 50px !important; }
     #cellPaiChart .pieLabel div {
-      font-size: 16px !important; }
+      font-size: 14px !important; }
   #cellPaiChart #pieLabel1 {
     left: 20px !important; }
   #cellPaiChart #pieLabel0 {

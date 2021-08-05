@@ -47,7 +47,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <a href="form_datakk" class="btn btn-success">Tambah Data Kartu Keluarga</a> <br>
+                            <a href="form_datakk" class="btn btn-success" id="tambah">Tambah Data Kartu Keluarga</a> <br>
                             <hr>
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <thead>
@@ -56,18 +56,18 @@
                                         <th>Nama Kepala Keluarga</th>
                                         <th>RW</th>
                                         <th>RT</th>
-                                        <th>Keterangan</th>
-                                        <th>Action</th>
+                                        {{-- <th>Keterangan</th> --}}
+                                        <th id="tk">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($dkdi as $join)
                                     <tr>
-                                        <td> <a class="btn btn-link" id="hue" data-a="{{$join->no_kk}}" data-toggle="modal" data-target=".bd-example-modal-lg" style="color:rgb(0, 17, 255)">{{$join->no_kk}}</a></td>
+                                        <td> <a class="btn btn-link" id="hue" data-a="{{$join->no_kk}}" data-toggle="modal" data-target=".bd-example-modal-lg" style="color:rgb(0, 17, 255); font-size:12px;">{{$join->no_kk}}</a></td>
                                         <td>{{$join->nm_kk}}</td>
                                         <td>{{$join->no_rw}}</td>
                                         <td>{{$join->no_rt}}</td>
-                                        <td>{{$join->keterangan}}</td>
+                                        {{-- <td>{{$join->keterangan}}</td> --}}
                                         <td>
                                             <a href="transaksi_datainduk/{{$join->no_kk}}" class="btn btn-primary" id="edit">TAMBAH ANGGOTA</a>
                                             <a href="/edit_dkk/{{$join->no_kk}}" class="btn btn-warning" id="edit">EDIT</a>

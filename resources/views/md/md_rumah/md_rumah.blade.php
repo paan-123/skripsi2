@@ -38,7 +38,7 @@
                 <div class="card">
                     
                     <div class="card-body">
-                        <a href="form_rumah" class="btn btn-success">Tambah Master Data Rumah</a> <br>
+                        <a href="form_rumah" class="btn btn-success" id="tambah">Tambah Master Data Rumah</a> <br>
                         <hr>
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>

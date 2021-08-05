@@ -33,6 +33,7 @@
                                             <div class="col-12 col-md-9">
                                                 <select name="no_kk" id="select" class="form-control select" >
                                                     @foreach ($join as $r)
+                                                    <option value=''>Default</option>
                                                     <option value='{{$r->no_kk}}'>{{$r->nm_kk}}</option>
                                                     @endforeach
                                                 </select>
@@ -43,6 +44,7 @@
                                             <div class="col-12 col-md-9">
                                                 <select name="nm_kk" id="select" class="form-control select1">
                                                     @foreach ($join as $r)
+                                                    <option value=''>Default</option>
                                                     <option value='{{$r->nm_kk}}'>{{$r->nm_kk}}</option>
                                                     @endforeach
                                                 </select>
@@ -58,14 +60,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Jumlah KK</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="jml_kk" placeholder="Jumlah KK" class="form-control"></div>
-                                        </div>
-                                        <div class="row form-group">
-                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Jumlah Penghuni</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="jml_penghuni" placeholder="Jumlah Penghuni" class="form-control"></div>
-                                        </div>
+                                        
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Keterangan</strong></label></div>
                                             <div class="col-12 col-md-9"><input type="text" id="text-input" name="keterangan" placeholder="Keterangan" class="form-control"></div>

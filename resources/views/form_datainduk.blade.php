@@ -30,7 +30,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="home">Dashboard</a></li>
                             <li><a href="#">Transaksi</a></li>
-                            <li><a href="#">Input Data Kartu Keluarga</a></li>
+                            <li><a href="#">Input Data Warga</a></li>
                         </ol>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <form method="post" action="{{route('savedi.post')}}">
                             @csrf
 
-                            <h2><strong>Tambah Anggota Kartu Keluarga</strong></h2>
+                            <h2><strong>Tambah Data Warga</strong></h2>
                             <hr> <br>
                             <div class="default-tab">
                                 <nav>
@@ -74,8 +74,14 @@
                                         </div>
 
                                         <div class="row form-group">
-                                            <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Nomor Kartu Keluarga</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="nomorkk" placeholder="Nomor Kartu Keluarga" class="form-control"></div>
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nama Kepala Keluarga</strong></label></div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="norw" id="select" class="form-control select">
+                                                    @foreach ($kk as $kk)
+                                                    <option value='{{$kk->no_kk}}'>{{$kk->nm_kk}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
                                         </div>
 
                                         <div class="row form-group">
@@ -132,13 +138,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Agama</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodeagama" id="kodeagama" class="form-control">
-                                                    <option value="0">Default</option>
-                                                    <option value="1">Islam</option>
-                                                    <option value="2">Kristen</option>
-                                                    <option value="3">Katolik</option>
-                                                    <option value="4">Hindu</option>
-                                                    <option value="5">Budha</option>
-                                                    <option value="6">Konghucu</option>
+                                                    @foreach ($ag as $ag)
+                                                    <option value='{{$ag->kd_agama}}'>{{$ag->nama_agama}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -171,16 +173,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pendidikan</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodependidikan" id="select" class="form-control">
-                                                    <option value="0">Default</option>
-                                                    <option value="1">Akademi/Diploma II/Sarjana Muda</option>
-                                                    <option value="2">Akademi/Diploma III/Sarjana Muda</option>
-                                                    <option value="3">Belum Tamat SD/Sederajat</option>
-                                                    <option value="4">Diploma IV/Strata I</option>
-                                                    <option value="5">SLTA/Sederajat</option>
-                                                    <option value="6">SLTP/Sederajat</option>
-                                                    <option value="7">Strata II</option>
-                                                    <option value="8">Tamat SD/Sederajat</option>
-                                                    <option value="9">Tidak/Belum Sekolah</option>
+                                                    @foreach ($pd as $pd)
+                                                    <option value='{{$pd->kd_pendidikan}}'>{{$pd->nama_jenjang}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -189,24 +184,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Pekerjaan</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodepekerjaan" id="select" class="form-control">
-                                                    <option value="0">Default</option>
-                                                    <option value="1">Arsitek</option>
-                                                    <option value="2">Belum/Tidak Bekerja</option>
-                                                    <option value="3">Buruh Harian Lepas</option>
-                                                    <option value="4">Buruh Tani/Perkebunan</option>
-                                                    <option value="5">Guru/Dosen</option>
-                                                    <option value="6">IRT</option>
-                                                    <option value="7">Karyawan BUMN</option>
-                                                    <option value="8">Karyawan Swasta</option>
-                                                    <option value="9">Pelajar/Mahasiswa</option>
-                                                    <option value="10">Pensiunan</option>
-                                                    <option value="11">Perdagangan</option>
-                                                    <option value="12">Pegawai Negeri Sipil</option>
-                                                    <option value="13">POLRI</option>
-                                                    <option value="14">Seniman</option>
-                                                    <option value="15">Sopir</option>
-                                                    <option value="16">TNI</option>
-                                                    <option value="17">Wiraswasta</option>
+                                                    @foreach ($pk as $pk)
+                                                    <option value='{{$pk->kd_pekerjaan}}'>{{$pk->nama_pekerjaan}}</option>
+                                                    @endforeach
                                                 </select>
 
                                             </div>
@@ -216,10 +196,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="levelekonomi" id="select" class="form-control">
-                                                    <option value="0">Default</option>
-                                                    <option value="1">Menengah Kebawah</option>
-                                                    <option value="2">Menengah</option>
-                                                    <option value="3">Menengah Keatas</option>
+                                                    @foreach ($le as $le)
+                                                    <option value='{{$le->kd_level_ekonomi}}'>{{$le->nama_level}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -250,10 +229,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kode RT</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kodert" id="select" class="form-control">
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="13">13</option>
+                                                    @foreach ($rt as $rt)
+                                                    <option value='{{$rt->kd_rt}}'>RT {{$rt->kd_rt}}</option>
+                                                    @endforeach
 
                                                 </select>
                                             </div>

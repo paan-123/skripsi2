@@ -65,8 +65,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RW</strong></label></div>
                                             <div class="col-12 col-md-6">
                                                 <select name="norw" id="select" class="form-control">
-                                                    <option value="1"{{ '1'    == $edit->no_rw ? 'selected' : ''}}>RW 1</option>
-                                                    
+                                                    @foreach($rw as $rw)
+                                                    <option value="{{$rw->no_rw}}"{{ $rw->no_rw    == $edit->no_rw ? 'selected' : ''}}>RW {{$rw->no_rw}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -74,10 +75,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nomor RT</strong></label></div>
                                             <div class="col-12 col-md-6">
                                                 <select name="nort" id="select" class="form-control">
-                                                    {{-- <option value="{{$edit->no_rt}}">{{$edit->no_rt}}</option> --}}
-                                                    <option value="1"{{ '1'    == $edit->no_rt ? 'selected' : ''}}>RT 1</option>
-                                                    <option value="2"{{ '2'    == $edit->no_rt ? 'selected' : ''}}>RT 2</option>
-                                                    <option value="13"{{ '13'    == $edit->no_rt ? 'selected' : ''}}>RT 13</option>
+                                                    @foreach($rt as $rt)
+                                                    <option value="{{$rt->no_rt}}"{{ $rt->no_rt    == $edit->no_rt ? 'selected' : ''}}>RT {{$rt->no_rt}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -98,10 +98,9 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Level Ekonomi</strong></label></div>
                                             <div class="col-12 col-md-6">
                                                 <select name="levelekonomi" id="select" class="form-control">
-                                                    <option value="0"{{ '0'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Default</option>
-                                                    <option value="1"{{ '1'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah</option>
-                                                    <option value="2"{{ '2'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Keatas</option>
-                                                    <option value="3"{{ '3'    == $edit->kd_level_ekonomi ? 'selected' : ''}}>Menengah Kebawah</option>
+                                                    @foreach($le as $le)
+                                                    <option value="{{$le->kd_level_ekonomi}}"{{ $le->kd_level_ekonomi    == $edit->kd_level_ekonomi ? 'selected' : ''}}>{{$le->nama_level}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>

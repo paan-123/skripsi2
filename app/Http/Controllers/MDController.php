@@ -151,6 +151,31 @@ class MDController extends Controller
 
     public function savePostRumah(Request $request)
     {
+        if (empty($request->no_kk)) {
+            $request->jml_kk = 0;
+            $request->jml_penghuni = 0;
+        } else {
+            $request->jml_kk = DB::table('data_kk')->where('kd_rumah', '=', $request->kd_rumah)->count();
+            $request->jml_penghuni = DB::table('datainduk')
+                ->rightJoin('data_kk', 'data_kk.no_kk', '=', 'datainduk.no_kk')
+                ->where('kd_rumah', '=', $request->kd_rumah)
+                ->select('kd_rumah')
+                ->count();
+        }
+        // dd([
+        //     'kd_rumah' => $request->kd_rumah,
+        //     'no_rumah' => $request->no_rumah,
+        //     'no_kk' => $request->no_kk,
+        //     'kd_rt' => $request->kd_rt,
+        //     'jml_kk' => $request->jml_kk,
+        //     'jml_penghuni' => $request->jml_penghuni,
+        //     'nm_kk' => $request->nm_kk,
+        //     'keterangan' => $request->keterangan,
+        //     'is_kontrakan' => $request->is_kontrakan,
+        //     'status' => $request->status,
+        //     'latitude' => $request->latitude,
+        //     'longitude' => $request->longitude,
+        // ]);
         DB::table('md_rumah')->insert([
             'kd_rumah' => $request->kd_rumah,
             'no_rumah' => $request->no_rumah,
@@ -203,6 +228,13 @@ class MDController extends Controller
         return redirect('/md_rumah');
     }
 
+
+
+    public function jumlahpenghuni()
+    {
+        $jumlah = '';
+        return $jumlah;
+    }
     //===============================================================================================//
 
     public function agama()
@@ -426,17 +458,17 @@ class MDController extends Controller
         return view('/md/md_keahlian/md_keahlian', ['keahlian' => $keahlian]);
     }
 
-    public function formKeahlian()
+    public function fk()
     {
-        return view('/md/md_keahlian/form_keahlian');
+        return view('/md/md_keahlian/form_mdkeahlian');
     }
 
-    public function addPostKeahlian()
+    public function addPostMDKeahlian()
     {
-        return view('add-post-keahlian');
+        return view('add-post-mdkeahlian');
     }
 
-    public function savePostKeahlian(Request $request)
+    public function savePostMDKeahlian(Request $request)
     {
         DB::table('md_keahlian')->insert([
             'kd_keahlian' => $request->kd_keahlian,
@@ -447,13 +479,13 @@ class MDController extends Controller
         return redirect('md_keahlian');
     }
 
-    public function editKeahlian($kd_keahlian)
+    public function editMDKeahlian($kd_keahlian)
     {
         $edit = DB::table('md_keahlian')->where('kd_keahlian', $kd_keahlian)->first();
         return view('/md/md_keahlian/edit_mdkeahlian', compact('edit'));
     }
 
-    public function updateKeahlian(Request $request)
+    public function updateMDKeahlian(Request $request)
     {
         DB::table('md_keahlian')->where('kd_keahlian', $request->id)->update(
             [
@@ -467,7 +499,7 @@ class MDController extends Controller
         return redirect('md_keahlian');
     }
 
-    public function deleteKeahlian($kd_keahlian)
+    public function deleteMDKeahlian($kd_keahlian)
     {
         DB::table('md_keahlian')->where('kd_keahlian', $kd_keahlian)->delete();
         return redirect('/md_keahlian');
