@@ -73,6 +73,12 @@
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">No. Rumah</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
                                         <label class="col-sm-4">Ekonomi</label>
@@ -110,12 +116,9 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>No. Rumah</th>
+                                    <th>Jumlah Anggota</th>
                                     <th>Level Ekonomi</th>
                                     <th>Keterangan</th>
-                                    <th>Jumlah Anggota</th>
-                                    {{-- <th>Action</th> --}}
-
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,13 +130,9 @@
                                     <td>{{$dkk->no_rw}}</td>
                                     <td>{{$dkk->no_rt}}</td>
                                     <td>{{$dkk->kd_rumah}}</td>
+                                    <td>{{$dkk->jml_anggota}}</td>
                                     <td>{{$dkk->nama_level}}</td>
                                     <td>{{$dkk->keterangan}}</td>
-                                    <td>{{$dkk->jml_anggota}}</td>
-                                    {{-- <td>
-                                            <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info" id="edit">EDIT</a>
-                                    <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger" id="delete">DELETE</a>
-                                    </td> --}}
                                 </tr>
                                 @endforeach
 
