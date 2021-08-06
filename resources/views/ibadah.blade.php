@@ -140,7 +140,7 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
-                                    {{-- <th>Nama Panggilan</th> --}}
+                                    <th>Panggilan</th>
                                     <th>Agama</th>
                                     <th>5 Waktu</th>
                                     <th>Berjamaah</th>
@@ -159,7 +159,7 @@
                                     <td>{{$i->no_rw}}</td>
                                     <td>{{$i->no_rt}}</td>
                                     <td>{{$i->nama}}</td>
-                                    {{-- <td>{{$i->nm_panggilan}}</td> --}}
+                                    <td>{{$i->nm_panggilan}}</td>
                                     <td>{{$i->nama_agama}}</td>
                                     <td>{{$i->is_5waktu}}</td>
                                     <td>{{$i->is_jamaah}}</td>

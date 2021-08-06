@@ -75,7 +75,7 @@
                             <li class="{{ '/pkk'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                 <a href="{{ url ('/pkk')}}">
                                     <i class="fa fa-tachometer-alt"></i>
-                                    <span>Dashboard</span>
+                                    <span>Home</span>
                                 </a>
                             </li>
                             <li class="sidebar-dropdown">
@@ -88,12 +88,12 @@
                                         <li class="{{ '/red_pkk/warga'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_pkk/warga')}}">Warga Perempuan</a>
                                         </li>
-                                        <li class="{{ '/red_pkk/pkk' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                        {{-- <li class="{{ '/red_pkk/pkk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_pkk/pkk')}}">Anggota PKK</a>
                                         </li>
                                         <li class="{{ '/red_pkk/kwt' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_pkk/kwt')}}">Anggota KWT</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="{{ '/red_pkk/pekerjaan' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_pkk/pekerjaan')}}">Pekerjaan</a>
                                         </li>

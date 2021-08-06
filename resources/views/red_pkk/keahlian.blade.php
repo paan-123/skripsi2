@@ -59,19 +59,12 @@
                                     <td>{{$p->no_ktp}}</td>
                                     <td>{{$p->kd_rt}}</td>
                                     <td>{{$p->nama}}</td>
-                                    <td>{{$p->keahlian}}</td>
+                                    <td>{{$p->nama_keahlian}}</td>
 
                                 </tr>
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nomor RT</th>
-                                <th>Nama</th>
-                                <th>Keahlian</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

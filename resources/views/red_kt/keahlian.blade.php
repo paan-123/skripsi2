@@ -65,13 +65,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nomor RT</th>
-                                <th>Nama</th>\
-                                <th>Keahlian</th>
-                            </tfoot>
                         </table>
 
                         <table>

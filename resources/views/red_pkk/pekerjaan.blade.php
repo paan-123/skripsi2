@@ -1,6 +1,6 @@
 @extends('red_pkk/layout',[
 "InfoPage" => [
-"Navbar" => '/red_pkk/keahlian'
+"Navbar" => '/red_pkk/pekerjaan'
 ]
 ])
 @section('title', 'Data Pekerjaan Warga Perempuan')
@@ -65,13 +65,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nomor RT</th>
-                                <th>Nama</th>
-                                <th>Pekerjaan</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

@@ -70,16 +70,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Status Kawin</th>
-                                <th>Status Mukim</th>
-                                <th>Pekerjaan</th>
-                                <th>Level Ekonomi</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

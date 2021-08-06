@@ -33,9 +33,6 @@
 <div class="content">
     <div class="animated fadeIn">
         <div class="row">
-
-
-
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -69,29 +66,14 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>Nama Kepala Keluarga</th>
-                                <th>Nomor RW</th>
-                                <th>Nomor RT</th>
-                                <th>Kode Rumah</th>
-                                <th>Level Ekonomi</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
             </div>
-
-
         </div><!-- .animated -->
     </div><!-- .content -->
-
-    <div class="clearfix"></div>
-
-
-
 </div><!-- /#right-panel -->
-
+@endsection
 <!-- Right Panel -->
 
 <!-- Scripts -->

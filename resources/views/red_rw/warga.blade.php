@@ -71,20 +71,7 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Nomor Kartu Keluarga</th>
-                                    <th>NIK</th>
-                                    <th>Nomor RW</th>
-                                    <th>Nomor RT</th>
-                                    <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Status Kawin</th>
-                                    <th>Status Mukim</th>
-                                    <th>Golongan Darah</th>
-                                    <th>Status</th>
-                                </tr>
-                            </tfoot>
+                            
                         </table>
 
 
@@ -96,7 +83,7 @@
         </div><!-- .animated -->
     </div><!-- .content -->
 </div>
-@section
+@endsection
 
 @section('customscript')
 <script>

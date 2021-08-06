@@ -63,12 +63,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Nomor RT</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -78,3 +72,4 @@
         </div><!-- .animated -->
     </div><!-- .content -->
 </div>
+@endsection

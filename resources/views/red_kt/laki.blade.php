@@ -1,6 +1,6 @@
 @extends('red_kt/layout',[
 "InfoPage" => [
-"Navbar" => '/red_kt/keahlian'
+"Navbar" => '/red_kt/laki'
 ]
 ])
 @section('title', 'Data Pemuda Laki-laki')
@@ -60,12 +60,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Nomor RT</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

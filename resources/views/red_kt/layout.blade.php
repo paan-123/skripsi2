@@ -75,7 +75,7 @@
                             <li class="{{ '/pkk'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                 <a href="{{ url ('/pkk')}}">
                                     <i class="fa fa-tachometer-alt"></i>
-                                    <span>Dashboard</span>
+                                    <span>Home</span>
                                 </a>
                             </li>
                             <li class="sidebar-dropdown">

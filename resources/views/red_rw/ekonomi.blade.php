@@ -68,15 +68,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nomor RT</th>
-                                <th>Nama</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Level Ekonomi</th>
-                                <th>Status Mukim</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
