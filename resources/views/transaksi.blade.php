@@ -54,6 +54,7 @@
                                     <tr>
                                         <th>Nomor Kartu Keluarga</th>
                                         <th>Nama Kepala Keluarga</th>
+                                        <th>Jumlah Anggota</th>
                                         <th>RW</th>
                                         <th>RT</th>
                                         {{-- <th>Keterangan</th> --}}
@@ -65,6 +66,7 @@
                                     <tr>
                                         <td> <a class="btn btn-link" id="hue" data-a="{{$join->no_kk}}" data-toggle="modal" data-target=".bd-example-modal-lg" style="color:rgb(0, 17, 255); font-size:12px;">{{$join->no_kk}}</a></td>
                                         <td>{{$join->nm_kk}}</td>
+                                        <td>{{$join->jml_anggota}}</td>
                                         <td>{{$join->no_rw}}</td>
                                         <td>{{$join->no_rt}}</td>
                                         {{-- <td>{{$join->keterangan}}</td> --}}

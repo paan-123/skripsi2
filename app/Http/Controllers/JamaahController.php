@@ -109,8 +109,7 @@ class JamaahController extends Controller
 
     public function joindkdi()
     {
-        $join = DB::table('data_kk')
-            ->leftJoin('datainduk', 'datainduk.no_kk', '=', 'data_kk.no_kk')
+        $join = Data_kk::leftJoin('datainduk', 'datainduk.no_kk', '=', 'data_kk.no_kk')
             ->select('data_kk.no_kk', 'data_kk.no_rt', 'data_kk.no_rw', 'data_kk.nm_kk', 'data_kk.keterangan')
             ->distinct()
             ->get();
