@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Data_kk;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -46,8 +47,7 @@ class JamaahController extends Controller
 
     public function datakk()
     {
-        $data_kk = DB::table('data_kk')
-            ->Join('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
+        $data_kk = Data_kk::Join('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
             ->select('data_kk.no_kk', 'data_kk.nm_kk', 'data_kk.no_rw', 'data_kk.no_rt', 'data_kk.kd_rumah', 'md_level_ekonomi.nama_level', 'data_kk.keterangan')
             ->get();
         return view('data_kk', ['data_kk' => $data_kk]);

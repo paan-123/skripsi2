@@ -112,6 +112,7 @@
                                     <th>No. Rumah</th>
                                     <th>Level Ekonomi</th>
                                     <th>Keterangan</th>
+                                    <th>Jumlah Anggota</th>
                                     {{-- <th>Action</th> --}}
 
 
@@ -128,6 +129,7 @@
                                     <td>{{$dkk->kd_rumah}}</td>
                                     <td>{{$dkk->nama_level}}</td>
                                     <td>{{$dkk->keterangan}}</td>
+                                    <td>{{$dkk->jml_anggota}}</td>
                                     {{-- <td>
                                             <a href="/edit_data_kk/{{$dkk->no_kk}}" class="btn btn-info" id="edit">EDIT</a>
                                     <a href="/delete_data_kk/{{$dkk->no_kk}}" class="btn btn-danger" id="delete">DELETE</a>
