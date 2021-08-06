@@ -11,7 +11,12 @@ class Test extends Controller
 {
     public function export()
     {
-        $data = DB::table('datainduk')->get();
+        $data = DB::table('datainduk')
+            ->leftJoin('md_agama', 'md_agama.kd_agama', '=', 'datainduk.kd_agama')
+            ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
+            ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
+
+            ->get();
 
         return (new FastExcel($data))->download('datainduk.xlsx');
     }
