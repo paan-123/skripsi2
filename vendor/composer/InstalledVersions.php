@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'ab29f0d82d6d7c9ab7b22c6e0a4c053c468adcdd',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -43,6 +43,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
+    ),
+    'box/spout' => 
+    array (
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9bdb027d312b732515b884a341c0ad70372c6295',
     ),
     'brick/math' => 
     array (
@@ -111,6 +120,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+    ),
+    'ezyang/htmlpurifier' => 
+    array (
+      'pretty_version' => 'v4.13.0',
+      'version' => '4.13.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '08e27c97e4c6ed02f37c5b2b20488046c8d90d75',
     ),
     'facade/flare-client-php' => 
     array (
@@ -455,12 +473,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'ab29f0d82d6d7c9ab7b22c6e0a4c053c468adcdd',
     ),
     'laravel/sail' => 
     array (
@@ -534,6 +552,42 @@ private static $installed = array (
       ),
       'reference' => '1e7e6be2dc543bf466236fb171e5b20e1b06aee6',
     ),
+    'maatwebsite/excel' => 
+    array (
+      'pretty_version' => '3.1.32',
+      'version' => '3.1.32.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9dc29b63a77fb7f2f514ef754af3a1b57e83cadf',
+    ),
+    'maennchen/zipstream-php' => 
+    array (
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c4c5803cc1f93df3d2448478ef79394a5981cc58',
+    ),
+    'markbaker/complex' => 
+    array (
+      'pretty_version' => '2.0.3',
+      'version' => '2.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6f724d7e04606fd8adaa4e3bb381c3e9db09c946',
+    ),
+    'markbaker/matrix' => 
+    array (
+      'pretty_version' => '2.1.3',
+      'version' => '2.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '174395a901b5ba0925f1d790fa91bab531074b61',
+    ),
     'mockery/mockery' => 
     array (
       'pretty_version' => '1.4.3',
@@ -571,6 +625,15 @@ private static $installed = array (
       array (
         0 => '1.10.2',
       ),
+    ),
+    'myclabs/php-enum' => 
+    array (
+      'pretty_version' => '1.8.3',
+      'version' => '1.8.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b942d263c641ddb5190929ff840c68f78713e937',
     ),
     'nesbot/carbon' => 
     array (
@@ -652,6 +715,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
+    ),
+    'phpoffice/phpspreadsheet' => 
+    array (
+      'pretty_version' => '1.18.0',
+      'version' => '1.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '418cd304e8e6b417ea79c3b29126a25dc4b1170c',
     ),
     'phpoption/phpoption' => 
     array (
@@ -773,6 +845,15 @@ private static $installed = array (
         0 => '1.0',
       ),
     ),
+    'psr/http-factory' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+    ),
     'psr/http-message' => 
     array (
       'pretty_version' => '1.0.1',
@@ -850,6 +931,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
+    ),
+    'rap2hpoutre/fast-excel' => 
+    array (
+      'pretty_version' => 'v3.0.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e7633e58d695e29669ecbb08aeffbbbcb2738925',
     ),
     'rhumsaa/uuid' => 
     array (

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Export\Test;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
@@ -25,6 +26,9 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\DB;
 
 use function PHPSTORM_META\type;
+
+
+Route::get('/export', [Test::class, 'export'])->name('export');
 
 function NToS($before)
 {
@@ -337,7 +341,3 @@ Route::middleware(['rw'])->group(function () {
 
 
 Route::get('/logout', 'App\Http\Controllers\GoogleController@logout')->name('logout');
-
-
-
-//REDIRECT KE RW//

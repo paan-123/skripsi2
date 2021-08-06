@@ -122,7 +122,13 @@
                     <div class="card-header">
                         <strong class="card-title">Tabel Data Warga</strong>
                     </div>
+                    
                     <div class="card-body">
+                       
+                            
+                                <a href="{{route('export')}}" class="btn btn-success" id="tambah"> <i class="fa fa-download"></i> Excel</a> <hr>
+                        
+                    
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
