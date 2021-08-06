@@ -47,16 +47,16 @@ class GoogleController extends Controller
 
 
             } else {
-                // $newUser = User::create([
-                //     'google_id' => $user->id,
-                //     'name' => $user->name,
-                //     'email' => $user->email,
-                //     'password' => bcrypt('12345678'),
-                //     'role' => '2',
-                // ]);
+                $newUser = User::create([
+                    'google_id' => $user->id,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'password' => bcrypt('12345678'),
+                    'role' => '2',
+                ]);
 
-                // Auth::login($newUser);
-                // return redirect()->intended('home');
+                Auth::login($newUser);
+                return redirect()->intended('home');
             }
         } catch (\Throwable $th) {
             //throw $th;

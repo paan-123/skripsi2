@@ -119,6 +119,7 @@
                                         <select name="statuskawin" id="statuskawin" class="form-control">
                                             <option value="Belum Kawin"{{ 'Belum Kawin'    == $edit->status_kawin ? 'selected' : ''}}>Belum Kawin</option>
                                             <option value="Kawin"{{ 'Kawin'    == $edit->status_kawin ? 'selected' : ''}}>Kawin</option>
+                                            <option value="Cerai"{{ 'Cerai'    == $edit->status_kawin ? 'selected' : ''}}>Cerai</option>
                                         </select>
                                     </div>
                                 </div>
@@ -148,9 +149,20 @@
                                 </div>
 
                                 <div class="row form-group">
+                                    <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Anggota Karang Taruna</strong></label></div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="is_kt" id="is_kt" class="form-control">
+                                            <option value="-"{{ ''    == $edit->is_kt ? 'selected' : ''}}>-</option>
+                                            <option value="Ya"{{ 'Ya'    == $edit->is_latin ? 'selected' : ''}}>Ya</option>
+                                            <option value="Tidak"{{ 'Tidak'    == $edit->is_latin ? 'selected' : ''}}>Tidak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Latin</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="bacalatin" id="bacalatin" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_latin ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_latin ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -160,6 +172,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Hijaiyah</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="bacahijaiyah" id="bacahijaiyah" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_hijaiyah ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_hijaiyah ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -169,6 +182,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Iqra</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="bacaiqra" id="bacaiqra" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_iqra ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_iqra ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -178,6 +192,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Al-Qur'an</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="bacaquran" id="bacaquran" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_quran ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_quran? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -187,6 +202,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Sholat 5 Waktu</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="sholat" id="sholat" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <<option value="Ya"{{ 'Ya'    == $edit->is_5waktu ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_5waktu ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -196,6 +212,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Sholat Berjamaah</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="sholatjamaah" id="sholatjamaah" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_jamaah ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_jamaah ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -205,6 +222,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Zakat Fitrah</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="zakatfitrah" id="zakatfitrah" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_zakat_fitrah ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_zakat_fitrah ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -214,6 +232,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Zakat Mal</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="zakatmal" id="zakatmal" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <<option value="Ya"{{ 'Ya'    == $edit->is_zakat_mal ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_zakat_mal ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -223,6 +242,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kurban</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="kurban" id="kurban" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_qurban ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_qurban ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -232,6 +252,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Haji</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="haji" id="haji" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_haji ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_haji ? 'selected' : ''}}>Tidak</option>
                                         </select>
@@ -241,6 +262,7 @@
                                     <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Umrah</strong></label></div>
                                     <div class="col-12 col-md-9">
                                         <select name="umrah" id="umrah" class="form-control">
+                                            <option value="-"{{ '-'    == $edit->is_latin ? 'selected' : ''}}>-</option>
                                             <option value="Ya"{{ 'Ya'    == $edit->is_umrah ? 'selected' : ''}}>Ya</option>
                                             <option value="Tidak"{{ 'Tidak'    == $edit->is_umrah ? 'selected' : ''}}>Tidak</option>
                                         </select>
