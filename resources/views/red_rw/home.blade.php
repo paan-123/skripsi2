@@ -79,49 +79,49 @@
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-users fa-2x"> <br>{{ $counter['total'] }}</i>
-                                                <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Jumlah Warga </p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-database fa-2x"> <br> {{$data_kk}}</i>
-                                                <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Data Kartu Keluarga</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-male fa-2x"> <br> {{$laki}}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Laki-laki</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-female fa-2x"> <br> {{$perempuan}}</i>
-                                                <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Perempuan</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-home fa-2x"><br> {{$rumah}}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Rumah</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-child fa-2x"> <br>{{ $counter['age']['Anak-anak'] }}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Anak-anak </p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-user fa-2x"> <br>{{ $counter['age']['Remaja'] }}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Remaja</p>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-users fa-2x"> {{ $counter['age']['Dewasa'] }}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Dewasa</p>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-wheelchair fa-2x"> <br> {{ $counter['age']['Manula'] }}</i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Manula</p>
                                             </div>
                                         </div>

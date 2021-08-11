@@ -536,6 +536,10 @@ class JamaahController extends Controller
             ->where('j_kelamin', '=', 'Perempuan')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
+        $counter['Remaja']['KT'] = $data_induk = DB::table('datainduk')
+            ->where('is_kt', '=', 'Ya')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->count();
         $counter['Remaja']['Keahlian'] = DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')

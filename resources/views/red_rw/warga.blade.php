@@ -36,6 +36,89 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
+                        <strong class="card-title">Filter Data Warga</strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
+                            <div class="row">
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">No. Kartu Keluarga</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">NIK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">RW</label>
+                                        <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right" >RT</label>
+                                        <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Panggilan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">TTL</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Jenis Kelamin</label>
+                                            <select class="select form-control col-sm-5"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Status Hubungan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">Status Mukim</label>
+                                        <select class="select form-control col-sm-5"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Status</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div>
+                            </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
                         <strong class="card-title">Tabel Data Warga</strong>
                     </div>
                     <div class="card-body">

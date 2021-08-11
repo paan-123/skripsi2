@@ -43,6 +43,12 @@
                                 
                                 <div class="col-sm-6" hidden>
                                     <div class="form-group">
+                                        <label class="control-label">No. KK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
                                         <label class="control-label">NIK</label>
                                         <select class="select form-control"></select>
                                     </div>
@@ -62,6 +68,12 @@
                                 <div class="col-sm-3" hidden>
                                     <div class="form-group">
                                         <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Panggilan</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
@@ -136,7 +148,7 @@
                             <thead>
                                 <tr>
                                     <th>No. KK</th>
-                                    {{-- <th>NIK</th> --}}
+                                    <th>NIK</th>
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
@@ -155,7 +167,7 @@
                                 @foreach( $ibadah as $i )
                                 <tr>
                                     <td>{{$i->no_kk}}</td>
-                                    {{-- <td>{{$i->no_ktp}}</td> --}}
+                                    <td>{{$i->no_ktp}}</td>
                                     <td>{{$i->no_rw}}</td>
                                     <td>{{$i->no_rt}}</td>
                                     <td>{{$i->nama}}</td>

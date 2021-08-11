@@ -36,6 +36,112 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
+                        <strong class="card-title">Filter Data Ibadah</strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
+                            <div class="row">
+                                
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">No. KK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">NIK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5">No. RW</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">No. RT</label>
+                                            <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Panggilan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Agama</label>
+                                        <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">5 Waktu</label>
+                                        <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">Berjamaah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 text-right">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5">Fitrah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Mal</label>
+                                            <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Kurban</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Haji</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-7 text-right">Umrah</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
                         <strong class="card-title">Tabel Ibadah Warga</strong>
                     </div>
                     <div class="card-body">
@@ -47,6 +153,7 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
                                     <th>Agama</th>
                                     <th>5 Waktu</th>
                                     <th>Berjamaah</th>
@@ -65,6 +172,7 @@
                                     <td>{{$w->no_rw}}</td>
                                     <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
+                                    <td>{{$w->nm_panggilan}}</td>
                                     <td>{{$w->nama_agama}}</td>
                                     <td>{{$w->is_5waktu}}</td>
                                     <td>{{$w->is_jamaah}}</td>

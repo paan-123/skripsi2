@@ -33,9 +33,73 @@
 <div class="content">
     <div class="animated fadeIn">
         <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Filter Data Pendidikan</strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
+                            <div class="row">
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor KK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">NIK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5">Nomor RW</label>
+                                            <select class="select form-control col-sm-7"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Nomor RT</label>
+                                        <select class="select form-control col-sm-7"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Panggilan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Pendidikan</label>
+                                        <select class="select form-control col-sm-7"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Level Ekonomi</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div>
+                            </div>
+                            
+                        </div>
 
-
-
+                        
+                    </div>
+                </div>
+            </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -50,8 +114,8 @@
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
                                     <th>Jenjang Pendidikan</th>
-                                    <th>Keterangan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,8 +126,8 @@
                                     <td>{{$w->no_rw}}</td>
                                     <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
+                                    <td>{{$w->nm_panggilan}}</td>
                                     <td>{{$w->nama_jenjang}}</td>
-                                    <td>{{$w->keterangan}}</td>
                                 </tr>
                                 @endforeach
 

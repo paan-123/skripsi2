@@ -32,7 +32,7 @@
 		// }
 	});
 	var wrap_filter = $('#cFilter')
-	if(wrap_filter.length !== 0){
+	if (wrap_filter.length !== 0) {
 		// wrap_filter.each(function(index, e){
 
 		// })
@@ -40,15 +40,15 @@
 		wSelect.classList.add("select");
 		wSelect.append(document.createElement('option'))
 		// let all_length = 
-		
-		wrap_filter.find('select').each(function(i, e){
+
+		wrap_filter.find('select').each(function (i, e) {
 			e.append(document.createElement('option'))
-			$('#bootstrap-data-table').DataTable().column(i).data().unique().sort().each( function ( d ) {
+			$('#bootstrap-data-table').DataTable().column(i).data().unique().sort().each(function (d) {
 				let wOption = document.createElement('option')
 				wOption.value = d
 				wOption.innerHTML = d
 				e.append(wOption)
-			} );
+			});
 		})
 
 		// for(let i = 0; i <= all_length; i++)

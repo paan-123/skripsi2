@@ -80,7 +80,7 @@
                                                 <div class="counter">
                                                     <i class="fa fa-users fa-2x">
                                                         <br>{{$data['Remaja']['Total']}}</i>
-                                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                                    {{-- <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2> --}}
                                                     <p class="count-text ">Jumlah Pemuda</p>
                                                 </div>
                                             </a>
@@ -90,7 +90,7 @@
                                                 <div class="counter">
                                                     <i class="fa fa-male fa-2x">
                                                         <br>{{$data['Remaja']['Laki']}}</i>
-                                                    <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                                                    {{-- <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2> --}}
                                                     <p class="count-text ">Pemuda Laki-laki</p>
                                                 </div>
                                             </a>
@@ -100,16 +100,16 @@
                                                 <div class="counter">
                                                     <i class="fa fa-female fa-2x">
                                                         <br>{{$data['Remaja']['Perempuan']}}</i>
-                                                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                    {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                     <p class="count-text ">Pemuda Perempuan</p>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="col">
-                                            <a href="{{ url('red_kt/kt') }}">
+                                            <a href="{{ url('red_kt/karangtaruna') }}">
                                                 <div class="counter">
-                                                    <i class="fa fa-briefcase fa-2x"> <br></i>
-                                                    <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                                                    <i class="fa fa-briefcase fa-2x"> <br>{{$data['Remaja']['KT']}}</i>
+                                                    {{-- <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2> --}}
                                                     <p class="count-text ">Anggota Karang Taruna</p>
                                                 </div>
                                             </a>
@@ -118,7 +118,7 @@
                                             <a href="{{ url('red_kt/keahlian') }}">
                                                 <div class="counter">
                                                     <i class="fa fa-book fa-2x"><br>{{$data['Remaja']['Keahlian']}}</i>
-                                                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                    {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                     <p class="count-text ">Berdasarkan Keahlian</p>
                                                 </div>
                                             </a>
