@@ -77,7 +77,7 @@
                                         <label class="control-label">Usia Min.</label>
                                         <select class='select form-control excludedFromCustomFilter'>
                                             <option></option>
-                                            @for($i = 16; $i < 30; $i++)
+                                            @for($i = 16; $i <= 30; $i++)
                                             <option value="{{ $i }}"> {{$i}} </option>
                                             @endfor()
                                         </select>
@@ -89,7 +89,7 @@
                                         <label class="col-sm-4 ">Usia Maks.</label>
                                         <select class='select form-control excludedFromCustomFilter'>
                                             <option></option>
-                                            @for($i = 16; $i < 30; $i++)
+                                            @for($i = 16; $i <= 30; $i++)
                                             <option value="{{ $i }}"> {{$i}} </option>
                                             @endfor()
                                         </select>

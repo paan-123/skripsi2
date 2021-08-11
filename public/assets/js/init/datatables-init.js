@@ -42,13 +42,15 @@
 		// let all_length = 
 
 		wrap_filter.find('select').each(function (i, e) {
-			e.append(document.createElement('option'))
-			$('#bootstrap-data-table').DataTable().column(i).data().unique().sort().each(function (d) {
-				let wOption = document.createElement('option')
-				wOption.value = d
-				wOption.innerHTML = d
-				e.append(wOption)
-			});
+			if (!$(e).hasClass('excludedFromCustomFilter')) {
+				e.append(document.createElement('option'))
+				$('#bootstrap-data-table').DataTable().column(i).data().unique().sort().each(function (d) {
+					let wOption = document.createElement('option')
+					wOption.value = d
+					wOption.innerHTML = d
+					e.append(wOption)
+				});
+			}
 		})
 
 		// for(let i = 0; i <= all_length; i++)
