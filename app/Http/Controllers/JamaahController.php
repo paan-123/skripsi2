@@ -318,9 +318,9 @@ class JamaahController extends Controller
 
     public function ageCategory($age)
     {
-        if ($age <= 12) :
+        if ($age <= 16) :
             return 'Anak-anak';
-        elseif ($age <= 25) :
+        elseif ($age <= 30) :
             return 'Remaja';
         elseif ($age <= 55) :
             return 'Dewasa';
@@ -484,20 +484,20 @@ class JamaahController extends Controller
         $counter = [];
         $counter['Remaja'] = [];
         $counter['Remaja']['Total'] = $data_induk = DB::table('datainduk')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Laki'] = $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Laki-laki')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Perempuan'] = $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Perempuan')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Keahlian'] = DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         return $counter;
     }
@@ -510,7 +510,7 @@ class JamaahController extends Controller
     public function wargakt()
     {
         $data_induk = DB::table('datainduk')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->get();
 
         return view('/red_kt/warga', ['data_induk' => $data_induk]);
@@ -521,7 +521,7 @@ class JamaahController extends Controller
     {
         $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Laki-laki')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->get();
 
         return view('/red_kt/laki', ['data_induk' => $data_induk]);
@@ -531,7 +531,7 @@ class JamaahController extends Controller
     {
         $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Perempuan')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->get();
 
         return view('/red_kt/perempuan', ['data_induk' => $data_induk]);
@@ -543,7 +543,7 @@ class JamaahController extends Controller
         $data_induk =  DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->get();
 
 

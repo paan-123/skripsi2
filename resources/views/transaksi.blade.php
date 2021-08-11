@@ -1,7 +1,8 @@
 @extends('layout/paan',[
-'InfoPage' => [
-'Navbar' => '/transaksi'
-]])
+    'InfoPage' => [
+        'Navbar' => '/transaksi'
+    ]
+])
 @section('title', 'Transaksi')
 
 @section('container')
