@@ -138,27 +138,27 @@ Route::get('login', [LoginController::class, 'login']);
 Route::middleware(['admin'])->group(function () {
 
     /////////HOME///////////
-    Route::get('/home', [PagesController::class,'home']);
+    Route::get('/home', [PagesController::class, 'home']);
 
     /////////DATA WARGA KK///////////
-    Route::get('data_kk', [PagesController::class,'datakk']);
-    Route::get('data_kk', [JamaahController::class,'datakk']);
-    Route::get('formkk', [PagesController::class,'formdatakk']);
+    Route::get('data_kk', [PagesController::class, 'datakk']);
+    Route::get('data_kk', [JamaahController::class, 'datakk']);
+    Route::get('formkk', [PagesController::class, 'formdatakk']);
 
-    Route::get('edit_transaksi/{kd_induk}', [JamaahController::class,'editTransaksi'])->name('edit.transaksi');
-    Route::post('edit_transaksi/', [JamaahController::class,'simpanEditTransaksi'])->name('simpan.transaksi');
+    Route::get('edit_transaksi/{kd_induk}', [JamaahController::class, 'editTransaksi'])->name('edit.transaksi');
+    Route::post('edit_transaksi/', [JamaahController::class, 'simpanEditTransaksi'])->name('simpan.transaksi');
 
     /////////DATA WARGA INDUK///////////
-    Route::get('/data_induk', [PagesController::class,'data_induk']);
-    Route::get('/data_induk', [JamaahController::class,'datainduk']);
-    Route::get('/datainduk', [JamaahController::class,'data_induk']);
-    Route::get('/ibadah', [JamaahController::class,'ibadah']);
+    Route::get('/data_induk', [PagesController::class, 'data_induk']);
+    Route::get('/data_induk', [JamaahController::class, 'datainduk']);
+    Route::get('/datainduk', [JamaahController::class, 'data_induk']);
+    Route::get('/ibadah', [JamaahController::class, 'ibadah']);
 
 
     // Route::get('/keahlian', [JamaahController::class, 'joinkj'])->name('JamaahController.joinkj');
 
-    Route::get('/keahlian', [JamaahController::class,'keahlian']);
-    Route::get('/form_keahlian', [PagesController::class,'formkeahlian']);
+    Route::get('/keahlian', [JamaahController::class, 'keahlian']);
+    Route::get('/form_keahlian', [PagesController::class, 'formkeahlian']);
     Route::post('/add-post-keahlian', [PostKeahlian::class, 'savePostKeahlian'])->name('keahlian.save');
     Route::get('/add-post-keahlian', [PostKeahlian::class, 'addPostKeahlian'])->name('keahlian.add');
     Route::get('/edit_keahlian/{id}', [PostKeahlian::class, 'editPost'])->name('postkeahlian.edit');
@@ -209,7 +209,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/delete_mdkeahlian/{kd_keahlian}', [MDController::class, 'deleteMDKeahlian'])->name('post.delete');
 
 
-    Route::get('/md_rumah', [JamaahController::class,'mdrumah']);
+    Route::get('/md_rumah', [JamaahController::class, 'mdrumah']);
     Route::get('/form_rumah', [MDController::class, 'formRumah']);
     Route::get('/form_rumah', [MDController::class, 'formInputRumah']);
     Route::get('/add-post-rumah', [MDController::class, 'addPostRumah'])->name('rumah.add');
@@ -218,7 +218,7 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/update-post-rumah', [MDController::class, 'updateRumah'])->name('updaterumah.post');
     Route::get('/delete_mdrumah/{no_rumah}', [MDController::class, 'deleteRumah'])->name('post.delete');
 
-    Route::get('/md_rw', [JamaahController::class,'mdrw']);
+    Route::get('/md_rw', [JamaahController::class, 'mdrw']);
     Route::get('/form_rw', [MDController::class, 'formRW']);
     Route::get('/add-post-rw', [MDController::class, 'addPostRW'])->name('rw.add');
     Route::post('/add-post-rw', [MDController::class, 'savePostRW'])->name('rw.save');
@@ -226,7 +226,7 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/update-post-rw', [MDController::class, 'updateRW'])->name('updaterw.post');
     Route::get('/delete_mdrw/{no_rw}', [MDController::class, 'deleteRW'])->name('post.delete');
 
-    Route::get('/md_rt', [JamaahController::class,'mdrt']);
+    Route::get('/md_rt', [JamaahController::class, 'mdrt']);
     Route::get('/form_rt', [MDController::class, 'formRT']);
     Route::get('/add-post-rt', [MDController::class, 'addPostRT'])->name('rt.add');
     Route::post('/add-post-rt', [MDController::class, 'savePostRT'])->name('rt.save');
@@ -235,27 +235,27 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/delete_mdrt/{kd_rt}', [MDController::class, 'deleteRT'])->name('post.delete');
 
 
-    Route::get('transaksi', [JamaahController::class,'transaksi_datakk']);
-    Route::get('transaksi', [PagesController::class,'transaksi'])->name('transaksi');
+    Route::get('transaksi', [JamaahController::class, 'transaksi_datakk']);
+    Route::get('transaksi', [PagesController::class, 'transaksi'])->name('transaksi');
     Route::get('transaksi', [JamaahController::class, 'joindkdi'])->name('JamaahController.joindkdi');
     Route::get('transaksi/{no_kk}', [PostDataKK::class, 'tampilTransaksi']);
 
-    Route::get('/data_keahlian', [PagesController::class,'data_keahlian']);
+    Route::get('/data_keahlian', [PagesController::class, 'data_keahlian']);
     Route::get('/data_keahlian', [JamaahController::class, 'joinkj'])->name('JamaahController.joinkj');
 
-    Route::get('/golongan_darah', [PagesController::class,'golongan_darah']);
+    Route::get('/golongan_darah', [PagesController::class, 'golongan_darah']);
     Route::get('/golongan_darah', [JamaahController::class, 'joingd'])->name('JamaahController.joingd');
 
-    Route::get('/pekerjaan', [PagesController::class,'pekerjaan']);
+    Route::get('/pekerjaan', [PagesController::class, 'pekerjaan']);
     Route::get('/pekerjaan', [JamaahController::class, 'joinpk'])->name('JamaahController.joinpk');
 
-    Route::get('/pendidikan', [PagesController::class,'pendidikan']);
+    Route::get('/pendidikan', [PagesController::class, 'pendidikan']);
     Route::get('/pendidikan', [JamaahController::class, 'joinpd'])->name('JamaahController.joinpd');
 
     Route::get('/baca', [JamaahController::class, 'baca']);
 
-    Route::get('/form_datakk', [PagesController::class,'form_datakk']);
-    Route::get('/form_datainduk', [PagesController::class,'form_datainduk']);
+    Route::get('/form_datakk', [PagesController::class, 'form_datakk']);
+    Route::get('/form_datainduk', [PagesController::class, 'form_datainduk']);
 
     ///FORMULIR///
     Route::get('/add-post-di', [PostDataInduk::class, 'addPostDI'])->name('postdi.add');
@@ -278,26 +278,29 @@ Route::middleware(['admin'])->group(function () {
 
 
 
-    Route::get('red_rw', [JamaahController::class,'home']);
-    Route::get('red_rw/warga', [JamaahController::class,'warga']);
-    Route::get('red_rw/datakk', [JamaahController::class,'data_kk']);
-    Route::get('red_rw/ekonomi', [JamaahController::class,'ekonomi']);
-    Route::get('red_rw/pekerjaan', [JamaahController::class,'pekerjaan']);
-    Route::get('red_rw/pendidikan', [JamaahController::class,'pendidikan']);
-    Route::get('red_rw/agama', [JamaahController::class,'agama']);
+    Route::get('red_rw', [JamaahController::class, 'home']);
+    Route::get('red_rw/warga', [JamaahController::class, 'warga']);
+    Route::get('red_rw/datakk', [JamaahController::class, 'data_kk']);
+    Route::get('red_rw/ekonomi', [JamaahController::class, 'ekonomi']);
+    Route::get('red_rw/pekerjaan', [JamaahController::class, 'pekerjaan']);
+    Route::get('red_rw/pendidikan', [JamaahController::class, 'pendidikan']);
+    Route::get('red_rw/agama', [JamaahController::class, 'agama']);
+    Route::get('red_rw/keahlian', [JamaahController::class, 'rwkeahlian']);
+    Route::get('red_rw/gol_darah', [JamaahController::class, 'goldarah']);
 
 
-    Route::get('red_pkk', [JamaahController::class,'homepkk']);
-    Route::get('red_pkk/warga', [JamaahController::class,'wargapkk']);
-    Route::get('red_pkk/pekerjaan', [JamaahController::class,'pekerjaanpkk']);
-    Route::get('red_pkk/keahlian', [JamaahController::class,'keahlianpkk']);
+    Route::get('red_pkk', [JamaahController::class, 'homepkk']);
+    Route::get('red_pkk/warga', [JamaahController::class, 'wargapkk']);
+    Route::get('red_pkk/pekerjaan', [JamaahController::class, 'pekerjaanpkk']);
+    Route::get('red_pkk/keahlian', [JamaahController::class, 'keahlianpkk']);
 
 
-    Route::get('red_kt', [JamaahController::class,'homekt']);
-    Route::get('red_kt/warga', [JamaahController::class,'wargakt']);
-    Route::get('red_kt/laki', [JamaahController::class,'laki']);
-    Route::get('red_kt/perempuan', [JamaahController::class,'perempuan']);
-    Route::get('red_kt/keahlian', [JamaahController::class,'keahliankt']);
+    Route::get('red_kt', [JamaahController::class, 'homekt']);
+    Route::get('red_kt/warga', [JamaahController::class, 'wargakt']);
+    Route::get('red_kt/laki', [JamaahController::class, 'laki']);
+    Route::get('red_kt/perempuan', [JamaahController::class, 'perempuan']);
+    Route::get('red_kt/karangtaruna', [JamaahController::class, 'anggotakt']);
+    Route::get('red_kt/keahlian', [JamaahController::class, 'keahliankt']);
 });
 
 Route::middleware(['karangtaruna'])->group(function () {

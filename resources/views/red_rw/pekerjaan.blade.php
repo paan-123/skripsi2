@@ -47,10 +47,11 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>Status Kawin</th>
-                                    <th>Status Mukim</th>
                                     <th>Pekerjaan</th>
                                     <th>Level Ekonomi</th>
                                 </tr>
@@ -60,10 +61,11 @@
                                 <tr>
                                     <td>{{$w->no_kk}}</td>
                                     <td>{{$w->no_ktp}}</td>
+                                    <td>{{$w->no_rw}}</td>
+                                    <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
+                                    <td>{{$w->nm_panggilan}}</td>
                                     <td>{{$w->j_kelamin}}</td>
-                                    <td>{{$w->status_kawin}}</td>
-                                    <td>{{$w->status_mukim}}</td>
                                     <td>{{$w->nama_pekerjaan}}</td>
                                     <td>{{$w->nama_level}}</td>
                                 </tr>

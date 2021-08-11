@@ -64,7 +64,7 @@
                                                 <div class="counter">
                                                     <i class="fa fa-users fa-2x"> <br></i>
                                                     <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
-                                                    <p class="count-text ">Halaman Rukun Warga</p>
+                                                    <p class="count-text ">Halaman RW</p>
                                             </a>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@
                                             <div class="counter">
                                                 <i class="fa fa-child fa-2x"> <br></i>
                                                 <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
-                                                <p class="count-text ">Halaman Karang Taruna</p>
+                                                <p class="count-text ">Halaman KT</p>
                                             </div>
                                         </a>
                                     </div>

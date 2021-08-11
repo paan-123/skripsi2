@@ -44,13 +44,14 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
-                                    <th>Nomor RW</th>
-                                    <th>Nomor RT</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
+                                    <th>TTL</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>Status Kawin</th>
+                                    <th>Status Hubungan</th>
                                     <th>Status Mukim</th>
-                                    <th>Golongan Darah</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -62,10 +63,11 @@
                                     <td>{{$w->no_rw}}</td>
                                     <td>{{$w->kd_rt}}</td>
                                     <td>{{$w->nama}}</td>
+                                    <td>{{$w->nm_panggilan}}</td>
+                                    <td>{{$w->tmp_lahir}}, {{$w->tgl_lahir}}</td>
                                     <td>{{$w->j_kelamin}}</td>
-                                    <td>{{$w->status_kawin}}</td>
+                                    <td>{{$w->status_hub_kk}}</td>
                                     <td>{{$w->status_mukim}}</td>
-                                    <td>{{$w->gol_darah}}</td>
                                     <td>{{$w->status}}</td>
                                 </tr>
                                 @endforeach

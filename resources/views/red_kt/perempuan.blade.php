@@ -21,8 +21,8 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
-                            <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Pemuda Perempuan</li>
+                            <li><a href="#">Data Warga</a></li>
+                            <li class="active">Pemuda Perempuan</li>
                         </ol>
                     </div>
                 </div>
@@ -44,8 +44,11 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
+                                    <th>RT</th>
+                                    <th>RW</th>
                                     <th>Nama</th>
-                                    <th>Nomor RT</th>
+                                    {{-- <th>Anggota Karang Taruna</th> --}}
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,8 +56,10 @@
                                 <tr>
                                     <td>{{$p->no_kk}}</td>
                                     <td>{{$p->no_ktp}}</td>
-                                    <td>{{$p->nama}}</td>
-                                    <td>{{$p->kd_rt}}</td>
+                                    <td>{{$p->no_rw}}</td>
+                                    <td>{{$p->no_rt}}</td>
+                                    <td>{{$p->nm_panggilan}}</td>
+                                    {{-- <td>{{$p->is_kt}}</td> --}}
 
                                 </tr>
                                 @endforeach

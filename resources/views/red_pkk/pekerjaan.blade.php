@@ -47,9 +47,12 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
-                                    <th>Nomor RT</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
                                     <th>Pekerjaan</th>
+                                    <th>Level Ekonomi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,9 +60,12 @@
                                 <tr>
                                     <td>{{$p->no_kk}}</td>
                                     <td>{{$p->no_ktp}}</td>
-                                    <td>{{$p->kd_rt}}</td>
+                                    <td>{{$p->no_rw}}</td>
+                                    <td>{{$p->no_rt}}</td>
                                     <td>{{$p->nama}}</td>
+                                    <td>{{$p->nm_panggilan}}</td>
                                     <td>{{$p->nama_pekerjaan}}</td>
+                                    <td>{{$p->nama_level}}</td>
 
                                 </tr>
                                 @endforeach

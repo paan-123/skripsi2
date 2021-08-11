@@ -47,7 +47,8 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
-                                    <th>Nomor RT</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Level Ekonomi</th>
@@ -59,7 +60,8 @@
                                 <tr>
                                     <td>{{$w->no_kk}}</td>
                                     <td>{{$w->no_ktp}}</td>
-                                    <td>{{$w->kd_rt}}</td>
+                                    <td>{{$w->no_rw}}</td>
+                                    <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
                                     <td>{{$w->j_kelamin}}</td>
                                     <td>{{$w->nama_level}}</td>

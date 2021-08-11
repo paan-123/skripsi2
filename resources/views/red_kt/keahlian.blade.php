@@ -21,8 +21,8 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
-                            <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Keahlian Pemuda</li>
+                            <li><a href="#">Data Warga</a></li>
+                            <li class="active">Keahlian Pemuda</li>
                         </ol>
                     </div>
                 </div>

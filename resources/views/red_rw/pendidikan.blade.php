@@ -47,6 +47,8 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
                                     <th>Jenjang Pendidikan</th>
                                     <th>Keterangan</th>
@@ -57,6 +59,8 @@
                                 <tr>
                                     <td>{{$w->no_kk}}</td>
                                     <td>{{$w->no_ktp}}</td>
+                                    <td>{{$w->no_rw}}</td>
+                                    <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
                                     <td>{{$w->nama_jenjang}}</td>
                                     <td>{{$w->keterangan}}</td>

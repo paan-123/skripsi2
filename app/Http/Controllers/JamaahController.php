@@ -398,8 +398,8 @@ class JamaahController extends Controller
 
     public function data_kk()
     {
-        $kk = DB::table('data_kk')
-            ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
+        $kk = Data_kk::Join('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'data_kk.kd_level_ekonomi')
+            ->select('data_kk.no_kk', 'data_kk.nm_kk', 'data_kk.no_rw', 'data_kk.no_rt', 'data_kk.kd_rumah', 'md_level_ekonomi.nama_level', 'data_kk.keterangan')
             ->get();
         return view('/red_rw/datakk', ['kk' => $kk]);
     }
@@ -407,6 +407,7 @@ class JamaahController extends Controller
     public function ekonomi()
     {
         $ekonomi = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->get();
         return view('/red_rw/ekonomi', ['ekonomi' => $ekonomi]);
@@ -415,6 +416,7 @@ class JamaahController extends Controller
     public function pekerjaan()
     {
         $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
             ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->get();
@@ -424,6 +426,7 @@ class JamaahController extends Controller
     public function pendidikan()
     {
         $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_pendidikan', 'md_pendidikan.kd_pendidikan', '=', 'datainduk.kd_pendidikan')
             ->get();
         return view('/red_rw/pendidikan', ['pendidikan' => $join]);
@@ -432,11 +435,48 @@ class JamaahController extends Controller
     public function agama()
     {
         $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_agama', 'md_agama.kd_agama', '=', 'datainduk.kd_agama')
             ->get();
-        return view('/rw/agama', ['agama' => $join]);
+        return view('/red_rw/agama', ['agama' => $join]);
     }
 
+    public function rwkeahlian()
+    {
+        $keahlian =  DB::table('data_keahlian_warga')
+            ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
+            ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
+            // ->leftJoin('md_rt', 'datainduk.kd_rt', '=', 'md_rt.kd_rt')
+            ->select(
+
+                'data_keahlian_warga.id',
+                'data_keahlian_warga.kd_keahlian',
+                'datainduk.kd_induk',
+                'datainduk.no_kk',
+                'datainduk.no_ktp',
+                'datainduk.kd_rt',
+                // 'md_rt.no_rw',
+                'datainduk.nama',
+                'datainduk.nm_panggilan',
+                'md_keahlian.nama_keahlian',
+                'data_keahlian_warga.is_sertifikat',
+                'data_keahlian_warga.level_sertifikat',
+                'data_keahlian_warga.deskripsi_sertifikat'
+            )
+            ->get();
+        return view('/red_rw/keahlian', ['keahlian' => $keahlian]);
+    }
+
+
+    public function goldarah()
+    {
+        $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->leftJoin('md_rumah', 'md_rumah.kd_rt', '=', 'datainduk.kd_rt')
+            ->select('md_rt.no_rw', 'md_rt.no_rt', 'md_rumah.no_rumah', 'datainduk.nama', 'datainduk.nm_panggilan', 'datainduk.gol_darah')
+            ->get();
+        return view('/red_rw/gol_darah', ['gdarah' => $join]);
+    }
     //===============================================================================================================//
     //==============================================RED PKK==========================================================//
     public function homepkk()
@@ -448,6 +488,7 @@ class JamaahController extends Controller
     public function wargapkk()
     {
         $pk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('datainduk.j_kelamin', '=', 'Perempuan')
             ->get();
         return view(
@@ -459,6 +500,7 @@ class JamaahController extends Controller
     public function pekerjaanpkk()
     {
         $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
             ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->where('datainduk.j_kelamin', '=', "Perempuan")
@@ -509,10 +551,21 @@ class JamaahController extends Controller
 
     public function wargakt()
     {
+        // dd(Carbon::now()->subYear(30)->toDateString()); //1991
+        // dd(Carbon::now()->subYear(16)->toDateString()); //2005
+
         $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
+        $data_induk = $data_induk->map(function ($row) {
+            $kalkulasi = Carbon::parse($row->tgl_lahir)->age;
+            $row->usia = $kalkulasi;
+            return $row;
+        });
+        // dd($data_induk);
         return view('/red_kt/warga', ['data_induk' => $data_induk]);
     }
 
@@ -520,8 +573,10 @@ class JamaahController extends Controller
     public function laki()
     {
         $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('j_kelamin', '=', 'Laki-laki')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
         return view('/red_kt/laki', ['data_induk' => $data_induk]);
@@ -530,12 +585,28 @@ class JamaahController extends Controller
     public function perempuan()
     {
         $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('j_kelamin', '=', 'Perempuan')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
         return view('/red_kt/perempuan', ['data_induk' => $data_induk]);
     }
+    public function anggotakt()
+    {
+        $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->where('is_kt', '=', 'Ya')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
+            ->get();
+
+        return view('/red_kt/karangtaruna', ['data_induk' => $data_induk]);
+    }
+
+
+
 
     public function keahliankt()
     {
@@ -544,6 +615,7 @@ class JamaahController extends Controller
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
             ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
 

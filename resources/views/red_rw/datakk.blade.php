@@ -3,7 +3,7 @@
 "Navbar" => '/red_rw/datakk'
 ]
 ])
-@section('title', 'Data KK')
+@section('title', 'Data Kartu Keluarga')
 
 @section('container')
 <div class="breadcrumbs">
@@ -44,9 +44,10 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>Nama Kepala Keluarga</th>
-                                    <th>Nomor RW</th>
-                                    <th>Nomor RT</th>
-                                    <th>Kode Rumah</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
+                                    <th>No. Rumah</th>
+                                    <th>Jumlah Anggota</th>
                                     <th>Level Ekonomi</th>
                                     {{-- <th>Keterangan</th> --}}
                                 </tr>
@@ -60,6 +61,7 @@
                                     <td>{{$dkk->no_rw}}</td>
                                     <td>{{$dkk->no_rt}}</td>
                                     <td>{{$dkk->kd_rumah}}</td>
+                                    <td>{{$dkk->jml_anggota}}</td>
                                     <td>{{$dkk->nama_level}}</td>
                                     {{-- <td>{{$dkk->keterangan}}</td> --}}
                                 </tr>

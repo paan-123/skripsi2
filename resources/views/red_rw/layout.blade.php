@@ -91,6 +91,15 @@
                                         <li class="{{ '/red_rw/datakk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_rw/datakk')}}">Data Kartu Keluarga</a>
                                         </li>
+                                        <li class="{{ '/red_rw/agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/red_rw/agama')}}">Data Ibadah</a>
+                                        </li>
+                                        <li class="{{ '/red_rw/keahlian' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/red_rw/keahlian')}}">Data Keahlian</a>
+                                        </li>
+                                        <li class="{{ '/red_rw/gol_darah' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/red_rw/gol_darah')}}">Data Golongan Darah</a>
+                                        </li>
                                         <li class="{{ '/red_rw/ekonomi' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_rw/ekonomi')}}">Data Level Ekonomi</a>
                                         </li>
@@ -100,9 +109,7 @@
                                         <li class="{{ '/red_rw/pendidikan' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/red_rw/pendidikan')}}">Data Pendidikan</a>
                                         </li>
-                                        <li class="{{ '/red_rw/agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
-                                            <a href="{{ url ('/red_rw/agama')}}">Data Agama</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </li>
