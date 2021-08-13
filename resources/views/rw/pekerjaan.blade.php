@@ -36,6 +36,74 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
+                        <strong class="card-title">Filter Data Pekerjaan</strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
+                            <div class="row">
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor KK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">NIK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">RW</label>
+                                            <select class="select form-control col-sm-4 text-left"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 text-right">RT</label>
+                                            <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Panggilan</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-5 text-right">Pekerjaan</label>
+                                            <select class="select form-control col-sm-6"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">Level Ekonomi</label>
+                                            <select class="select form-control col-sm-5"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            
+
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
                         <strong class="card-title">Tabel Pekerjaan Warga</strong>
                     </div>
                     <div class="card-body">
@@ -44,10 +112,10 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Status Kawin</th>
-                                    <th>Status Mukim</th>
+                                    <th>Panggilan</th>
                                     <th>Pekerjaan</th>
                                     <th>Level Ekonomi</th>
                                 </tr>
@@ -57,26 +125,16 @@
                                 <tr>
                                     <td>{{$w->no_kk}}</td>
                                     <td>{{$w->no_ktp}}</td>
+                                    <td>{{$w->no_rw}}</td>
+                                    <td>{{$w->no_rt}}</td>
                                     <td>{{$w->nama}}</td>
-                                    <td>{{$w->j_kelamin}}</td>
-                                    <td>{{$w->status_kawin}}</td>
-                                    <td>{{$w->status_mukim}}</td>
+                                    <td>{{$w->nm_panggilan}}</td>
                                     <td>{{$w->nama_pekerjaan}}</td>
                                     <td>{{$w->nama_level}}</td>
                                 </tr>
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Status Kawin</th>
-                                <th>Status Mukim</th>
-                                <th>Pekerjaan</th>
-                                <th>Level Ekonomi</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

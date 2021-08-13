@@ -3,7 +3,7 @@
 "Navbar" => '/pkk/warga'
 ]
 ])
-@section('title', 'Data Kartu Keluarga')
+@section('title', 'Data Warga Perempuan')
 
 @section('container')
 <div class="breadcrumbs">
@@ -22,7 +22,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Warga Permepuan</li>
+                            <li class="active">Data Warga Perempuan</li>
                         </ol>
                     </div>
                 </div>
@@ -47,8 +47,12 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
                                     <th>Nama</th>
-                                    <th>Nomor RT</th>
+                                    <th>Panggilan</th>
+                                    <th>Status Kawin</th>
+                                    <th>Hubungan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,25 +60,24 @@
                                 <tr>
                                     <td>{{$p->no_kk}}</td>
                                     <td>{{$p->no_ktp}}</td>
+                                    <td>{{$p->no_rw}}</td>
+                                    <td>{{$p->no_rt}}</td>
                                     <td>{{$p->nama}}</td>
-                                    <td>{{$p->kd_rt}}</td>
+                                    <td>{{$p->nm_panggilan}}</td>
+                                    <td>{{$p->status_kawin}}</td>
+                                    <td>{{$p->status_hub_kk}}</td>
 
                                 </tr>
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nama</th>
-                                <th>Nomor RT</th>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div><!-- .animated -->
-</div><!-- .content -->
+
+        </div><!-- .animated -->
+    </div><!-- .content -->
+</div>
 @endsection

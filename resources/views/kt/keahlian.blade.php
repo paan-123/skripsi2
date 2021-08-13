@@ -21,8 +21,8 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
-                            <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Keahlian Pemuda</li>
+                            <li><a href="#">Data Warga</a></li>
+                            <li class="active">Keahlian Pemuda</li>
                         </ol>
                     </div>
                 </div>
@@ -32,8 +32,8 @@
 </div>
 <div class="content">
     <div class="animated fadeIn">
-
         <div class="row">
+
 
 
             <div class="col-md-12">
@@ -65,13 +65,6 @@
                                 @endforeach
 
                             </tbody>
-                            <tfoot>
-                                <th>Nomor Kartu Keluarga</th>
-                                <th>NIK</th>
-                                <th>Nomor RT</th>
-                                <th>Nama</th>
-                                <th>Keahlian</th>
-                            </tfoot>
                         </table>
 
                         <table>
@@ -83,7 +76,8 @@
                 </div>
             </div>
 
-        </div>
-    </div><!-- .animated -->
-</div><!-- .content -->
+
+        </div><!-- .animated -->
+    </div><!-- .content -->
+</div>
 @endsection

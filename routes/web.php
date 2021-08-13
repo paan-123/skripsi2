@@ -338,6 +338,8 @@ Route::middleware(['rw'])->group(function () {
     Route::get('/rw/pekerjaan', [RwController::class, 'pekerjaan']);
     Route::get('/rw/pendidikan', [RwController::class, 'pendidikan']);
     Route::get('/rw/agama', [RwController::class, 'agama']);
+    Route::get('/rw/keahlian', [RwController::class, 'rwkeahlian']);
+    Route::get('/rw/gol_darah', [RwController::class, 'goldarah']);
     Route::get('/rw/detail', [RwController::class, 'detail']);
     Route::get('/rw/detail2', [RwController::class, 'detail2']);
     Route::get('/rw/detail13', [RwController::class, 'detail13']);

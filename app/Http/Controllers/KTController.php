@@ -18,8 +18,10 @@ class KTController extends Controller
     public function laki()
     {
         $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('j_kelamin', '=', 'Laki-laki')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
         return view('/kt/laki', ['data_induk' => $data_induk]);
@@ -28,8 +30,10 @@ class KTController extends Controller
     public function perempuan()
     {
         $data_induk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('j_kelamin', '=', 'Perempuan')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
         return view('/kt/perempuan', ['data_induk' => $data_induk]);
@@ -38,15 +42,26 @@ class KTController extends Controller
     public function warga()
     {
         $data_induk = DB::table('datainduk')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
+
+        $data_induk = $data_induk->map(function ($row) {
+            $kalkulasi = Carbon::parse($row->tgl_lahir)->age;
+            $row->usia = $kalkulasi;
+            return $row;
+        });
 
         return view('/kt/warga', ['data_induk' => $data_induk]);
     }
     public function karangtaruna()
     {
         $data_induk = DB::table('datainduk')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->where('is_kt', '=', 'Ya')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
         return view('/kt/karangtaruna', ['data_induk' => $data_induk]);
@@ -58,7 +73,8 @@ class KTController extends Controller
         $data_induk =  DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->where('tgl_lahir', '<=', Carbon::now()->subYear(16)->toDateString())
             ->get();
 
 
@@ -122,20 +138,24 @@ class KTController extends Controller
         $counter = [];
         $counter['Remaja'] = [];
         $counter['Remaja']['Total'] = $data_induk = DB::table('datainduk')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Laki'] = $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Laki-laki')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Perempuan'] = $data_induk = DB::table('datainduk')
             ->where('j_kelamin', '=', 'Perempuan')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
+            ->count();
+        $counter['Remaja']['KT'] = $data_induk = DB::table('datainduk')
+            ->where('is_kt', '=', 'Ya')
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         $counter['Remaja']['Keahlian'] = DB::table('data_keahlian_warga')
             ->leftJoin('datainduk', 'datainduk.kd_induk', '=', 'data_keahlian_warga.kd_induk')
             ->leftJoin('md_keahlian', 'md_keahlian.kd_keahlian', '=', 'data_keahlian_warga.kd_keahlian')
-            ->where('tgl_lahir', '>=', Carbon::now()->subYear(25)->toDateString())
+            ->where('tgl_lahir', '>=', Carbon::now()->subYear(30)->toDateString())
             ->count();
         return $counter;
     }

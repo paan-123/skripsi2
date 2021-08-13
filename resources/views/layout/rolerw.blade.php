@@ -91,9 +91,18 @@
                                         <li class="{{ '/rw/datakk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/rw/datakk')}}">Data Kartu Keluarga</a>
                                         </li>
-                                        <li class="{{ '/rw/usia' == $InfoPage['Navbar'] ? 'active' : ''}}">
-                                            <a href="{{ url ('/rw/usia')}}">Penggolongan Usia</a>
+                                        <li class="{{ '/rw/agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/rw/agama')}}">Data Ibadah</a>
                                         </li>
+                                        <li class="{{ '/rw/keahlian' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/rw/keahlian')}}">Data Keahlian</a>
+                                        </li>
+                                        <li class="{{ '/rw/gol_darah' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/rw/gol_darah')}}">Data Golongan Darah</a>
+                                        </li>
+                                        {{-- <li class="{{ '/rw/usia' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                            <a href="{{ url ('/rw/usia')}}">Penggolongan Usia</a>
+                                        </li> --}}
                                         <li class="{{ '/rw/ekonomi' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/rw/ekonomi')}}">Data Level Ekonomi</a>
                                         </li>
@@ -103,9 +112,9 @@
                                         <li class="{{ '/rw/pendidikan' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/rw/pendidikan')}}">Data Pendidikan</a>
                                         </li>
-                                        <li class="{{ '/rw/agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                        {{-- <li class="{{ '/rw/agama' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/rw/agama')}}">Data Agama</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             </li>

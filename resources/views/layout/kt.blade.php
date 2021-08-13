@@ -79,9 +79,9 @@
                                     <span>Dashboard</span>
                                 </a>
                             </li>
-                            <li class="header-menu justify-content-start">
+                            {{-- <li class="header-menu justify-content-start">
                                 <span>Rekap</span>
-                            </li>
+                            </li> --}}
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fa fa-id-badge"></i>
@@ -107,7 +107,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="header-menu justify-content-start">
+                            {{-- <li class="header-menu justify-content-start">
                                 <span>Detail</span>
                             </li>
                             <li class="sidebar-dropdown">
@@ -128,7 +128,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>

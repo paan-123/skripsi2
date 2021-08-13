@@ -16,6 +16,7 @@ class PkkController extends Controller
     public function warga()
     {
         $pk = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->where('datainduk.j_kelamin', '=', 'Perempuan')
             ->get();
         return view(
@@ -37,6 +38,7 @@ class PkkController extends Controller
     public function pekerjaan()
     {
         $join = DB::table('datainduk')
+            ->leftJoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
             ->leftJoin('md_pekerjaan', 'md_pekerjaan.kd_pekerjaan', '=', 'datainduk.kd_pekerjaan')
             ->leftJoin('md_level_ekonomi', 'md_level_ekonomi.kd_level_ekonomi', '=', 'datainduk.kd_level_ekonomi')
             ->where('datainduk.j_kelamin', '=', "Perempuan")

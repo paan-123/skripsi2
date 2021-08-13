@@ -12,7 +12,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>DATA ANGGOTA KARANG TARUNA</h1>
+                        <h1>DATA PEMUDA LAKI-LAKI</h1>
                     </div>
                 </div>
             </div>
@@ -21,8 +21,8 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
-                            <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Anggota Karang Taruna</li>
+                            <li><a href="#">Data Warga</a></li>
+                            <li class="active">Anggota Karang Taruna</li>
                         </ol>
                     </div>
                 </div>
@@ -44,8 +44,11 @@
                                 <tr>
                                     <th>Nomor Kartu Keluarga</th>
                                     <th>NIK</th>
-                                    <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
+                                    <th>RW</th>
+                                    <th>RT</th>
+                                    {{-- <th>Nama</th> --}}
+                                    <th>Panggilan</th>
+                                    <th>Anggota Karang Taruna</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,16 +56,23 @@
                                 <tr>
                                     <td>{{$p->no_kk}}</td>
                                     <td>{{$p->no_ktp}}</td>
-                                    <td>{{$p->nama}}</td>
-                                    <td>{{$p->j_kelamin}}</td>
+                                    <td>{{$p->no_rw}}</td>
+                                    <td>{{$p->no_rt}}</td>
+                                    {{-- <td>{{$p->nama}}</td> --}}
+                                    <td>{{$p->nm_panggilan}}</td>
+                                    <td>{{$p->is_kt}}</td>
+
                                 </tr>
                                 @endforeach
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div><!-- .animated -->
 </div><!-- .content -->
 @endsection

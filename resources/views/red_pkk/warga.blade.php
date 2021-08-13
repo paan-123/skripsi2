@@ -3,7 +3,7 @@
 "Navbar" => '/red_pkk/warga'
 ]
 ])
-@section('title', 'Data Warga Permepuan')
+@section('title', 'Data Warga Perempuan')
 
 @section('container')
 <div class="breadcrumbs">
@@ -22,7 +22,7 @@
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
                             <li><a href="#">Data Lainnya</a></li>
-                            <li class="active">Data Warga Permepuan</li>
+                            <li class="active">Data Warga Perempuan</li>
                         </ol>
                     </div>
                 </div>

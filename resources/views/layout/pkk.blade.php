@@ -75,12 +75,12 @@
                             <li class="{{ '/pkk'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                 <a href="{{ url ('/pkk')}}">
                                     <i class="fa fa-tachometer-alt"></i>
-                                    <span>Dashboard</span>
+                                    <span>Home</span>
                                 </a>
                             </li>
-                            <li class="header-menu justify-content-start">
+                            {{-- <li class="header-menu justify-content-start">
                                 <span>Rekap</span>
-                            </li>
+                            </li> --}}
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fa fa-id-badge"></i>
@@ -91,12 +91,12 @@
                                         <li class="{{ '/pkk/warga'    == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/pkk/warga')}}">Warga Perempuan</a>
                                         </li>
-                                        <li class="{{ '/pkk/pkk' == $InfoPage['Navbar'] ? 'active' : ''}}">
+                                        {{-- <li class="{{ '/pkk/pkk' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/pkk/pkk')}}">Anggota PKK</a>
                                         </li>
                                         <li class="{{ '/pkk/kwt' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/pkk/kwt')}}">Anggota KWT</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="{{ '/pkk/pekerjaan' == $InfoPage['Navbar'] ? 'active' : ''}}">
                                             <a href="{{ url ('/pkk/pekerjaan')}}">Pekerjaan</a>
                                         </li>
@@ -106,7 +106,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="header-menu justify-content-start">
+                            {{-- <li class="header-menu justify-content-start">
                                 <span>Detail</span>
                             </li>
                             <li class="sidebar-dropdown">
@@ -127,7 +127,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>

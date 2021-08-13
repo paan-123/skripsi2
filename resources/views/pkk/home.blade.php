@@ -78,35 +78,35 @@
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-users fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Warga Perempuan </p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-female fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Anggota PKK</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-female fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Anggota KWT</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-briefcase fa-2x"> <br></i>
-                                                <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Pekerjaan</p>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="counter">
                                                 <i class="fa fa-book fa-2x"><br></i>
-                                                <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                                                {{-- <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2> --}}
                                                 <p class="count-text ">Berdasarkan Keahlian</p>
                                             </div>
                                         </div>

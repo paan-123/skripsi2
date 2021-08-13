@@ -1,9 +1,8 @@
 @extends('layout/rolerw',[
-"InfoPage" => [
-"Navbar" => '/rw/datakk'
-]
-])
-@section('title', 'Data Kartu Keluarga')
+'InfoPage' => [
+'Navbar' => '/rw/gol_darah'
+]])
+@section('title', 'Golongan Darah')
 
 @section('container')
 <div class="breadcrumbs">
@@ -12,7 +11,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>TABEL DATA KARTU KELUARGA</h1>
+                        <h1>TABEL GOLONGAN DARAH WARGA</h1>
                     </div>
                 </div>
             </div>
@@ -21,8 +20,8 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="/">Dashboard</a></li>
-                            <li><a href="#">Data Warga</a></li>
-                            <li class="active">Data KK</li>
+                            <li><a href="#">Tampilkan Data</a></li>
+                            <li class="active">Data Golongan Darah</li>
                         </ol>
                     </div>
                 </div>
@@ -30,29 +29,20 @@
         </div>
     </div>
 </div>
+
+
 <div class="content">
     <div class="animated fadeIn">
         <div class="row">
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Filter Data Kartu Keluarga</strong>
+                        <strong class="card-title">Filter Data Golongan Darah</strong>
                     </div>
                     <div class="card-body">
                         <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
                             <div class="row">
-                                <div class="col-sm-3" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">No. Kartu Keluarga</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">Nama</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
                                 <div class="col-sm-3">
                                     <div class="form-group row">
                                         <label class="col-sm-4">No. RW</label>
@@ -62,92 +52,78 @@
                                 <div class="col-sm-3">
                                     <div class="form-group row">
                                         <label class="col-sm-4">No. RT</label>
-                                        <select class="select form-control col-sm-5"></select>
+                                            <select class="select form-control col-sm-5"></select>
                                     </div>
                                 </div>
-                                
                                 <div class="col-sm-4" hidden>
                                     <div class="form-group">
-                                        <label class="control-label">No. Rumah</label>
+                                        <label class="control-label">Nomor Rumah</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
                                 <div class="col-sm-4" hidden>
                                     <div class="form-group">
-                                        <label class="control-label">No. Rumah</label>
+                                        <label class="control-label">Nomor Rumah</label>
                                         <select class="select form-control"></select>
                                     </div>
                                 </div>
-                                <div class="col-sm-3">
+                                <div class="col-sm-4" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nomor Rumah</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
                                     <div class="form-group row">
-                                        <label class="col-sm-4">Ekonomi</label>
+                                        <label class="col-sm-4">Golongan Darah</label>
                                         <select class="select form-control col-sm-6"></select>
                                     </div>
-                                </div>
-                                <div class="col-sm-3" hidden>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan</label>
-                                        <select class="select form-control"></select>
-                                    </div>
-                                </div>
+                                </div>    
                                 <div class="col-sm-2 text-center">
                                     <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
-                                </div>
+                                </div>                    
                             </div>
-                            
+
                         </div>
 
+                        
                     </div>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Tabel Data Kartu Keluarga</strong>
+                        <strong class="card-title">Tabel Golongan Darah Warga</strong>
                     </div>
                     <div class="card-body">
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Nomor Kartu Keluarga</th>
-                                    <th>Nama Kepala Keluarga</th>
                                     <th>RW</th>
                                     <th>RT</th>
                                     <th>No. Rumah</th>
-                                    <th>Jumlah Anggota</th>
-                                    <th>Level Ekonomi</th>
-                                    {{-- <th>Keterangan</th> --}}
+                                    <th>Nama</th>
+                                    <th>Panggilan</th>
+                                    <th>Golongan Darah</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($kk as $dkk)
+                                @foreach( $gdarah as $gd )
                                 <tr>
-
-                                    <td>{{$dkk->no_kk}}</td>
-                                    <td>{{$dkk->nm_kk}}</td>
-                                    <td>{{$dkk->no_rw}}</td>
-                                    <td>{{$dkk->no_rt}}</td>
-                                    <td>{{$dkk->kd_rumah}}</td>
-                                    <td>{{$dkk->jml_anggota}}</td>
-                                    <td>{{$dkk->nama_level}}</td>
-                                    {{-- <td>{{$dkk->keterangan}}</td> --}}
+                                    <td>{{$gd->no_rw}}</td>
+                                    <td>{{$gd->no_rt}}</td>
+                                    <td>{{$gd->no_rumah}}</td>
+                                    <td>{{$gd->nama}}</td>
+                                    <td>{{$gd->nm_panggilan}}</td>
+                                    <td>{{$gd->gol_darah}}</td>
                                 </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div><!-- .animated -->
-    </div><!-- .content -->
-</div><!-- /#right-panel -->
+    </div>
+</div><!-- .content -->
 @endsection
-<!-- Right Panel -->
-
-<!-- Scripts -->
-@section('container')
-</body>
-@endsection('container')
-
-</html>
