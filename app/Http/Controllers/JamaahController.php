@@ -189,6 +189,7 @@ class JamaahController extends Controller
         $ibadah = DB::table('datainduk')
             ->leftjoin('md_agama', 'md_agama.kd_agama', '=', 'datainduk.kd_agama')
             ->leftjoin('md_rt', 'md_rt.kd_rt', '=', 'datainduk.kd_rt')
+            ->where('datainduk.kd_agama', '=', '1')
             ->get();
         return view('ibadah', ['ibadah' => $ibadah]);
     }
