@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Export;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Rap2hpoutre\FastExcel\FastExcel;
@@ -18,6 +19,6 @@ class Test extends Controller
 
             ->get();
 
-        return (new FastExcel($data))->download('datainduk.xlsx');
+        return (new FastExcel($data))->download('datainduk ' . Carbon::new()->isoFormat('YYYY-MM-DD HH-mm-ss') . '.xlsx');
     }
 }
