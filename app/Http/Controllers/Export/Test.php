@@ -19,6 +19,6 @@ class Test extends Controller
 
             ->get();
 
-        return (new FastExcel($data))->download('datainduk ' . Carbon::new()->isoFormat('YYYY-MM-DD HH-mm-ss') . '.xlsx');
+        return (new FastExcel($data))->download('datainduk ' . Carbon::now()->isoFormat('YYYY-MM-DD HH-mm-ss') . '.xlsx');
     }
 }
