@@ -79,7 +79,7 @@
                                             <div class="col-12 col-md-9">
                                                 <select name="hubungan" id="select" class="form-control">
                                                     <option value="Kepala Keluarga">Kepala Keluarga</option>
-                                                    <option value="Istri">Ibu</option>
+                                                    <option value="Istri">Istri</option>
                                                     <option value="Anak">Anak</option>
                                                     <option value="Orang Tua">Orang Tua</option>
                                                     <option value="Cucu">Cucu</option>
