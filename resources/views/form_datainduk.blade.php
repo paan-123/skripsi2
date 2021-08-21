@@ -76,7 +76,7 @@
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Nama Kepala Keluarga</strong></label></div>
                                             <div class="col-12 col-md-9">
-                                                <select name="norw" id="select" class="form-control select">
+                                                <select name="nomorkk" id="select" class="form-control select">
                                                     @foreach ($kk as $kk)
                                                     <option value='{{$kk->no_kk}}'>{{$kk->nm_kk}}</option>
                                                     @endforeach
