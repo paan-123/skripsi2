@@ -135,7 +135,7 @@ class JamaahController extends Controller
             )
             ->get();
 
-        return view('keahlian', ['keahlian' => $join]);
+        return view('data_keahlian', ['keahlian' => $join]);
     }
 
     public function joingd() ///GOLONGAN DARAH///
@@ -181,7 +181,7 @@ class JamaahController extends Controller
                 'data_keahlian_warga.deskripsi_sertifikat'
             )
             ->get();
-        return view('/data_keahlian', ['keahlian' => $keahlian]);
+        return view('/keahlian', ['keahlian' => $keahlian]);
     }
 
     public function ibadah()

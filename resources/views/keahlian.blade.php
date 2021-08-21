@@ -1,6 +1,6 @@
-@extends('layout/rolerw',[
+@extends('layout/paan',[
     'InfoPage' => [
-        'Navbar' => '/red_rw/keahlian'
+        'Navbar' => '/keahlian'
         ]
     ])
 @section('title', 'Data Keahlian')
