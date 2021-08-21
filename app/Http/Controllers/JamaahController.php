@@ -135,7 +135,7 @@ class JamaahController extends Controller
             )
             ->get();
 
-        return view('data_keahlian', ['keahlian' => $join]);
+        return view('keahlian', ['keahlian' => $join]);
     }
 
     public function joingd() ///GOLONGAN DARAH///
