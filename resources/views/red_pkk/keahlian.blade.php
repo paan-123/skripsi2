@@ -35,7 +35,70 @@
 
         <div class="row">
 
-
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Filter Data Keahlian</strong>
+                    </div>
+                    <div class="card-body">
+                        <div id="cFilter" class='container-fluid flex-row flex-nowrap'>
+                            <div class="row">
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">No. Kartu Keluarga</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">NIK</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 ">No. RT</label>
+                                        <select class="select form-control col-sm-4"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">RT</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 text-right">Keahlian</label>
+                                        <select class="select form-control col-sm-7"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group row">
+                                        <label class="col-sm-6 text-right">Level Sertifikat</label>
+                                        <select class="select form-control col-sm-5"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" hidden>
+                                    <div class="form-group">
+                                        <label class="control-label">Jenis Kelamin</label>
+                                        <select class="select form-control"></select>
+                                    </div>
+                                </div>   
+                                <div class="col-sm-2 text-center">
+                                    <button class='btn btn-primary' style="font-size: 12px" onclick="cFilter()">Filter</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
@@ -45,11 +108,14 @@
                         <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Nomor Kartu Keluarga</th>
+                                    <th>No. KK</th>
                                     <th>NIK</th>
                                     <th>Nomor RT</th>
                                     <th>Nama</th>
+                                    <th>Panggilan</th>
                                     <th>Keahlian</th>
+                                    <th>Level Sertifikat</th>
+                                    <th>Deskripsi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,7 +125,10 @@
                                     <td>{{$p->no_ktp}}</td>
                                     <td>{{$p->kd_rt}}</td>
                                     <td>{{$p->nama}}</td>
+                                    <td>{{$p->nm_panggilan}}</td>
                                     <td>{{$p->nama_keahlian}}</td>
+                                    <td>{{$p->level_sertifikat}}</td>
+                                    <td>{{$p->deskripsi}}</td>
 
                                 </tr>
                                 @endforeach

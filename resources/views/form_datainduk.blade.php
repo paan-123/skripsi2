@@ -166,7 +166,7 @@
 
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Golongan Darah</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="golongandarah" placeholder="Golongan Darah" class="form-control" required></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="golongandarah" placeholder="Golongan Darah" class="form-control"></div>
                                         </div>
 
                                         <div class="row form-group">
@@ -227,12 +227,12 @@
                                     <div class="tab-pane fade" id="data-mukim" role="tabpanel" aria-labelledby="data-mukim-tab">
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Status Mukim</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="statusmukim" placeholder="Keterangan Mukim" class="form-control" required></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="statusmukim" placeholder="Keterangan Mukim" class="form-control"></div>
                                         </div>
 
                                         <div class="row form-group">
                                             <div class="col col-md-3"><label for="text-input" class=" form-control-label"><strong>Keterangan Mukim</strong></label></div>
-                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="keteranganmukim" placeholder="Keterangan Mukim" class="form-control" required></div>
+                                            <div class="col-12 col-md-9"><input type="text" id="text-input" name="keteranganmukim" placeholder="Keterangan Mukim" class="form-control"></div>
                                         </div>
 
                                         <div class="row form-group">
