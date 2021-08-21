@@ -226,6 +226,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Latin</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="bacalatin" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -235,6 +236,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Hijaiyah</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="bacahijaiyah" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -244,6 +246,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Iqra</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="bacaiqra" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -253,6 +256,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Baca Al-Qur'an</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="bacaquran" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -262,6 +266,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Sholat 5 Waktu</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="sholat" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -271,6 +276,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Sholat Berjamaah</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="sholatjamaah" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -280,6 +286,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Zakat Fitrah</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="zakatfitrah" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -289,6 +296,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Zakat Mal</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="zakatmal" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -298,6 +306,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Kurban</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="kurban" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -307,6 +316,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Haji</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="haji" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
@@ -316,6 +326,7 @@
                                             <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Umrah</strong></label></div>
                                             <div class="col-12 col-md-9">
                                                 <select name="umrah" id="select" class="form-control">
+                                                    <option value="-">-</option>
                                                     <option value="Ya">Ya</option>
                                                     <option value="Tidak">Tidak</option>
                                                 </select>
