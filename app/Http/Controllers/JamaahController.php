@@ -181,7 +181,7 @@ class JamaahController extends Controller
                 'data_keahlian_warga.deskripsi_sertifikat'
             )
             ->get();
-        return view('/keahlian', ['keahlian' => $keahlian]);
+        return view('/data_keahlian', ['keahlian' => $keahlian]);
     }
 
     public function ibadah()
