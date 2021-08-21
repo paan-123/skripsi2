@@ -83,6 +83,7 @@ class PostDataKK extends Controller
             'keterangan_mukim'  => $request->keteranganmukim,
             'kd_level_ekonomi'  => $request->levelekonomi,
             'gol_darah'         => $request->golongandarah,
+            'is_kt'             => $request->karangtaruna,
             'is_latin'          => $request->bacalatin,
             'is_hijaiyah'       => $request->bacahijaiyah,
             'is_iqra'           => $request->bacaiqra,

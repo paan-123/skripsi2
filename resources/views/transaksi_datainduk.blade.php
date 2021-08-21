@@ -187,6 +187,17 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3"><label for="select" class=" form-control-label"><strong>Anggota Karang Taruna</strong></label></div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="karangtaruna" id="select" class="form-control">
+                                                    <option value="-">-</option>
+                                                    <option value="Ya">Ya</option>
+                                                    <option value="Tidak">Tidak</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="tab-pane fade" id="data-mukim" role="tabpanel" aria-labelledby="data-mukim-tab">
                                         <div class="row form-group">
